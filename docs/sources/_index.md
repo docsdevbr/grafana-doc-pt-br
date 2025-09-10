@@ -9,6 +9,10 @@
 # https://github.com/grafana/grafana/blob/main/LICENSE
 # https://github.com/grafana/grafana/blob/main/LICENSING.md
 
+source_url: https://github.com/grafana/grafana/blob/main/docs/sources/_index.md
+revision: f43d39f8ad8aec6139fbcda7e8a54741f949064b
+status: ready
+
 aliases:
   - /docs/grafana/v1.1/
   - /docs/grafana/v3.1/
@@ -18,70 +22,91 @@ cascade:
   TEMPO_VERSION: latest
   ONCALL_VERSION: latest
   PYROSCOPE_VERSION: latest
-description: Find answers to your technical questions and learn how to use Grafana OSS and Enterprise products.
+description: |-
+  Encontre respostas para suas perguntas técnicas e saiba como usar os produtos
+  Grafana OSS e Enterprise.
 keywords:
   - grafana
-  - get started
-  - documentation
+  - começando
+  - primeiros passos
+  - documentação
 labels:
   products:
     - enterprise
     - oss
-menuTitle: Grafana documentation
+menuTitle: Documentação do Grafana
 title: Grafana OSS and Enterprise
 hero:
-  title: Grafana OSS and Enterprise
+  title: Grafana OSS e Enterprise
   level: 1
   width: 100
   image: /media/docs/grafana-cloud/infrastructure/grafanalogo.svg
   height: 100
-  description: Query, visualize, alert on, and explore your metrics, logs, and traces wherever they are stored.
+  description: |-
+    Consulte, visualize, alerte e explore suas métricas, logs e traces onde quer
+    que estejam armazenados.
 cards:
   title_class: pt-0 lh-1
   items:
-    - title: What's new
+    - title: Novidades
       href: ./whatsnew/
-      description: Browse release highlights, deprecations, and breaking changes in Grafana releases.
+      description: |-
+        Navegue pelos destaques de lançamentos, descontinuações e alterações
+        significativas nas versões do Grafana.
       height: 24
-    - title: Introduction
+    - title: Introdução
       href: ./fundamentals/
-      description: Learn about observability topics in general and some of the products included in Grafana.
+      description: |-
+        Aprenda sobre tópicos de observabilidade em geral e alguns dos produtos
+        incluídos no Grafana.
       height: 24
-    - title: Set up
+    - title: Configuração
       href: ./setup-grafana/
-      description: Get up and running with Grafana.
+      description: Comece a usar o Grafana.
       height: 24
-    - title: Data sources
+    - title: Fontes de dados
       href: ./datasources/
-      description: Manage data sources and how to configure or query the built-in data sources.
+      description: |-
+        Gerencie fontes de dados e saiba como configurar ou consultar as fontes
+        de dados integradas.
       height: 24
     - title: Dashboards
       href: ./dashboards/
-      description: Query, transform, visualize, and understand your data no matter where it's stored.
+      description: |-
+        Consulte, transforme, visualize e entenda seus dados, independentemente
+        de onde estejam armazenados.
       height: 24
-    - title: Panels and Visualizations
+    - title: Painéis e visualizações
       href: ./panels-visualizations/
-      description: Easily collect, correlate, and visualize data to make informed decisions in real-time.
+      description: |-
+        Colete, correlacione e visualize dados facilmente para tomar decisões
+        informadas em tempo real.
       height: 24
     - title: Explore
       href: ./explore/
-      description: Explore your data using a query instead of creating a dashboard.
+      description: |-
+        Explore seus dados usando uma consulta em vez de criar um dashboard.
       height: 24
-    - title: Alerting
+    - title: Alertas
       href: ./alerting/
-      description: Learn about problems in your systems moments after they occur.
+      description: |-
+        Aprenda sobre problemas em seus sistemas momentos após eles ocorrerem.
       height: 24
-    - title: Administration
+    - title: Administração
       href: ./administration/
-      description: Perform administrative tasks such as configuring user management and roles and permissions.
+      description: |-
+        Execute tarefas administrativas, como configurar o gerenciamento de
+        pessoas usuárias, funções e permissões.
       height: 24
-    - title: Troubleshooting
+    - title: Solução de problemas
       href: ./troubleshooting/
-      description: Troubleshoot common Grafana issues.
+      description: Solucione problemas comuns do Grafana.
       height: 24
-    - title: Upgrade
+    - title: Atualização
       href: ./upgrade-guide/
-      description: Upgrade Grafana to stay current with the latest fixes and enhancements.
+      description: |-
+        Atualize o Grafana para se manter atualizado com as últimas correções e
+        melhorias.
       height: 24
 ---
 
@@ -89,17 +114,33 @@ cards:
 
 ---
 
-## Overview
+## Visão geral
 
-_Grafana Open Source Software (OSS)_ enables you to query, visualize, alert on, and explore your metrics, logs, and traces wherever they're stored. Grafana data source plugins enable you to query data sources including time series databases like Prometheus and CloudWatch, logging tools like Loki and Elasticsearch, NoSQL/SQL databases like Postgres, CI/CD tooling like GitHub, and many more. Grafana OSS provides you with tools to display that data on live dashboards with insightful graphs and visualizations.
+O _Grafana Open Source Software (OSS)_ permite consultar, visualizar, emitir
+alertas e explorar suas métricas, logs e traces onde quer que estejam
+armazenados.
+Os plugins de fonte de dados do Grafana permitem consultar fontes de dados,
+incluindo bancos de dados de séries temporais como Prometheus e CloudWatch,
+ferramentas de logging como Loki e Elasticsearch, bancos de dados NoSQL/SQL como
+Postgres, ferramentas de CI/CD como GitHub e muito mais.
+O Grafana OSS fornece ferramentas para exibir esses dados em dashboards
+dinâmicos com gráficos e visualizações detalhados.
 
-_Grafana Enterprise_ is a commercial edition of Grafana that includes exclusive data source plugins and additional features not found in the open source version. You also get 24x7x365 support and training from the core Grafana team.
-To learn more about these features, refer to [Enterprise features](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/introduction/grafana-enterprise/#enterprise-features-in-grafana-cloud).
+O _Grafana Enterprise_ é uma edição comercial do Grafana que inclui plugins
+exclusivos de fonte de dados e recursos adicionais não encontrados na versão de
+código aberto.
+Você também recebe suporte e treinamento 24 horas por dia, 7 dias por semana,
+365 dias por ano da equipe principal do Grafana.
+Para saber mais sobre esses recursos, consulte
+[Recursos corporativos](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/introduction/grafana-enterprise/#enterprise-features-in-grafana-cloud).
 
-## Guidance and help
+## Orientação e ajuda
 
-{{< guide name="whichgrafana" title="Which Grafana is right for you?" text="Answer a few questions and Grot will help you decide." >}}
+{{< guide
+  name="whichgrafana"
+  title="Qual Grafana é ideal para você?"
+  text="Responda a algumas perguntas e o Grot ajudará você a decidir." >}}
 
-## Learn
+## Aprenda
 
 {{< card-grid key="cards" type="simple" >}}
