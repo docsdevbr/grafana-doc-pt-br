@@ -121,16 +121,16 @@ alertas e explorar suas métricas, logs e traces onde quer que estejam
 armazenados.
 Os plugins de fonte de dados do Grafana permitem consultar fontes de dados,
 incluindo bancos de dados de séries temporais como Prometheus e CloudWatch,
-ferramentas de logging como Loki e Elasticsearch, bancos de dados NoSQL/SQL como
+ferramentas de log como Loki e Elasticsearch, bancos de dados NoSQL/SQL como
 Postgres, ferramentas de CI/CD como GitHub e muito mais.
 O Grafana OSS fornece ferramentas para exibir esses dados em dashboards
-dinâmicos com gráficos e visualizações detalhados.
+dinâmicos com gráficos e visualizações intuitivos.
 
 O _Grafana Enterprise_ é uma edição comercial do Grafana que inclui plugins
 exclusivos de fonte de dados e recursos adicionais não encontrados na versão de
 código aberto.
-Você também recebe suporte e treinamento 24 horas por dia, 7 dias por semana,
-365 dias por ano da equipe principal do Grafana.
+Você também recebe suporte e treinamento 24x7x365 da equipe principal do
+Grafana.
 Para saber mais sobre esses recursos, consulte
 [Recursos corporativos](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/introduction/grafana-enterprise/#enterprise-features-in-grafana-cloud).
 
