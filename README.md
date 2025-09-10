@@ -30,7 +30,8 @@ Você pode apoiar o projeto através do [GitHub Sponsors][github-sponsors] ou
 Copyright (c) 2025 Grafana Labs.<br>
 Grafana e o logotipo Grafana são marcas registradas de propriedade da Raintank, Inc. dba Grafana Labs.
 
-Documentação licenciada sob a [Licença Pública Geral GNU Affero Versão 3][license-gnu].
+Documentação licenciada sob a
+[Licença Pública Geral GNU Affero Versão 3][license-gnu].<br>
 Para exceções de licença, consulte [LICENSING][license-apache].<br>
 A obra original foi traduzida do inglês para o português brasileiro.
 

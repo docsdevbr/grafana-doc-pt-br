@@ -28,9 +28,11 @@ You can support the project through [GitHub Sponsors][github-sponsors] or
 ## License
 
 Copyright (c) 2025 Grafana Labs.<br>
-Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba Grafana Labs.
+Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba Grafana
+Labs.
 
-Documentation licensed under the [GNU Affero General Public License Version 3][license-gnu].
+Documentation licensed under the
+[GNU Affero General Public License Version 3][license-gnu].<br>
 For license exceptions, see [LICENSING][license-apache].<br>
 The original work was translated from English into Brazilian Portuguese.
 
