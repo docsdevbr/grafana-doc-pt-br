@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 labels:
   products:
     - enterprise
@@ -25,9 +35,9 @@ A label matchers consists of 3 distinct parts, the **label**, the **value** and 
   | `=~`     | Select labels that regex-match the value.          |
   | `!~`     | Select labels that do not regex-match the value.   |
 
-{{% admonition type="note" %}}
+{{< admonition type="note" >}}
 If you are using multiple label matchers, they are combined using the AND logical operator. This means that all matchers must match in order to link a rule to a policy.
-{{% /admonition %}}
+{{< /admonition >}}
 
 **Label matching example**
 

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 aliases:
   - ../../http_api/dashboard_public/
 canonical: /docs/grafana/latest/developers/http_api/dashboard_public/
@@ -24,11 +34,11 @@ refs:
 
 # Shared Dashboards API
 
-{{% admonition type="note" %}}
+{{< admonition type="note" >}}
 
 If you're running Grafana Enterprise, you'll need to have specific permissions for some endpoints. Refer to [Role-based access control permissions](ref:role-based-access-control-permissions) for more information.
 
-{{% /admonition %}}
+{{< /admonition >}}
 
 ## Create a shared dashboard
 

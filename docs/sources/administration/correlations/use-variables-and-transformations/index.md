@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 labels:
   products:
     - enterprise
@@ -66,14 +76,13 @@ Instructions below show how to set up a link that can run metrics query for the 
    ```
 
    Two data sources are created: Source (emulating logs data source) and Target (emulating metrics data source):
-
    - A correlation called “App metrics” is created targeting the Target data source with its UID.
      - The label and description are provided as text
      - Each correlation contains the following configuration:
        - Required correlation type (query)
        - Target query matching test data source model
      - “App metrics” correlation contains the following configuration:
-       - Alias is set to ${application} variable (note that in provisioning files $ is used to access environment variables so it has to be [escaped]({{< relref "../../../administration/provisioning#using-environment-variables" >}})).
+       - Alias is set to ${application} variable (note that in provisioning files $ is used to access environment variables so it has to be [escaped](../../provisioning/#using-environment-variables)).
        - Regular expression transformation is created to extract values from “msg” field
          - Regular expression transformation is used to capture the application name from the full name of the service stored in the log line.
          - The output of the transformation is mapped to a variable called “application”.

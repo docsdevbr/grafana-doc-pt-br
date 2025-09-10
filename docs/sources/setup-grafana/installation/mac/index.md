@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 aliases:
   - ../../installation/mac/
 description: How to install Grafana OSS or Enterprise on macOS
@@ -35,7 +45,6 @@ To install Grafana on macOS using Homebrew, complete the following steps:
    ```
 
    The brew page downloads and untars the files into:
-
    - `/usr/local/Cellar/grafana/[version]` (Intel Silicon)
    - `/opt/homebrew/Cellar/grafana/[version]` (Apple Silicon)
 
@@ -87,4 +96,4 @@ Alternatively, watch the Grafana for Beginners video below:
 
 ## Next steps
 
-- [Start the Grafana server]({{< relref "../../start-restart-grafana" >}})
+- [Start the Grafana server](../../start-restart-grafana/)

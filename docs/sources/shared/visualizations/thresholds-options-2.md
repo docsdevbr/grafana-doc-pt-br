@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 title: Thresholds options
 comments: |
   There are two thresholds shared files, thresholds-options-1.md and thresholds-options-2.md, to cover the most common combinations of options. 
@@ -15,4 +25,4 @@ For each threshold, set the following options:
 | Value           | Set the value for each threshold.            |
 | Thresholds mode | Choose from **Absolute** and **Percentage**. |
 
-To learn more, refer to [Configure thresholds](../../configure-thresholds/).
+To learn more, refer to [Configure thresholds](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/panels-visualizations/configure-thresholds/).

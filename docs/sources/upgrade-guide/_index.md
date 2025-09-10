@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 aliases:
   - installation/upgrading/
   - setup-grafana/upgrade-grafana
@@ -22,7 +32,7 @@ We recommend that you upgrade Grafana often to stay current with the latest fixe
 
 Because Grafana upgrades are backward compatible, the upgrade process is straightforward, and dashboards and graphs will not change.
 
-To learn what's available in a Grafana release, refer to [What's New]({{< relref "../whatsnew" >}}).
+To learn what's available in a Grafana release, refer to [What's New](../whatsnew/).
 
 Refer to any of the following upgrade guides:
 

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 canonical: https://grafana.com/docs/grafana/latest/alerting/set-up/configure-rbac/access-folders/
 description: Manage access using folders
 keywords:
@@ -21,7 +31,7 @@ weight: 200
 You can extend the access provided by a role to alert rules and rule-specific silences by assigning permissions to individual folders or data sources.
 
 {{< admonition type="note" >}}
-Data source query permissions are required to create or modify an alert rule using that data source.
+Data source query permissions are required to create an alert rule or modify an alert rule's query using that data source.
 {{< /admonition >}}
 
 This allows different users, teams, or service accounts to have customized access to modify or silence alert rules in specific folders or using specific data sources.
@@ -65,7 +75,7 @@ To manage folder permissions, complete the following steps.
 
 By default, users with the basic roles Admin, Editor, and Viewer roles have query access to data sources for Grafana Alerting.
 
-If you used fixed roles or custom roles, you need to update data source permissions.
+If you used fixed roles or custom roles, you need to update data source permissions to create rules or update rule queries.
 
 Alternatively, an administrator can assign the role **Datasource Reader**, which grants the user access to all data sources.
 

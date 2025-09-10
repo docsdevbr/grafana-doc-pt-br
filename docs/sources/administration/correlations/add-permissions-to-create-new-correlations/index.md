@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 labels:
   products:
     - enterprise
@@ -12,7 +22,7 @@ weight: 30
 
 ## Before you begin
 
-Adding access to create correlations for [Viewers and Editors]({{< relref "../../../administration/roles-and-permissions" >}}) is available with [Role-based access control]({{< relref "../../../administration/roles-and-permissions/access-control" >}}).
+Adding access to create correlations for [Viewers and Editors](../../roles-and-permissions/) is available with [Role-based access control](../../roles-and-permissions/access-control/).
 
 ## Add permissions to create correlations
 

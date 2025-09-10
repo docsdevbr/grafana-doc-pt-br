@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 aliases:
   - ../guides/getting_started/
   - ../guides/gettingstarted/
@@ -16,9 +26,9 @@ weight: 200
 
 This topic helps you get started with Grafana and build your first dashboard using the built-in `Grafana` data source. To learn more about Grafana, refer to [Introduction to Grafana](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/introduction/).
 
-{{% admonition type="note" %}}
+{{< admonition type="note" >}}
 Grafana also offers a [free account with Grafana Cloud](/signup/cloud/connect-account?pg=gsdocs) to help getting started even easier and faster. You can install Grafana to self-host or get a free Grafana Cloud account.
-{{% /admonition %}}
+{{< /admonition >}}
 
 #### Install Grafana
 

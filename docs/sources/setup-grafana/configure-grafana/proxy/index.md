@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 description: Learn about proxy datasource connections through a secure socks proxy.
 keywords:
   - proxy
@@ -44,6 +54,6 @@ To complete this task, you must first deploy a socks proxy server that supports 
 
 1. Set up a data source and configure it to send data source connections through the proxy.
 
-   To configure your data sources to send connections through the proxy, `enableSecureSocksProxy=true` must be specified in the data source json. You can do this in the [API]({{< relref "../../../developers/http_api/data_source" >}}) or use [file based provisioning]({{< relref "../../../administration/provisioning#data-sources" >}}).
+   To configure your data sources to send connections through the proxy, `enableSecureSocksProxy=true` must be specified in the data source json. You can do this in the [API](../../../developers/http_api/data_source/) or use [file based provisioning](../../../administration/provisioning/#data-sources).
 
    Additionally, you can set the socks5 username and password by adding `secureSocksProxyUsername` in the data source json and `secureSocksProxyPassword` in the secure data source json.

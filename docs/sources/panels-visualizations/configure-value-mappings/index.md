@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 aliases:
   - ../panels/configure-value-mappings/
   - ../panels/format-data/
@@ -184,7 +194,6 @@ The following image shows a table visualization with value mappings. If you want
 1. Scroll to the **Value mappings** section and expand it.
 1. Click **Add value mappings**.
 1. Click **Add a new mapping** and then select one of the following:
-
    - **Value** - Enter a single value to match.
    - **Range** - Enter the beginning and ending values of a range to match.
    - **Regex** - Enter a regular expression pattern to match.

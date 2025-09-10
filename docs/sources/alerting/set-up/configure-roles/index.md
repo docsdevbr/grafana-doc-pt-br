@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 canonical: https://grafana.com/docs/grafana/latest/alerting/set-up/configure-roles/
 description: Configure roles and permissions for Grafana Alerting
 keywords:
@@ -68,8 +78,6 @@ To manage folder permissions, complete the following steps.
 ## Manage access using contact point permissions
 
 ### Before you begin
-
-- Enable the `alertingApiServer` feature toggle.
 
 Extend or limit the access provided by a role to contact points by assigning permissions to individual contact point.
 

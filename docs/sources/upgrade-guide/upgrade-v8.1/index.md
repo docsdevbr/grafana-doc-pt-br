@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 description: Upgrade to Grafana v8.1
 keywords:
   - grafana
@@ -30,8 +40,8 @@ This section describes technical changes associated with this release of Grafana
 
 As of Grafana v8.1, we no longer support unencrypted storage of passwords and basic auth passwords.
 
-{{% admonition type="note" %}}
+{{< admonition type="note" >}}
 Since Grafana v6.2, new or updated data sources store passwords and basic auth passwords encrypted. However, unencrypted passwords and basic auth passwords were also allowed.
-{{% /admonition %}}
+{{< /admonition >}}
 
-To migrate to encrypted storage, use a `grafana-cli` command to migrate all of your data sources to use encrypted storage of secrets. See [migrate data and encrypt passwords]({{< relref "../../cli#migrate-data-and-encrypt-passwords" >}}) for further instructions.
+To migrate to encrypted storage, use a `grafana-cli` command to migrate all of your data sources to use encrypted storage of secrets. See [migrate data and encrypt passwords](../../cli/#migrate-data-and-encrypt-passwords) for further instructions.

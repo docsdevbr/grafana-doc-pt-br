@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 aliases:
   - ../../http_api/org/
   - ../../http_api/organization/
@@ -23,7 +33,7 @@ The Organization HTTP API is divided in two resources, `/api/org` (current organ
 and `/api/orgs` (admin organizations). One big difference between these are that
 the admin of all organizations API only works with basic authentication, see [Admin Organizations API](#admin-organizations-api) for more information.
 
-> If you are running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions]({{< relref "/docs/grafana/latest/administration/roles-and-permissions/access-control/custom-role-actions-scopes" >}}) for more information.
+> If you are running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions](/docs/grafana/latest/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for more information.
 
 ## Current Organization API
 
@@ -33,7 +43,7 @@ the admin of all organizations API only works with basic authentication, see [Ad
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#organization-api" >}}) for an explanation.
+See note in the [introduction](#organization-api) for an explanation.
 
 | Action    | Scope |
 | --------- | ----- |
@@ -69,7 +79,7 @@ Accessible to users with org admin role.
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#organization-api" >}}) for an explanation.
+See note in the [introduction](#organization-api) for an explanation.
 
 | Action         | Scope    |
 | -------------- | -------- |
@@ -115,7 +125,7 @@ when editing folder/dashboard permissions.
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#organization-api" >}}) for an explanation.
+See note in the [introduction](#organization-api) for an explanation.
 
 | Action         | Scope    |
 | -------------- | -------- |
@@ -151,7 +161,7 @@ Content-Type: application/json
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#organization-api" >}}) for an explanation.
+See note in the [introduction](#organization-api) for an explanation.
 
 | Action          | Scope    |
 | --------------- | -------- |
@@ -185,7 +195,7 @@ Content-Type: application/json
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#organization-api" >}}) for an explanation.
+See note in the [introduction](#organization-api) for an explanation.
 
 | Action           | Scope    |
 | ---------------- | -------- |
@@ -215,7 +225,7 @@ Content-Type: application/json
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#organization-api" >}}) for an explanation.
+See note in the [introduction](#organization-api) for an explanation.
 
 | Action     | Scope |
 | ---------- | ----- |
@@ -251,7 +261,7 @@ Adds a global user to the current organization.
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#organization-api" >}}) for an explanation.
+See note in the [introduction](#organization-api) for an explanation.
 
 | Action        | Scope    |
 | ------------- | -------- |
@@ -300,7 +310,7 @@ Only works with Basic Authentication (username and password), see [introduction]
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#organization-api" >}}) for an explanation.
+See note in the [introduction](#organization-api) for an explanation.
 
 | Action    | Scope |
 | --------- | ----- |
@@ -342,7 +352,7 @@ Only works with Basic Authentication (username and password), see [introduction]
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#organization-api" >}}) for an explanation.
+See note in the [introduction](#organization-api) for an explanation.
 
 | Action    | Scope | Note                           |
 | --------- | ----- | ------------------------------ |
@@ -384,7 +394,7 @@ Only works with Basic Authentication (username and password), see [introduction]
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#organization-api" >}}) for an explanation.
+See note in the [introduction](#organization-api) for an explanation.
 
 | Action      | Scope | Note                           |
 | ----------- | ----- | ------------------------------ |
@@ -427,7 +437,7 @@ Only works with Basic Authentication (username and password), see [introduction]
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#organization-api" >}}) for an explanation.
+See note in the [introduction](#organization-api) for an explanation.
 
 | Action    | Scope | Note                           |
 | --------- | ----- | ------------------------------ |
@@ -469,7 +479,7 @@ Only works with Basic Authentication (username and password), see [introduction]
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#organization-api" >}}) for an explanation.
+See note in the [introduction](#organization-api) for an explanation.
 
 | Action     | Scope |
 | ---------- | ----- |
@@ -504,7 +514,7 @@ Only works with Basic Authentication (username and password), see [introduction]
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#organization-api" >}}) for an explanation.
+See note in the [introduction](#organization-api) for an explanation.
 
 | Action      | Scope |
 | ----------- | ----- |
@@ -534,7 +544,7 @@ Only works with Basic Authentication (username and password), see [introduction]
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#organization-api" >}}) for an explanation.
+See note in the [introduction](#organization-api) for an explanation.
 
 | Action         | Scope    |
 | -------------- | -------- |
@@ -575,7 +585,7 @@ Only works with Basic Authentication (username and password), see [introduction]
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#organization-api" >}}) for an explanation.
+See note in the [introduction](#organization-api) for an explanation.
 
 | Action        | Scope    |
 | ------------- | -------- |
@@ -611,7 +621,7 @@ Only works with Basic Authentication (username and password), see [introduction]
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#organization-api" >}}) for an explanation.
+See note in the [introduction](#organization-api) for an explanation.
 
 | Action          | Scope    |
 | --------------- | -------- |
@@ -646,7 +656,7 @@ Only works with Basic Authentication (username and password), see [introduction]
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#organization-api" >}}) for an explanation.
+See note in the [introduction](#organization-api) for an explanation.
 
 | Action           | Scope    |
 | ---------------- | -------- |

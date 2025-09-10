@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 headless: true
 labels:
   products:
@@ -22,10 +32,10 @@ The Grafana configuration files are located in the following directories:
 
 For more information on where to find configuration files, refer to [Configuration file location](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-grafana/#configuration-file-location).
 
-{{% admonition type="note" %}}
+{{< admonition type="note" >}}
 If you installed Grafana using the `deb` or `rpm` packages, then your configuration file is located at
 `/etc/grafana/grafana.ini`. This path is specified in the Grafana `init.d` script using `--config` file parameter.
-{{% /admonition %}}
+{{< /admonition >}}
 
 ## Back up plugin data
 
@@ -44,9 +54,9 @@ We recommend that you back up your Grafana database so that you can roll back to
 
 The default Grafana database is SQLite, which stores its data in a single file on disk. To back up this file, copy it to your backup repository.
 
-{{% admonition type="note" %}}
+{{< admonition type="note" >}}
 To ensure data integrity, shut down your Grafana service before backing up the SQLite database.
-{{% /admonition %}}
+{{< /admonition >}}
 
 The SQLite database file is located in one of the following directories:
 

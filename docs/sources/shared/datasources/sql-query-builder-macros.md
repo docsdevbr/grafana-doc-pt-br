@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 headless: true
 labels:
   products:
@@ -9,8 +19,6 @@ labels:
 #### Macros
 
 You can enable macros support in the select clause to create time-series queries.
-
-{{< docs/experimental product="Macros support in visual query builder" featureFlag="`sqlQuerybuilderFunctionParameters`" >}}
 
 Use the **Data operations** drop-down to select a macro like `$__timeGroup` or `$__timeGroupAlias`.
 Select a time column from the **Column** drop-down and a time interval from the **Interval** drop-down to create a time-series query.

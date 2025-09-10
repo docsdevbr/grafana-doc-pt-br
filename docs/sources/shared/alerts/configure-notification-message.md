@@ -1,11 +1,19 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 labels:
   products:
     - oss
 title: 'Configure notification message'
 ---
-
-## Configure notification message
 
 Use [annotations](ref:shared-annotations) to add information to alert messages that can help respond to the alert.
 

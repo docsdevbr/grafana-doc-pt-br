@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 aliases:
   - ../../http_api/dashboard_permissions/
   - ../../http_api/dashboardpermissions/
@@ -32,7 +42,7 @@ The permission levels for the permission field:
 - 2 = Edit
 - 4 = Admin
 
-> If you are running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions]({{< relref "/docs/grafana/latest/administration/roles-and-permissions/access-control/custom-role-actions-scopes" >}}) for more information.
+> If you are running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions](/docs/grafana/latest/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for more information.
 
 ## Get permissions for a dashboard
 
@@ -42,7 +52,7 @@ Gets all existing permissions for the dashboard with the given `uid`.
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#dashboard-permission-api" >}}) for an explanation.
+See note in the [introduction](#dashboard-permission-api) for an explanation.
 
 <!-- prettier-ignore-start -->
 | Action                        | Scope                                                                                                   |
@@ -124,7 +134,7 @@ Updates permissions for a dashboard. This operation will remove existing permiss
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#dashboard-permission-api" >}}) for an explanation.
+See note in the [introduction](#dashboard-permission-api) for an explanation.
 
 <!-- prettier-ignore-start -->
 | Action                         | Scope                                                                                                   |

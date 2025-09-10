@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 description: Upgrade to Grafana v9.2
 keywords:
   - grafana
@@ -24,4 +34,4 @@ weight: 2100
 
 ## Technical notes
 
-Beginning in v9.2, Grafana has a [supported database versions policy]({{< relref "../../setup-grafana/installation#supported-databases" >}}). As of this release, MySQL versions from 5.7, postgres versions from v10, and SQLite 3 are supported databases.
+Beginning in v9.2, Grafana has a [supported database versions policy](../../setup-grafana/installation/#supported-databases). As of this release, MySQL versions from 5.7, postgres versions from v10, and SQLite 3 are supported databases.

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 description: Install guide for Grafana on SUSE or openSUSE.
 labels:
   products:
@@ -194,4 +204,4 @@ To uninstall Grafana, run the following commands in a terminal window:
 
 ## Next steps
 
-Refer to [Start the Grafana server]({{< relref "../../start-restart-grafana" >}}).
+Refer to [Start the Grafana server](../../start-restart-grafana/).

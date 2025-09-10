@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 aliases:
   - ../../panels/visualizations/pie-chart-pane/
   - ../../visualizations/pie-chart-panel/
@@ -136,6 +146,15 @@ Select the pie chart display style. Choose from **Pie** or **Donut**.
 
 ![Pie chart types](/media/docs/grafana/panels-visualizations/screenshot-pie-chart-types.png)
 
+#### Slice sorting
+
+By default, the pie chart is sorted so that the slices decrease in size clockwise around the circle.
+You can configure the sorting of the slices, and by extension the legend, with the following options:
+
+- **Descending** - The slices decrease in size, clockwise (default).
+- **Ascending** - The slices increase in size, clockwise.
+- **None** - No sorting is applied. The original order of the data is maintained.
+
 #### Labels
 
 Select labels to display on the pie chart. You can select more than one.
@@ -174,7 +193,7 @@ Use these settings to define how the legend appears in your visualization. For m
 
 {{< docs/shared lookup="visualizations/standard-options.md" source="grafana" version="<GRAFANA_VERSION>" >}}
 
-### Data links
+### Data links and actions
 
 {{< docs/shared lookup="visualizations/datalink-options-1.md" source="grafana" version="<GRAFANA_VERSION>" >}}
 

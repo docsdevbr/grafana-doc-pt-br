@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 description: Learn how to configure passwordless authentication with magic links in Grafana
 labels:
   products:
@@ -15,7 +25,9 @@ Passwordless authentication lets Grafana users authenticate with a magic link or
 
 ## Enable passwordless authentication
 
-{{< docs/experimental product="passwordless authentication" featureFlag="passwordlessMagicLinkAuthentication" >}}
+{{< admonition type="note" >}}
+Passwordless authentication is an experimental feature. Engineering and on-call support is not available. Documentation is either limited or not provided outside of code comments. No SLA is provided. Enable the `passwordlessMagicLinkAuthentication` feature toggle in Grafana to use this feature.
+{{< /admonition >}}
 
 To enable passwordless authentication, use the following configuration:
 

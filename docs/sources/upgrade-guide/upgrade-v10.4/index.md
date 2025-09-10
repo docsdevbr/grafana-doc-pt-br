@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 description: Guide for upgrading to Grafana v10.4
 keywords:
   - grafana
@@ -32,6 +42,6 @@ You can disable this behavior using the feature flag `alertingUpgradeDryrunOnSta
 alertingUpgradeDryrunOnStart=false
 ```
 
-{{% admonition type="note" %}}
+{{< admonition type="note" >}}
 We strongly encourage you to review the [upgrade guide](https://grafana.com/docs/grafana/v10.4/alerting/set-up/migrating-alerts/) and perform the necessary upgrade steps prior to v11.
-{{% /admonition %}}
+{{< /admonition >}}

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 canonical: https://grafana.com/docs/grafana/latest/alerting/configure-notifications/manage-contact-points/integrations/configure-email/
 description: Configure email integration to send email notifications when your alerts are firing
 keywords:
@@ -53,7 +63,6 @@ For Grafana OSS, you enable email notifications by first configuring [SMTP setti
 1. Configure SMTP settings.
 
    Within the `[smtp]` settings section, specify the following parameters:
-
    - `enabled = true`: Enables SMTP.
    - `host`: The hostname or IP address of your SMTP server, and the port number of your SMTP server (commonly 25, 465, or 587). Default is `localhost:25`.
    - `user`: Your SMTP username (if authentication is required).

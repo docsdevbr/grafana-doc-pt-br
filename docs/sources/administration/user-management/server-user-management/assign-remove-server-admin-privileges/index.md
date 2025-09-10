@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 aliases:
   - ../../manage-users-and-permissions/manage-server-users/assign-remove-server-admin-privileges/
 description: Describes how to assign and remove Grafana administrator privileges from
@@ -13,15 +23,15 @@ weight: 20
 
 # Assign or remove Grafana server administrator privileges
 
-Grafana server administrators are responsible for creating users, organizations, and managing permissions. For more information about the server administration role, refer to [Grafana server administrators]({{< relref "../../../roles-and-permissions#grafana-server-administrators" >}}).
+Grafana server administrators are responsible for creating users, organizations, and managing permissions. For more information about the server administration role, refer to [Grafana server administrators](../../../roles-and-permissions/#grafana-server-administrators).
 
-{{% admonition type="note" %}}
+{{< admonition type="note" >}}
 Server administrators are "super-admins" with full permissions to create, read, update, and delete all resources and users in all organizations, as well as update global settings such as licenses. Only grant this permission to trusted users.
-{{% /admonition %}}
+{{< /admonition >}}
 
 ## Before you begin
 
-- [Add a user]({{< relref "../#add-a-user" >}})
+- [Add a user](../#add-a-user)
 - Ensure you have Grafana server administrator privileges
 
 **To assign or remove Grafana administrator privileges**:

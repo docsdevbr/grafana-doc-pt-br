@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 aliases:
   - ../../http_api/library_element/
 canonical: /docs/grafana/latest/developers/http_api/library_element/
@@ -35,7 +45,7 @@ Returns a list of all library elements the authenticated user has permission to 
 Query parameters:
 
 - `searchString`: Part of the name or description searched for.
-- `kind`: Kind of element to search for. Use `1` for library panels or `2` for library variables.
+- `kind`: Kind of element to search for. Use `1` for library panels.
 - `sortDirection`: Sort order of elements. Use `alpha-asc` for ascending and `alpha-desc` for descending sort order.
 - `typeFilter`: A comma separated list of types to filter the elements by.
 - `excludeUid`: Element UID to exclude from search results.
@@ -251,7 +261,7 @@ Content-Type: application/json
 {
     "result": [
         {
-            "id": 148,
+            "id": 148, // Deprecated: will be removed in the future.
             "kind": 1,
             "elementId": 25,
             "connectionId": 527,
@@ -285,8 +295,8 @@ JSON Body schema:
 - `folderUid`: Optional, the UID of the folder where the library element is stored, empty string when it is at the root level.
 - `name`: Optional, the name of the library element.
 - `model`: The JSON model for the library element.
-- `kind`: Kind of element to create, Use `1` for library panels or `2` for library variables.
-- `uid`: Optional, the [unique identifier](/http_api/library_element/#identifier-id-vs-unique-identifier-uid).
+- `kind`: Kind of element to create, Use `1` for library panels.
+- `uid`: Optional, the [unique identifier](#identifier-id-vs-unique-identifier-uid).
 
 **Example Request**:
 
@@ -364,9 +374,9 @@ JSON Body schema:
 - `folderUid`: UID of the folder where the library element is stored, empty string when it is at the root level.
 - `name`: Name of the library element.
 - `model`: The JSON model for the library element.
-- `kind`: Kind of element to create. Use `1` for library panels or `2` for library variables.
+- `kind`: Kind of element to create. Use `1` for library panels.
 - `version`: Version of the library element you are updating.
-- `uid`: Optional, the [unique identifier](/http_api/library_element/#identifier-id-vs-unique-identifier-uid).
+- `uid`: Optional, the [unique identifier](#identifier-id-vs-unique-identifier-uid).
 
 **Example Request**:
 
@@ -441,9 +451,9 @@ Status Codes:
 
 Deletes an existing library element as specified by the UID. This operation cannot be reverted.
 
-{{% admonition type="note" %}}
+{{< admonition type="note" >}}
 You cannot delete a library element that is connected. This operation cannot be reverted.
-{{% /admonition %}}
+{{< /admonition >}}
 
 **Example Request**:
 

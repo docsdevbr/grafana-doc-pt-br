@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 aliases:
   - ../../../auth/grafana/
 description: Learn how to configure basic authentication in Grafana
@@ -41,9 +51,9 @@ With the `password_policy` option enabled, new and updated passwords must meet t
 password_policy = true
 ```
 
-{{% admonition type="note" %}}
+{{< admonition type="note" >}}
 Existing passwords that do not comply with the new password policy will not be affected until the user updates their password.
-{{% /admonition %}}
+{{< /admonition >}}
 
 ## Disable login form
 

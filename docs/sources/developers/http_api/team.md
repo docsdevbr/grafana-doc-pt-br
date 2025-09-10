@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 aliases:
   - ../../http_api/team/
 canonical: /docs/grafana/latest/developers/http_api/team/
@@ -26,10 +36,8 @@ Access to these API endpoints is restricted as follows:
 
 - All authenticated users are able to view details of teams they are a member of.
 - Organization Admins are able to manage all teams and team members.
-- If you enable `editors_can_admin` configuration flag, then Organization Editors can create teams and manage teams where they are Admin.
-  - If you enable `editors_can_admin` configuration flag, Editors can find out whether a team that they are not members of exists by trying to create a team with the same name.
 
-> If you are running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions]({{< relref "/docs/grafana/latest/administration/roles-and-permissions/access-control/custom-role-actions-scopes" >}}) for more information.
+> If you are running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions](/docs/grafana/latest/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for more information.
 
 ## Team Search With Paging
 
@@ -41,7 +49,7 @@ or
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#team-api" >}}) for an explanation.
+See note in the [introduction](#team-api) for an explanation.
 
 | Action     | Scope    |
 | ---------- | -------- |
@@ -107,7 +115,7 @@ The `name` parameter returns a single team if the parameter matches the `name` f
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#team-api" >}}) for an explanation.
+See note in the [introduction](#team-api) for an explanation.
 
 | Action     | Scope    |
 | ---------- | -------- |
@@ -153,7 +161,7 @@ The Team `name` needs to be unique. `name` is required and `email` is optional.
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#team-api" >}}) for an explanation.
+See note in the [introduction](#team-api) for an explanation.
 
 | Action       | Scope |
 | ------------ | ----- |
@@ -197,7 +205,7 @@ There are two fields that can be updated for a team: `name` and `email`.
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#team-api" >}}) for an explanation.
+See note in the [introduction](#team-api) for an explanation.
 
 | Action      | Scope    |
 | ----------- | -------- |
@@ -240,7 +248,7 @@ Status Codes:
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#team-api" >}}) for an explanation.
+See note in the [introduction](#team-api) for an explanation.
 
 | Action       | Scope    |
 | ------------ | -------- |
@@ -277,7 +285,7 @@ Status Codes:
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#team-api" >}}) for an explanation.
+See note in the [introduction](#team-api) for an explanation.
 
 | Action                 | Scope    |
 | ---------------------- | -------- |
@@ -330,7 +338,7 @@ Status Codes:
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#team-api" >}}) for an explanation.
+See note in the [introduction](#team-api) for an explanation.
 
 | Action                  | Scope    |
 | ----------------------- | -------- |
@@ -372,7 +380,7 @@ Status Codes:
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#team-api" >}}) for an explanation.
+See note in the [introduction](#team-api) for an explanation.
 
 | Action                  | Scope    |
 | ----------------------- | -------- |
@@ -412,7 +420,7 @@ Will override all current members and administrators for the specified team.
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#team-api" >}}) for an explanation.
+See note in the [introduction](#team-api) for an explanation.
 
 | Action                  | Scope    |
 | ----------------------- | -------- |
@@ -455,7 +463,7 @@ Status Codes:
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#team-api" >}}) for an explanation.
+See note in the [introduction](#team-api) for an explanation.
 
 | Action     | Scope    |
 | ---------- | -------- |
@@ -479,6 +487,7 @@ Content-Type: application/json
 {
   "theme": "",
   "homeDashboardId": 0,
+  "homeDashboardUID": "",
   "timezone": ""
 }
 ```
@@ -489,7 +498,7 @@ Content-Type: application/json
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#team-api" >}}) for an explanation.
+See note in the [introduction](#team-api) for an explanation.
 
 | Action      | Scope    |
 | ----------- | -------- |
@@ -506,6 +515,7 @@ Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
 {
   "theme": "dark",
   "homeDashboardId": 39,
+  "homeDashboardUID": "jcIIG-07z",
   "timezone": "utc"
 }
 ```
@@ -513,7 +523,8 @@ Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
 JSON Body Schema:
 
 - **theme** - One of: `light`, `dark`, or an empty string for the default theme
-- **homeDashboardId** - The numerical `:id` of a dashboard, default: `0`
+- **homeDashboardId** - Deprecated. Use `homeDashboardUID` instead.
+- **homeDashboardUID** - The `:uid` of a dashboard
 - **timezone** - One of: `utc`, `browser`, or an empty string for the default
 
 Omitting a key will cause the current value to be replaced with the system default value.

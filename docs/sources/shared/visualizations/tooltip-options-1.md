@@ -1,9 +1,19 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 title: Tooltip options
 comments: |
-  There are two tooltip shared files, tooltip-options-1.md and tooltip-options-2.md, to cover the most common combinations of options. 
-  Using two shared files ensures that content remains consistent across visualizations that share the same options and users don't have to figure out which options apply to a specific visualization when reading that content. 
-  This file is used in the following visualizations: bar chart, histogram, pie chart, state timeline, status history
+  There are three tooltip shared files, tooltip-options-1.md, tooltip-options-2.md, and tooltip-options-3.md, to cover the most common combinations of options. 
+  Using shared files ensures that content remains consistent across visualizations that share the same options and users don't have to figure out which options apply to a specific visualization when reading that content. 
+  This file is used in the following visualizations: bar chart, pie chart
 ---
 
 Tooltip options control the information overlay that appears when you hover over data points in the visualization.

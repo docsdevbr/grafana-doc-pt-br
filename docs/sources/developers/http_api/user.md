@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 aliases:
   - ../../http_api/user/
 canonical: /docs/grafana/latest/developers/http_api/user/
@@ -35,6 +45,8 @@ To use these API endpoints you have to use Basic authentication and the Grafana 
 
 The `admin` user that Grafana is provisioned with by default has permissions to use these API endpoints.
 {{< /admonition >}}
+
+For Grafana Cloud customers, refer to [Organization HTTP API](/docs/grafana/latest/developers/http_api/org/) for finding users with the org Admin role.
 
 > If you are running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions](ref:role-based-access-control-permissions) for more information.
 

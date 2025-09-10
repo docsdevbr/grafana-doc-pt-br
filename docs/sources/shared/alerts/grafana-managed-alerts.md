@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 labels:
   products:
     - enterprise
@@ -22,7 +32,7 @@ Alerting rules can only query backend data sources with alerting enabled:
 
 ## Metrics from the alerting engine
 
-The alerting engine publishes some internal metrics about itself. You can read more about how Grafana publishes [internal metrics]({{< relref "../../setup-grafana/set-up-grafana-monitoring/" >}}). See also, [View alert rules and their current state]({{< relref "../../alerting/fundamentals/state-and-health/" >}}).
+The alerting engine publishes some internal metrics about itself. You can read more about how Grafana publishes [internal metrics](/docs/grafana/<GRAFANA_VERSION>/setup-grafana/set-up-grafana-monitoring/). See also, [View alert rules and their current state](/docs/grafana/<GRAFANA_VERSION>/alerting/fundamentals/state-and-health/).
 
 | Metric Name                                         | Type      | Description                                                                              |
 | --------------------------------------------------- | --------- | ---------------------------------------------------------------------------------------- |

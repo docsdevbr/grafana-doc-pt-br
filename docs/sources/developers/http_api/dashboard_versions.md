@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 aliases:
   - ../../http_api/dashboard_versions/
   - ../../http_api/dashboardversions/
@@ -47,30 +57,33 @@ HTTP/1.1 200 OK
 Content-Type: application/json; charset=UTF-8
 Content-Length: 428
 
-[
-  {
-    "id": 2,
-    "dashboardId": 1,
-    "uid": "QA7wKklGz",
-    "parentVersion": 1,
-    "restoredFrom": 0,
-    "version": 2,
-    "created": "2017-06-08T17:24:33-04:00",
-    "createdBy": "admin",
-    "message": "Updated panel title"
-  },
-  {
-    "id": 1,
-    "dashboardId": 1,
-    "uid": "QA7wKklGz",
-    "parentVersion": 0,
-    "restoredFrom": 0,
-    "version": 1,
-    "created": "2017-06-08T17:23:33-04:00",
-    "createdBy": "admin",
-    "message": "Initial save"
-  }
-]
+{
+  "continueToken": "",
+  "versions": [
+    {
+      "id": 2,
+      "dashboardId": 1,
+      "uid": "QA7wKklGz",
+      "parentVersion": 1,
+      "restoredFrom": 0,
+      "version": 2,
+      "created": "2017-06-08T17:24:33-04:00",
+      "createdBy": "admin",
+      "message": "Updated panel title"
+    },
+    {
+      "id": 1,
+      "dashboardId": 1,
+      "uid": "QA7wKklGz",
+      "parentVersion": 0,
+      "restoredFrom": 0,
+      "version": 1,
+      "created": "2017-06-08T17:23:33-04:00",
+      "createdBy": "admin",
+      "message": "Initial save"
+    }
+  ]
+}
 ```
 
 Status Codes:
@@ -89,7 +102,7 @@ Get the dashboard version with the given version, for the dashboard with the giv
 **Example request for getting a dashboard version**:
 
 ```http
-GET /api/dashboards/id/1/versions/1 HTTP/1.1
+GET /api/dashboards/uid/QA7wKklGz/versions/1 HTTP/1.1
 Accept: application/json
 Content-Type: application/json
 Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
@@ -216,6 +229,7 @@ JSON response body schema:
 Status codes:
 
 - **200** - OK
+- **400** - Bad request (specified version has the same content as the current dashboard)
 - **401** - Unauthorized
 - **404** - Not found (dashboard not found or dashboard version not found)
 - **500** - Internal server error (indicates issue retrieving dashboard tags from database)

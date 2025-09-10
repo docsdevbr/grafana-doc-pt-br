@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 aliases:
   - ../../http_api/preferences/
 canonical: /docs/grafana/latest/developers/http_api/preferences/
@@ -21,7 +31,8 @@ title: 'Preferences API'
 Keys:
 
 - **theme** - One of: `light`, `dark`, or an empty string for the default theme
-- **homeDashboardId** - The numerical `:id` of a favorited dashboard, default: `0`
+- **homeDashboardId** - Deprecated. Use `homeDashboardUID` instead.
+- **homeDashboardUID**: The `:uid` of a dashboard
 - **timezone** - One of: `utc`, `browser`, or an empty string for the default
 
 Omitting a key will cause the current value to be replaced with the
@@ -139,6 +150,7 @@ Content-Type: application/json
 {
     "theme": "",
     "homeDashboardId": 0,
+    "homeDashboardUID": "",
     "timezone": "",
     "weekStart": "",
     "navbar": {

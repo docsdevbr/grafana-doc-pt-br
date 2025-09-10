@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 headless: true
 labels:
   products:
@@ -18,7 +28,6 @@ labels:
 To set up authentication:
 
 1. Select an authentication method from the drop-down list:
-
    - **Basic authentication**: Authenticates your data source using a username and password
    - **Forward OAuth identity**: Forwards the OAuth access token and the OIDC ID token, if available, of the user querying to the data source
    - **No authentication**: No authentication is required to access the data source

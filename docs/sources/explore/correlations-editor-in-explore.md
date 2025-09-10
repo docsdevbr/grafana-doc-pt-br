@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 labels:
   products:
     - enterprise
@@ -10,9 +20,9 @@ weight: 20
 
 # Correlations Editor in Explore
 
-{{% admonition type="note" %}}
+{{< admonition type="note" >}}
 The Explore editor is available in 10.1 and later versions. In the editor, transformations is available in Grafana 10.3 and later versions.
-{{% /admonition %}}
+{{< /admonition >}}
 
 Correlations allow users to build a link between any two data sources. For more information about correlations in general, please see the [correlations](/docs/grafana/<GRAFANA_VERSION>/administration/correlations/) topic in the administration page.
 

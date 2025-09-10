@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 canonical: https://grafana.com/docs/grafana/latest/alerting/configure-notifications/manage-contact-points/integrations/configure-opsgenie/
 description: Configure the Opsgenie integration to receive notifications when your alerts are firing
 keywords:
@@ -41,10 +51,12 @@ To create your Opsgenie integration in Grafana Alerting, complete the following 
 1. Enter a contact point name.
 1. From the **Integration** list, select **Opsgenie**.
 1. In the **API key** field, paste in your API key.
-1. In the **Alert API URL**, enter `https://api.opsgenie.com/v2/alerts`.
+1. Configure the **Alert API URL**.
+   1. For Grafana Alertmanager, enter `https://api.opsgenie.com/v2/alerts`.
+   1. For other Alertmanagers, enter the host for sending Opsgenie API requests, depending on the hosted region.
 1. Click **Test** to check that your integration works.
 
-   ** For Grafana Alertmanager only.**
+   **For Grafana Alertmanager only.**
 
    A test alert notification is sent to the Alerts page in Opsgenie.
 

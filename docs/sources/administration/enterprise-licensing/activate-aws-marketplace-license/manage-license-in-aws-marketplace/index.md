@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 aliases:
   - ../../../enterprise/activate-aws-marketplace-license/manage-license-in-aws-marketplace/
   - ../../../enterprise/license/activate-aws-marketplace-license/manage-license-in-aws-marketplace/
@@ -42,4 +52,4 @@ You can use AWS Marketplace to make the following modifications to your Grafana 
 
    This action retrieves updated license information from AWS.
 
-> To learn more about licensing and active users, refer to [Activate a Grafana Enterprise license purchased through AWS Marketplace]({{< relref "../" >}}).
+> To learn more about licensing and active users, refer to [Activate a Grafana Enterprise license purchased through AWS Marketplace](../).

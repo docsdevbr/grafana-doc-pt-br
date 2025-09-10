@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 aliases:
   - ../panels/query-a-data-source/download-raw-query-results/
   - ../panels/query-a-data-source/inspect-query-performance/
@@ -43,7 +53,6 @@ Grafana generates a CSV file that contains your data, including any transformati
 1. Click **Data**.
 
    If your panel contains multiple queries or queries multiple nodes, then you have additional options.
-
    - **Select result**: Choose which result set data you want to view.
    - **Transform data**
    - **Join by time**: View raw data from all your queries at once, one result set per column. Click a column heading to reorder the data.

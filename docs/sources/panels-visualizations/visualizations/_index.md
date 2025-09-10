@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 aliases:
   - ../features/panels/graph/
   - ../panels/visualizations/
@@ -157,7 +167,7 @@ Grafana offers a variety of visualizations to support different use cases. This 
 
 {{< youtube id="JwF6FgeotaU" >}}
 
-{{% admonition type="note" %}}
+{{< admonition type="note" >}}
 If you are unsure which visualization to pick, Grafana can provide visualization suggestions based on the panel query. When you select a visualization, Grafana will show a preview with that visualization applied.
 {{< /admonition >}}
 

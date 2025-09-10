@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 aliases:
   - ../admin/view-server-settings/
   - ../admin/view-server-stats/
@@ -25,11 +35,11 @@ This setting contains information about tools that Grafana Server Admins can use
 
 ## View Grafana server settings
 
-> Refer to [Role-based access control]({{< relref "../roles-and-permissions/access-control" >}}) in Grafana Enterprise to understand how you can control access with RBAC permissions.
+> Refer to [Role-based access control](../roles-and-permissions/access-control/) in Grafana Enterprise to understand how you can control access with RBAC permissions.
 
-If you are a Grafana server administrator, use the Settings tab to view the settings that are applied to your Grafana server via the [Configuration]({{< relref "../../setup-grafana/configure-grafana#configuration-file-location" >}}) file and any environmental variables.
+If you are a Grafana server administrator, use the Settings tab to view the settings that are applied to your Grafana server via the [Configuration](../../setup-grafana/configure-grafana/#configuration-file-location) file and any environmental variables.
 
-> **Note:** Only Grafana server administrators can access the **Server Admin** menu. For more information about about administrative permissions, refer to [Roles and permissions]({{< relref "../roles-and-permissions#grafana-server-administrators" >}}).
+> **Note:** Only Grafana server administrators can access the **Server Admin** menu. For more information about about administrative permissions, refer to [Roles and permissions](../roles-and-permissions/#grafana-server-administrators).
 
 ### View server settings
 
@@ -38,15 +48,15 @@ If you are a Grafana server administrator, use the Settings tab to view the sett
 
 ### Available settings
 
-For a full list of server settings, refer to [Configuration]({{< relref "../../setup-grafana/configure-grafana#server" >}}).
+For a full list of server settings, refer to [Configuration](../../setup-grafana/configure-grafana/#server).
 
 ## View Grafana server stats
 
-> Refer to [Role-based access control]({{< relref "../roles-and-permissions/access-control" >}}) in Grafana Enterprise to understand how you can control access with RBAC permissions.
+> Refer to [Role-based access control](../roles-and-permissions/access-control/) in Grafana Enterprise to understand how you can control access with RBAC permissions.
 
 If you are a Grafana server admin, then you can view useful statistics about your Grafana server in the Stats & Licensing tab.
 
-> **Note:** Only Grafana server administrators can access the **Server Admin** menu. For more information about about administrative permissions, refer to [Roles and permissions]({{< relref "../roles-and-permissions#grafana-server-administrators" >}}).
+> **Note:** Only Grafana server administrators can access the **Server Admin** menu. For more information about about administrative permissions, refer to [Roles and permissions](../roles-and-permissions/#grafana-server-administrators).
 
 ### View server stats
 

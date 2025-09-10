@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 title: Field overrides options
 comments: |
   This file is used in the following visualizations: bar chart, bar gauge, candlestick, canvas, gauge, geomap, heatmap, histogram, pie chart, stat, state timeline, status history, table, time series, trend, xy chart
@@ -16,4 +26,4 @@ Choose from the following override options:
 | Fields returned by query       | Select all fields returned by a specific query, such as A, B, or C.                                           |
 | Fields with values             | Select all fields returned by your defined reducer condition, such as **Min**, **Max**, **Count**, **Total**. |
 
-To learn more, refer to [Configure field overrides](../../configure-overrides/).
+To learn more, refer to [Configure field overrides](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/panels-visualizations/configure-overrides/).

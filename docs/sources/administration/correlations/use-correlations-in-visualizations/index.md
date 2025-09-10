@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 labels:
   products:
     - enterprise
@@ -27,7 +37,7 @@ weight: 70
 1. Open Explore.
 1. Select a data source that you chose as the source data source of the correlation.
 1. Run a query that results in data containing fields required to build variables in the target query.
-1. Links are added to cell rows in the column representing the field with the assigned link ([the results field]({{< relref "../correlation-configuration#source-data-source-and-result-field" >}}).
+1. Links are added to cell rows in the column representing the field with the assigned link ([the results field](../correlation-configuration/#source-data-source-and-result-field).
 1. Cells containing multiple links accessible with a context menu.
 
    {{< figure src="/static/img/docs/correlations/correlations-in-table-10-0.png" max-width="600px" caption="Correlations links in table" >}}

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 description: Multiple providers with Keycloak
 keywords:
   - grafana
@@ -82,9 +92,9 @@ To authenticate with Azure AD, the Keycloak application needs a client ID and cl
    1. Paste the client secret you created in the previous step in the **Client secret** field.
    1. Click Add.
 
-{{% admonition type="note" %}}
+{{< admonition type="note" >}}
 Up to this point, you have created an App Registration in Azure AD, assigned users to the application, created credentials for the application, and configured the application in Keycloak. In the Keycloak Client's section, the client with ID `account` Home URL can be used to test the configuration. This will open a new tab where you can login into the correct Keycloak realm with the Azure AD tenant you just configured.
-{{% /admonition %}}
+{{< /admonition >}}
 
 Repeat this steps, for every Azure AD tenant you want to configure in Keycloak.
 

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 description: Feature and improvement highlights for Grafana v10.3
 keywords:
   - grafana
@@ -34,9 +44,9 @@ For Grafana v10.3, we've also provided a list of [breaking changes](https://graf
 <!-- Name of contributor -->
 <!--_[Generally available | Available in private/public preview | Experimental] in Grafana [Open Source, Enterprise, all editions of Grafana, some combination of self-managed and Cloud]_
 Description. Include an overview of the feature and problem it solves, and where to learn more (like a link to the docs).
-{{% admonition type="note" %}}
+{{< admonition type="note" >}}
 Use full URLs for links. When linking to versioned docs, replace the version with the version interpolation placeholder (for example, <GRAFANA_VERSION>, <TEMPO_VERSION>, <MIMIR_VERSION>) so the system can determine the correct set of docs to point to. For example, "https://grafana.com/docs/grafana/latest/administration/" becomes "https://grafana.com/docs/grafana/<GRAFANA_VERSION>/administration/".
-{{% /admonition %}}
+{{< /admonition >}}
 
 <!--Add an image, GIF or video  as below-->
 
@@ -135,9 +145,9 @@ To try out the new tooltips, enable the `newVizTooltips` [feature toggle](https:
 - XY Chart
 - and more coming soon!
 
-{{% admonition type="note" %}}
+{{< admonition type="note" >}}
 As this is an ongoing project, the dashboard shared cursor and annotations features are not yet fully supported.
-{{% /admonition %}}
+{{< /admonition >}}
 
 {{< youtube id="0Rp6FYfHu6Q" >}}
 
@@ -328,11 +338,11 @@ _Generally available in Grafana Enterprise, Grafana Cloud Advanced and Cloud Pro
 
 Introducing query caching for async queries in the Athena and Redshift data source plugins. We previously introduced async queries for the Athena and Redshift plugins, and this feature adds support for caching those queries. To use this, you must have query caching enabled for the Athena or Redshift data source you wish to cache. This feature was previously available behind a feature toggle and is now generally available and enabled by default.
 
-{{% admonition type="note" %}}
+{{< admonition type="note" >}}
 
 The `useCachingService` feature toggle must also be enabled to use this feature.
 
-{{% /admonition %}}
+{{< /admonition >}}
 
 ### Loki data source improvements: "or" filter syntax, filter by label types, derived fields by labels
 

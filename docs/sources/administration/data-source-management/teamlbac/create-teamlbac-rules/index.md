@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 description: Learn how to create LBAC for data sources rules for a supported data source.
 keywords:
   - loki
@@ -16,8 +26,6 @@ weight: 250
 LBAC for data sources is available for LBAC-supported data sources created with basic authentication. As of today, managed/provisioned data source can **NOT** be configured with LBAC rules.
 
 ## Before you begin
-
-To be able to use LBAC for data sources rules, you need to enable the feature toggle `teamHttpHeaders` on your Grafana instance. Contact support to enable the feature toggle for you.
 
 - Be sure that you have the permission setup to create a Loki tenant in Grafana Cloud.
 - Be sure that you have admin data source permissions for Grafana.

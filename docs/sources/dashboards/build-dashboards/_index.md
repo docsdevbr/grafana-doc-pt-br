@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 keywords:
   - grafana
   - dashboard
@@ -28,7 +38,3 @@ refs:
 This section includes the following topics:
 
 {{< section >}}
-
-## Dynamic dashboards
-
-You can create more interactive and dynamic dashboards by adding and using [variables](ref:variables). Instead of hard-coding things like server, application, and sensor names in your metric queries, you can use variables in their place. Read more about variables [here](ref:variables).

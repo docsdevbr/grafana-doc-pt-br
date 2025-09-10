@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 aliases:
   - ../../data-sources/tempo/query-editor/
 description: Guide for using the Tempo data source's query editor
@@ -61,7 +71,7 @@ The queries use [TraceQL](/docs/tempo/latest/traceql), the query language design
 For general documentation on querying data sources in Grafana, refer to [Query and transform data](ref:query-transform-data).
 
 {{< admonition type="tip" >}}
-Don't know TraceQL? Try [Explore Traces](ref:explore-traces-app), an intuitive, queryless app that lets you explore your tracing data using RED metrics.
+Don't know TraceQL? Try [Grafana Traces Drilldown](ref:explore-traces-app), an intuitive, queryless app that lets you explore your tracing data using RED metrics.
 {{< /admonition >}}
 
 ## Before you begin
@@ -97,7 +107,7 @@ The three query types are:
 The **Search** query builder provides drop-down lists and text fields to help you write a query.
 The query builder is ideal for people who aren't familiar with or want to learn TraceQL.
 
-Refer to the [Search using the TraceQL query builder documentation]({{< relref "./traceql-search" >}}) to learn more about creating queries using convenient drop-down menus.
+Refer to the [Search using the TraceQL query builder documentation](traceql-search/) to learn more about creating queries using convenient drop-down menus.
 
 ![The Search query builder](/media/docs/grafana/data-sources/tempo/query-editor/tempo-ds-query-search-v11.png)
 

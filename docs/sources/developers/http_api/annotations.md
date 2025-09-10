@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 aliases:
   - ../../http_api/annotations/
 canonical: /docs/grafana/latest/developers/http_api/annotations/
@@ -22,7 +32,7 @@ title: Annotations HTTP API
 
 Annotations are saved in the Grafana database (sqlite, mysql or postgres). Annotations can be organization annotations that can be shown on any dashboard by configuring an annotation data source - they are filtered by tags. Or they can be tied to a panel on a dashboard and are then only shown on that panel.
 
-> If you are running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions]({{< relref "/docs/grafana/latest/administration/roles-and-permissions/access-control/custom-role-actions-scopes" >}}) for more information.
+> If you are running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions](/docs/grafana/latest/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for more information.
 
 ## Find Annotations
 
@@ -30,7 +40,7 @@ Annotations are saved in the Grafana database (sqlite, mysql or postgres). Annot
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#annotations-api" >}}) for an explanation.
+See note in the [introduction](#annotations-api) for an explanation.
 
 <!-- prettier-ignore-start -->
 | Action             | Scope                                                                                                                                                        |
@@ -54,7 +64,7 @@ Query Parameters:
 - `to`: epoch datetime in milliseconds. Optional.
 - `limit`: number. Optional - default is 100. Max limit for results returned.
 - `alertId`: number. Optional. Find annotations for a specified alert.
-- `dashboardId`: number. Optional. Find annotations that are scoped to a specific dashboard
+- `dashboardId`: Deprecated. Use dashboardUID instead.
 - `dashboardUID`: string. Optional. Find annotations that are scoped to a specific dashboard, when dashboardUID presents, dashboardId would be ignored.
 - `panelId`: number. Optional. Find annotations that are scoped to a specific panel
 - `userId`: number. Optional. Find annotations created by a specific user
@@ -113,7 +123,7 @@ Content-Type: application/json
 
 ## Create Annotation
 
-Creates an annotation in the Grafana database. The `dashboardId` and `panelId` fields are optional.
+Creates an annotation in the Grafana database. The `dashboardUid` and `panelId` fields are optional.
 If they are not specified then an organization annotation is created and can be queried in any dashboard that adds
 the Grafana annotations data source. When creating a region annotation include the timeEnd property.
 
@@ -123,7 +133,7 @@ The format for `time` and `timeEnd` should be epoch numbers in millisecond resol
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#annotations-api" >}}) for an explanation.
+See note in the [introduction](#annotations-api) for an explanation.
 
 <!-- prettier-ignore-start -->
 | Action               | Scope                                                                                                                                                        |
@@ -178,7 +188,7 @@ format (string with multiple tags being separated by a space).
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#annotations-api" >}}) for an explanation.
+See note in the [introduction](#annotations-api) for an explanation.
 
 | Action               | Scope                           |
 | -------------------- | ------------------------------- |
@@ -219,7 +229,7 @@ Updates all properties of an annotation that matches the specified id. To only u
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#annotations-api" >}}) for an explanation.
+See note in the [introduction](#annotations-api) for an explanation.
 
 <!-- prettier-ignore-start -->
 | Action              | Scope                                                                                                                                                        |
@@ -265,7 +275,7 @@ This operation currently supports updating of the `text`, `tags`, `time` and `ti
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#annotations-api" >}}) for an explanation.
+See note in the [introduction](#annotations-api) for an explanation.
 
 <!-- prettier-ignore-start -->
 | Action              | Scope                                                                                                                                                        |
@@ -307,7 +317,7 @@ Deletes the annotation that matches the specified id.
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#annotations-api" >}}) for an explanation.
+See note in the [introduction](#annotations-api) for an explanation.
 
 <!-- prettier-ignore-start -->
 | Action               | Scope                                                                                                                                                        |
@@ -344,7 +354,7 @@ Find all the event tags created in the annotations.
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#annotations-api" >}}) for an explanation.
+See note in the [introduction](#annotations-api) for an explanation.
 
 | Action             | Scope |
 | ------------------ | ----- |

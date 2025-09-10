@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 aliases:
   - ../../http_api/datasource_lbac_rules/
 canonical: /docs/grafana/latest/developers/http_api/datasource_lbac_rules/
@@ -19,8 +29,6 @@ title: Datasource LBAC rules HTTP API
 ---
 
 # Data Source LBAC rules API
-
-> The Data Source LBAC rules are only available in Grafana Cloud. Only cloud loki data sources are supported.
 
 LBAC (Label-Based Access Control) rules can be set for teams.
 

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 title: Value mappings options
 comments: |
   This file is used in the following visualizations: bar chart, bar gauge, candlestick, canvas, gauge, geomap, histogram, pie chart, stat, state timeline, status history, table, time series, trend
@@ -17,4 +27,4 @@ For each value mapping, set the following options:
 - **Color** (Optional)
 - **Icon** (Canvas only)
 
-To learn more, refer to [Configure value mappings](../../configure-value-mappings/).
+To learn more, refer to [Configure value mappings](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/panels-visualizations/configure-value-mappings/).

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 aliases:
   - ../../enterprise/activate-aws-marketplace-license/about-ge-license-through-aws/
   - ../../enterprise/license/activate-aws-marketplace-license/
@@ -30,7 +40,7 @@ You can deploy Grafana Enterprise in the following ways:
 - Using AWS services like ECS, EKS or EC2.
 - In an instance outside AWS.
 
-In each case, you must activate the Grafana Enterprise license purchased in AWS Marketplace to take advantage of Grafana Enterprise observability features. Grafana Enterprise licenses purchased through AWS Marketplace are subject to the same [restrictions]({{< relref "../#license-restrictions" >}}) as Grafana Enterprise licensed purchased directly from Grafana Labs.
+In each case, you must activate the Grafana Enterprise license purchased in AWS Marketplace to take advantage of Grafana Enterprise observability features. Grafana Enterprise licenses purchased through AWS Marketplace are subject to the same [restrictions](../#license-restrictions) as Grafana Enterprise licensed purchased directly from Grafana Labs.
 
 > To purchase a license directly from Grafana Labs or learn more about other Grafana offerings, [Contact a Grafana Labs representative](/contact?about=grafana-enterprise).
 

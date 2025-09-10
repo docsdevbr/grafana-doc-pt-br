@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 headless: true
 comments: |
   This file is used in the following files: developers/http_api/{_index.md,authentication.md}
@@ -21,7 +31,7 @@ curl http://admin:admin@localhost:3000/api/org
 ### Service account token
 
 To create a service account token, click on **Administration** in the left-side menu, click **Users and access**, then **Service Accounts**.
-For more information on how to use service account tokens, refer to the [Service Accounts]({{< relref "../../administration/service-accounts/" >}}) documentation.
+For more information on how to use service account tokens, refer to the [Service Accounts](/docs/grafana/<GRAFANA_VERSION>/administration/service-accounts/) documentation.
 
 You use the token in all requests in the `Authorization` header, like this:
 

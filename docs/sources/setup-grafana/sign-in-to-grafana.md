@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 description: Learn how to sign in to Grafana
 labels:
   products:
@@ -14,13 +24,13 @@ This topic describes how to sign in to Grafana.
 
 ## Before you begin
 
-- [Install Grafana]({{< relref "./installation" >}})
+- [Install Grafana](../installation/)
 
 ## Steps
 
 To sign in to Grafana for the first time, follow these steps:
 
-1. Open your web browser and go to root URL specified in [Grafana configuration file]({{< relref "./configure-grafana" >}}).
+1. Open your web browser and go to root URL specified in [Grafana configuration file](../configure-grafana/).
 
    Unless you have configured Grafana differently, it is set to use `http://localhost:3000` by default.
 

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 labels:
   products:
     - enterprise
@@ -15,7 +25,7 @@ Make sure you have permission to add new correlations. Only users with write per
 
 ## Create a correlation in Explore's correlations editor
 
-To learn more, refer to Explore's [documentation]({{< relref "../../../explore/correlations-editor-in-explore" >}}) about building correlations in Explore.
+To learn more, refer to Explore's [documentation](../../../explore/correlations-editor-in-explore/) about building correlations in Explore.
 
 ## Create a correlation in Administration page
 
@@ -52,8 +62,8 @@ datasources:
       - targetUID: uid
         label: "test"
         description: "..."
+        type: query
         config:
-          type: "query"
           target:
             expr: "..."
           field: "name"
@@ -64,6 +74,14 @@ datasources:
               mapValue: "other"
             - type: logfmt
               field: "test"
+      - targetUID: uid2
+        label: "test 2"
+        description: "..."
+        type: external
+        config:
+          target:
+            url: "http://${example}"
+          field: "name"
 ```
 
 Description of provisioning properties:
@@ -77,11 +95,11 @@ Description of provisioning properties:
 **description**
 : Optional description
 
+**type**
+: Correlation type. Valid values are "query" for linking to a data source query and "external" for linking to an external URL.
+
 **config**
 : Config object
-
-**config.type**
-: Correlation type. “query” is the only supported type at the moment
 
 **config.target**
 : [Target query model](#determine-target-query-model-structure)

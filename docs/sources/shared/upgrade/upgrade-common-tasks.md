@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 labels:
   products:
     - enterprise
@@ -66,7 +76,6 @@ To upgrade Grafana installed using RPM or YUM complete the following steps:
    This enables you to upgrade Grafana without the risk of losing your configuration changes.
 
 1. Perform one of the following steps based on your installation.
-
    - If you [downloaded an RPM package](https://grafana.com/grafana/download) to install Grafana, then complete the steps documented in [Install Grafana on Red Hat, RHEL, or Fedora](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/setup-grafana/installation/redhat-rhel-fedora/) or [Install Grafana on SUSE or openSUSE](https://grafana.com/docs/grafana/<GRAFANA_VERSION>//setup-grafana/installation/suse-opensuse/) to upgrade Grafana.
    - If you used the Grafana YUM repository, run the following command:
 
@@ -90,9 +99,9 @@ To upgrade Grafana running in a Docker container, complete the following steps:
 
 1. Run a commands similar to the following commands.
 
-   {{% admonition type="note" %}}
+   {{< admonition type="note" >}}
    This is an example. The parameters you enter depend on how you configured your Grafana container.
-   {{% /admonition %}}
+   {{< /admonition >}}
 
    ```bash
    docker pull grafana/grafana

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 aliases:
   - ../../reference/dashboard/
   - ../json-model/
@@ -39,9 +49,9 @@ To view the JSON of a dashboard:
 
 When a user creates a new dashboard, a new dashboard JSON object is initialized with the following fields:
 
-{{% admonition type="note" %}}
+{{< admonition type="note" >}}
 In the following JSON, id is shown as null which is the default value assigned to it until a dashboard is saved. Once a dashboard is saved, an integer value is assigned to the `id` field.
-{{% /admonition %}}
+{{< /admonition >}}
 
 ```json
 {

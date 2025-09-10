@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 aliases:
   - ../../http_api/licensing/
 canonical: /docs/grafana/latest/developers/http_api/licensing/
@@ -19,7 +29,7 @@ title: Licensing HTTP API
 
 # Enterprise License API
 
-Licensing is only available in Grafana Enterprise. Read more about [Grafana Enterprise]({{< relref "/docs/grafana/latest/introduction/grafana-enterprise" >}}).
+Licensing is only available in Grafana Enterprise. Read more about [Grafana Enterprise](/docs/grafana/latest/introduction/grafana-enterprise/).
 
 {{< admonition type="caution" >}}
 You can't authenticate to the Licensing HTTP API with service account tokens.
@@ -31,7 +41,7 @@ To use these API endpoints you have to use Basic authentication and the Grafana 
 The `admin` user that Grafana is provisioned with by default has permissions to use these API endpoints.
 {{< /admonition >}}
 
-> If you are running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions]({{< relref "/docs/grafana/latest/administration/roles-and-permissions/access-control/custom-role-actions-scopes" >}}) for more information.
+> If you are running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions](/docs/grafana/latest/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for more information.
 
 ## Check license availability
 
@@ -43,7 +53,7 @@ Checks if a valid license is available.
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#enterprise-license-api" >}}) for an explanation.
+See note in the [introduction](#enterprise-license-api) for an explanation.
 
 | Action         | Scope |
 | -------------- | ----- |
@@ -75,9 +85,9 @@ Status codes:
 
 ## Add license
 
-{{% admonition type="note" %}}
+{{< admonition type="note" >}}
 Available in Grafana Enterprise v7.4+.
-{{% /admonition %}}
+{{< /admonition >}}
 
 `POST /api/licensing/token`
 
@@ -85,7 +95,7 @@ Applies a license to a Grafana instance.
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#enterprise-license-api" >}}) for an explanation.
+See note in the [introduction](#enterprise-license-api) for an explanation.
 
 | Action          | Scope |
 | --------------- | ----- |
@@ -112,22 +122,36 @@ Content-Type: application/json
 Content-Length: 357
 
 {
-  "jti":"2",
-  "iss":"https://grafana.com",
-  "sub":"https://play.grafana.org/"
-  "lid":"1",
-  "included_users":15,
-  "lic_exp_warn_days":30,
-  "tok_exp_warn_days":2,
-  "update_days":1,
-  "prod":["grafana-enterprise"],
-  "company":"Grafana Labs"
+"status":0,
+"jti":"",
+"iss":"",
+"sub":"",
+"iat":0,
+"exp":0,
+"nbf":0,
+"lexp":0,
+"lid":"",
+"limit_by":"",
+"included_users":0,
+"lic_exp_warn_days":0,
+"tok_exp_warn_days":0,
+"update_days":0,
+"prod":null,
+"company":"",
+"account":"",
+"slug":"",
+"usage_billing":false,
+"max_concurrent_user_sessions":0,
+"details_url":"",
+"trial":false,
+"trial_exp":0,
+"anonymousRatio":0
 }
 
 ```
 
-The response is a JSON blob available for debugging purposes. The
-available fields may change at any time without any prior notice.
+The response is a JSON blob with specific values intentionally not shown. The
+available fields may change at any time without any prior notice. Refer to [Check license availability](#check-license-availability) for information on using the API to check the status of your license.
 
 Status Codes:
 
@@ -137,9 +161,9 @@ Status Codes:
 
 ## Manually force license refresh
 
-{{% admonition type="note" %}}
+{{< admonition type="note" >}}
 Available in Grafana Enterprise v7.4+.
-{{% /admonition %}}
+{{< /admonition >}}
 
 `POST /api/licensing/token/renew`
 
@@ -147,7 +171,7 @@ Manually ask license issuer for a new token.
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#enterprise-license-api" >}}) for an explanation.
+See note in the [introduction](#enterprise-license-api) for an explanation.
 
 | Action          | Scope |
 | --------------- | ----- |
@@ -198,9 +222,9 @@ Status Codes:
 
 ## Remove license from database
 
-{{% admonition type="note" %}}
+{{< admonition type="note" >}}
 Available in Grafana Enterprise v7.4+.
-{{% /admonition %}}
+{{< /admonition >}}
 
 `DELETE /api/licensing/token`
 
@@ -208,7 +232,7 @@ Removes the license stored in the Grafana database.
 
 **Required permissions**
 
-See note in the [introduction]({{< ref "#enterprise-license-api" >}}) for an explanation.
+See note in the [introduction](#enterprise-license-api) for an explanation.
 
 | Action           | Scope |
 | ---------------- | ----- |

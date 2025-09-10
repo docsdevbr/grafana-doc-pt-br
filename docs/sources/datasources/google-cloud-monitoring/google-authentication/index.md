@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 aliases:
   - /docs/grafana/next/datasources/cloudmonitoring/
 description: Google authentication
@@ -68,3 +78,8 @@ When Grafana is running on a Google Compute Engine (GCE) virtual machine, Grafan
 - Allow access to the specified API scope.
 
 For more information about creating and enabling service accounts for GCE instances, refer to [enabling service accounts for instances in Google documentation](https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances).
+
+### Service account impersonation
+
+You can also configure the plugin to use [service account impersonation](https://cloud.google.com/iam/docs/service-account-impersonation).
+You need to ensure the service account used by this plugin has the `iam.serviceAccounts.getAccessToken` permission. This permission is in roles like the [Service Account Token Creator role](https://cloud.google.com/iam/docs/roles-permissions/iam#iam.serviceAccountTokenCreator) (roles/iam.serviceAccountTokenCreator). Also, the service account impersonated by this plugin needs [Monitoring Viewer](https://cloud.google.com/iam/docs/roles-permissions/monitoring#monitoring.viewer).

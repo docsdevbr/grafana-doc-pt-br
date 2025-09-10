@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 aliases:
   - ../../http_api/folder_dashboard_search/
 canonical: /docs/grafana/latest/developers/http_api/folder_dashboard_search/
@@ -24,7 +34,7 @@ title: Folder/Dashboard Search HTTP API
 
 `GET /api/search/`
 
-> Note: When using [Role-based access control]({{< relref "/docs/grafana/latest/administration/roles-and-permissions/access-control" >}}), search results will contain only dashboards and folders which you have access to.
+> Note: When using [Role-based access control](/docs/grafana/latest/administration/roles-and-permissions/access-control/), search results will contain only dashboards and folders which you have access to.
 
 Query parameters:
 
@@ -58,6 +68,7 @@ Content-Type: application/json
   {
     "id": 163,
     "uid": "000000163",
+    "orgId": 1,
     "title": "Folder",
     "url": "/dashboards/f/000000163/folder",
     "type": "dash-folder",
@@ -68,6 +79,7 @@ Content-Type: application/json
   {
     "id":1,
     "uid": "cIBgcSjkk",
+    "orgId": 1,
     "title":"Production Overview",
     "url": "/d/cIBgcSjkk/production-overview",
     "type":"dash-db",
@@ -97,6 +109,7 @@ Content-Type: application/json
   {
     "id":1,
     "uid": "cIBgcSjkk",
+    "orgId": 1,
     "title":"Production Overview",
     "url": "/d/cIBgcSjkk/production-overview",
     "type":"dash-db",

@@ -1,4 +1,14 @@
 ---
+# Copyright (c) 2025 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
 aliases:
   - ../data-sources/testdata/
   - ../features/datasources/testdata/
@@ -120,19 +130,15 @@ That makes it much easier for the developers to replicate and solve your issue.
 
 ## Use a custom version of TestData
 
-{{% admonition type="note" %}}
+{{< admonition type="note" >}}
 This feature is experimental and requires Grafana version 10.3.0 or later.
-{{% /admonition %}}
+{{< /admonition >}}
 
 If you want to use a version of TestData different from the one shipped with Grafana, follow these steps:
 
-1. Enable the [feature toggle](https://grafana.com/docs/grafana/latest/setup-grafana/configure-grafana/feature-toggles/) `externalCorePlugins`.
 1. Set the configuration field `as_external` for the plugin to `true`. An example configuration would be:
 
    ```ini
-   [feature_toggles]
-   externalCorePlugins = true
-
    [plugin.grafana-testdata-datasource]
    as_external = true
    ```
