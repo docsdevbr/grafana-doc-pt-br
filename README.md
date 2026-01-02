@@ -1,12 +1,12 @@
-# [ grafana-doc-pt-br][page]
+# [grafana-doc-pt-br][page]
 
 [![Arquivo README em inglês][badge-readme-en]][readme-en]
 [![Arquivo README em português brasileiro][badge-readme-pt-br]][readme-pt-br]
-[![Licença: AGPL-3.0][badge-license]][license-gnu]
+[![Licença: AGPL-3.0][badge-license]][license]
 [![Pessoas contribuidoras][badge-contributors]][contributors]
 [![GitHub Sponsors][badge-github-sponsors]][github-sponsors]
 
-Tradução da Documentação do Grafana para português brasileiro.
+Tradução da documentação do Grafana para português brasileiro.
 
 ## Contribuindo
 
@@ -22,18 +22,18 @@ comunidade.
 
 ## Apoio
 
-Você pode apoiar o projeto através do [GitHub Sponsors][github-sponsors] ou
-[Pix][sponsor].
+Visite nossa [página para pessoas apoiadoras][sponsor] para saber como você pode
+apoiar o projeto.
 
 ## Licença
 
-Copyright (c) 2025 Grafana Labs.<br>
+Copyright (c) 2026 Grafana Labs.<br/>
 Grafana e o logotipo Grafana são marcas registradas de propriedade da Raintank,
 Inc. dba Grafana Labs.
 
 Documentação licenciada sob a
-[Licença Pública Geral GNU Affero Versão 3][license-gnu].<br>
-Para exceções de licença, consulte [LICENSING][license-apache].<br>
+[Licença Pública Geral GNU Affero Versão 3][license].<br/>
+Para exceções de licença, consulte [LICENSING][licensing].<br/>
 A obra original foi traduzida do inglês para o português brasileiro.
 
 [badge-contributors]: https://img.shields.io/github/contributors/docsdevbr/grafana-doc-pt-br
@@ -46,19 +46,19 @@ A obra original foi traduzida do inglês para o português brasileiro.
 
 [badge-readme-pt-br]: https://img.shields.io/badge/lang-pt--br-blue
 
-[code-of-conduct]: https://github.com/docsdevbr/.github/blob/main/CODE_OF_CONDUCT.EN.md
+[code-of-conduct]: https://github.com/docsdevbr/.github/blob/main/CODE_OF_CONDUCT.md
 
-[contributing]: https://github.com/docsdevbr/.github/blob/main/CONTRIBUTING.EN.md
+[contributing]: https://github.com/docsdevbr/.github/blob/main/CONTRIBUTING.md
 
 [contributors]: https://github.com/docsdevbr/grafana-doc-pt-br/graphs/contributors
 
 [github-sponsors]: https://github.com/sponsors/docsdevbr
 
-[license-gnu]: LICENSE
+[license]: LICENSE
 
-[license-apache]: https://github.com/grafana/grafana/blob/HEAD/LICENSING.md
+[licensing]: https://github.com/grafana/grafana/blob/HEAD/LICENSING.md
 
-[page]: https://pt.docs.dev.br/p/grafana/
+[page]: https://pt.docs.dev.br/tech/g/grafana/
 
 [readme-en]: README.EN.md
 

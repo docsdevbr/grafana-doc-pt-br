@@ -1,13 +1,13 @@
 ---
-# Copyright (c) 2025 Grafana Labs.
+# Copyright (c) 2026 Grafana Labs.
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
-
-# Documentation licensed under the GNU Affero General Public License.
+#
+# Documentation licensed under the GNU Affero General Public License Version 3.
 # For license exceptions, see LICENSING.md.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/grafana/grafana/blob/main/LICENSE
-# https://github.com/grafana/grafana/blob/main/LICENSING.md
+# https://github.com/grafana/grafana/blob/-/LICENSE
+# https://github.com/grafana/grafana/blob/-/LICENSING.md
 
 canonical: https://grafana.com/docs/grafana/latest/alerting/set-up/configure-alert-state-history/
 description: Configure alert state history to explore the behavior of your alert rules
@@ -72,6 +72,9 @@ The following steps describe a basic configuration:
 
    # The URL of the Loki server
    loki_remote_url = http://localhost:3100
+
+   [feature_toggles]
+   enable = alertingCentralAlertHistory
    ```
 
 1. **Configure the Loki data source in Grafana**

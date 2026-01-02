@@ -1,13 +1,13 @@
 ---
-# Copyright (c) 2025 Grafana Labs.
+# Copyright (c) 2026 Grafana Labs.
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
-
-# Documentation licensed under the GNU Affero General Public License.
+#
+# Documentation licensed under the GNU Affero General Public License Version 3.
 # For license exceptions, see LICENSING.md.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/grafana/grafana/blob/main/LICENSE
-# https://github.com/grafana/grafana/blob/main/LICENSING.md
+# https://github.com/grafana/grafana/blob/-/LICENSE
+# https://github.com/grafana/grafana/blob/-/LICENSING.md
 
 aliases:
   - ../basics/glossary/
@@ -92,6 +92,11 @@ This topic lists words and abbreviations that are commonly used in the Grafana d
     <td>
       A commonly-used visualization that displays data as points, lines, or bars.
     </td>
+  </tr>
+  <tr>
+    <td style="vertical-align: top"><code>grafanactl</code></td>
+    <td>
+      A command-line tool that enables users to authenticate, manage multiple environments, and perform administrative tasks through Grafana's REST API.
   </tr>
   <tr>
     <td style="vertical-align: top">mixin</td>

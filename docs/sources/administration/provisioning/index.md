@@ -1,13 +1,13 @@
 ---
-# Copyright (c) 2025 Grafana Labs.
+# Copyright (c) 2026 Grafana Labs.
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
-
-# Documentation licensed under the GNU Affero General Public License.
+#
+# Documentation licensed under the GNU Affero General Public License Version 3.
 # For license exceptions, see LICENSING.md.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/grafana/grafana/blob/main/LICENSE
-# https://github.com/grafana/grafana/blob/main/LICENSING.md
+# https://github.com/grafana/grafana/blob/-/LICENSE
+# https://github.com/grafana/grafana/blob/-/LICENSING.md
 
 aliases:
   - ../installation/provisioning/
@@ -21,7 +21,8 @@ labels:
     - enterprise
     - oss
 title: Provision Grafana
-weight: 600
+menuTitle: Provision Grafana
+weight: 4100
 ---
 
 # Provision Grafana
@@ -263,6 +264,7 @@ Common settings in the [built-in core data sources](../../datasources/#built-in-
 | `incrementalQuerying`           | string  | Prometheus                                                       | Experimental: Turn on incremental querying to enhance dashboard reload performance with slow data sources                                                                                                                                                                                     |
 | `incrementalQueryOverlapWindow` | string  | Prometheus                                                       | Experimental: Configure incremental query overlap window. Requires a valid duration string, for example, `180s` or `15m` Default value is `10m` (10 minutes).                                                                                                                                 |
 | `disableRecordingRules`         | boolean | Prometheus                                                       | Experimental: Turn off Prometheus recording rules                                                                                                                                                                                                                                             |
+| `seriesEndpoint`                | boolean | Prometheus                                                       | Using Prometheus `/api/v1/series` endpoint                                                                                                                                                                                                                                                    |
 | `implementation`                | string  | Alertmanager                                                     | The implementation of the Alertmanager data source, such as `prometheus`, `cortex` or `mimir`                                                                                                                                                                                                 |
 | `handleGrafanaManagedAlerts`    | boolean | Alertmanager                                                     | When enabled, Grafana-managed alerts are sent to this Alertmanager                                                                                                                                                                                                                            |
 
@@ -384,6 +386,58 @@ providers:
 ```
 
 When Grafana starts, it updates or creates all dashboards found in the configured path.
+These files can define the dashboard using the dashboard JSON:
+
+```json
+{
+  "dashboard": {
+    "id": null,
+    "uid": "example-dashboard",
+    "title": "Production Overview",
+    "tags": ["production", "monitoring"],
+    "timezone": "browser",
+    "schemaVersion": 16,
+    "version": 0,
+    "refresh": "30s"
+  },
+  "folderUid": "monitoring-folder",
+  "overwrite": true
+}
+```
+
+Or using a Kubernetes format, for example `kubernetes-dashboard.json`:
+
+```json
+{
+  "kind": "Dashboard",
+  "apiVersion": "dashboard.grafana.app/v1beta1",
+  "metadata": {
+    "name": "dashboard-uid"
+  },
+  "spec": {
+    "title": "Dashboard title",
+    "panels": [
+      {
+        "gridPos": {
+          "h": 13,
+          "w": 24,
+          "x": 0,
+          "y": 0
+        },
+        "options": {
+          "content": "<div><h1>Example panel</h1></div>",
+          "mode": "html"
+        },
+        "transparent": true,
+        "type": "text"
+      }
+    ]
+  }
+}
+```
+
+You _must_ use the Kubernetes resource format to provision dashboards v2 / dynamic dashboards.
+
 It later polls that path every `updateIntervalSeconds` for updates to the dashboard files and updates its database.
 
 {{< admonition type="note" >}}
@@ -613,14 +667,6 @@ Grafana encrypts secure settings in the database.
 | ------------- | -------------- |
 | `singleEmail` |                |
 | `addresses`   |                |
-
-#### Alert notification `hipchat`
-
-| Name     | Secure setting |
-| -------- | -------------- |
-| `url`    |                |
-| `apikey` |                |
-| `roomid` |                |
 
 #### Alert notification `opsgenie`
 

@@ -1,13 +1,13 @@
 ---
-# Copyright (c) 2025 Grafana Labs.
+# Copyright (c) 2026 Grafana Labs.
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
-
-# Documentation licensed under the GNU Affero General Public License.
+#
+# Documentation licensed under the GNU Affero General Public License Version 3.
 # For license exceptions, see LICENSING.md.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/grafana/grafana/blob/main/LICENSE
-# https://github.com/grafana/grafana/blob/main/LICENSING.md
+# https://github.com/grafana/grafana/blob/-/LICENSE
+# https://github.com/grafana/grafana/blob/-/LICENSING.md
 
 canonical: https://grafana.com/docs/grafana/latest/alerting/fundamentals/notifications/group-alert-notifications/
 description: Learn about how notification policies group alert notifications
@@ -169,7 +169,9 @@ Once the first notification has been sent for a new group of alerts, the group i
 
 When the group interval timer elapses, the system resets the group interval timer and sends a notification only if there were group changes. This process repeats until there are no more alerts.
 
-It's important to note that an alert instance exits the group after being resolved and notified of its state change. When no alerts remain, the group is deleted, and then the group wait timer handles the first notification for the next incoming alert once again.
+It's important to note that an alert instance exits the group after being resolved and notified of its state change.
+
+When the group interval timer elapses and no alerts remain, the group is deleted. The [group wait timer](#group-wait) will then start again the next time a new alert arrives.
 
 ### Repeat interval
 

@@ -1,13 +1,13 @@
 ---
-# Copyright (c) 2025 Grafana Labs.
+# Copyright (c) 2026 Grafana Labs.
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
-
-# Documentation licensed under the GNU Affero General Public License.
+#
+# Documentation licensed under the GNU Affero General Public License Version 3.
 # For license exceptions, see LICENSING.md.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/grafana/grafana/blob/main/LICENSE
-# https://github.com/grafana/grafana/blob/main/LICENSING.md
+# https://github.com/grafana/grafana/blob/-/LICENSE
+# https://github.com/grafana/grafana/blob/-/LICENSING.md
 
 aliases:
   - ../administration/image_rendering/
@@ -41,6 +41,12 @@ You can also render a PNG by hovering over the panel to display the actions menu
 Alert notifications can include images, but rendering many images at the same time can overload the server where the renderer is running. For instructions of how to configure this, see [max_concurrent_screenshots](../configure-grafana/#max_concurrent_screenshots).
 
 ## Install Grafana Image Renderer plugin
+
+{{< admonition type="caution" >}}
+Starting with Grafana v12.2, the Grafana Image Renderer plugin is deprecated and is no longer maintained.
+
+Instead, use the Grafana Image Renderer remote rendering service.
+{{< /admonition >}}
 
 {{< admonition type="note" >}}
 All PhantomJS support has been removed. Instead, use the Grafana Image Renderer plugin or remote rendering service.

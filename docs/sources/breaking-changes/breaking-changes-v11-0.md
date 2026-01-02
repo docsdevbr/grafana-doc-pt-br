@@ -1,13 +1,13 @@
 ---
-# Copyright (c) 2025 Grafana Labs.
+# Copyright (c) 2026 Grafana Labs.
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
-
-# Documentation licensed under the GNU Affero General Public License.
+#
+# Documentation licensed under the GNU Affero General Public License Version 3.
 # For license exceptions, see LICENSING.md.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/grafana/grafana/blob/main/LICENSE
-# https://github.com/grafana/grafana/blob/main/LICENSING.md
+# https://github.com/grafana/grafana/blob/-/LICENSE
+# https://github.com/grafana/grafana/blob/-/LICENSING.md
 
 description: Breaking changes for Grafana v11.0
 keywords:
@@ -67,7 +67,7 @@ In Grafana v11, support for the deprecated AngularJS framework is turned off by 
 
 #### Migration/mitigation
 
-To avoid disruption, ensure all plugins are up to date and migrate from any remaining AngularJS plugins to a React-based alternative. If a plugin relies on AngularJS, a warning icon and message will be displayed in the [plugins catalog](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/administration/plugin-management/#plugin-catalog) in Grafana and any dashboard panel where it's used. Additionally, a warning banner will appear in any impacted dashboards. A list of all impacted dashboards can also be generated using the [`detect-angular-dashboards`](https://github.com/grafana/detect-angular-dashboards) tool.
+To avoid disruption, ensure all plugins are up to date and migrate from any remaining AngularJS plugins to a React-based alternative. If a plugin relies on AngularJS, a warning icon and message will be displayed in the [plugins catalog](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/administration/plugin-management/#access-the-plugin-catalog) in Grafana and any dashboard panel where it's used. Additionally, a warning banner will appear in any impacted dashboards. A list of all impacted dashboards can also be generated using the [`detect-angular-dashboards`](https://github.com/grafana/detect-angular-dashboards) tool.
 
 Our [documentation](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/developers/angular_deprecation/angular-plugins/) lists all known public plugins and provides migration advice when possible.
 
@@ -91,7 +91,7 @@ Turn off anonymous access, and consider using public dashboards to allow view-on
 
 #### Learn more
 
-[Anonymous access documentation](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-security/configure-authentication/grafana/#anonymous-authentication)
+[Anonymous access documentation](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-access/configure-authentication/grafana/#anonymous-authentication)
 
 ### Legacy alerting is entirely removed
 

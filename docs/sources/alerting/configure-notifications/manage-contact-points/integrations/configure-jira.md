@@ -1,13 +1,13 @@
 ---
-# Copyright (c) 2025 Grafana Labs.
+# Copyright (c) 2026 Grafana Labs.
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
-
-# Documentation licensed under the GNU Affero General Public License.
+#
+# Documentation licensed under the GNU Affero General Public License Version 3.
 # For license exceptions, see LICENSING.md.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/grafana/grafana/blob/main/LICENSE
-# https://github.com/grafana/grafana/blob/main/LICENSING.md
+# https://github.com/grafana/grafana/blob/-/LICENSE
+# https://github.com/grafana/grafana/blob/-/LICENSING.md
 
 canonical: https://grafana.com/docs/grafana/latest/alerting/configure-notifications/manage-contact-points/integrations/configure-jira/
 description: Configure the Jira integration to receive notifications when your alerts are firing
@@ -61,7 +61,7 @@ For more details on contact points, including how to test them and enable notifi
 
 | Key                 | Description                                                                                                                                                                                                                            |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| URL                 | The URL of the REST API of your Jira instance. Supported versions: `2` and `3` (e.g., `https://your-domain.atlassian.net/rest/api/3`).                                                                                                 |
+| URL                 | The URL of the REST API of your Jira instance. Supported versions: `2` and `3` (e.g., `https://your-domain.atlassian.net/rest/api/3`). This field is [protected](ref:configure-contact-points) from modification in Grafana Cloud.     |
 | Basic Auth User     | Username for authentication. For Jira Cloud, use your email address.                                                                                                                                                                   |
 | Basic Auth Password | Password or personal token. For Jira Cloud, you need to obtain a personal token [here](https://id.atlassian.com/manage-profile/security/api-tokens) and use it as the password.                                                        |
 | API Token           | An alternative to basic authentication, a bearer token is used to authorize the API requests. See [Jira documentation](https://confluence.atlassian.com/enterprise/using-personal-access-tokens-1026032365.html) for more information. |

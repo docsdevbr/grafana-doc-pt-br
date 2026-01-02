@@ -1,13 +1,13 @@
 ---
-# Copyright (c) 2025 Grafana Labs.
+# Copyright (c) 2026 Grafana Labs.
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
-
-# Documentation licensed under the GNU Affero General Public License.
+#
+# Documentation licensed under the GNU Affero General Public License Version 3.
 # For license exceptions, see LICENSING.md.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/grafana/grafana/blob/main/LICENSE
-# https://github.com/grafana/grafana/blob/main/LICENSING.md
+# https://github.com/grafana/grafana/blob/-/LICENSE
+# https://github.com/grafana/grafana/blob/-/LICENSING.md
 
 canonical: https://grafana.com/docs/grafana/latest/alerting/best-practices/
 description: This section provides a set of guides for useful alerting practices and recommendations
@@ -56,5 +56,12 @@ Designing and configuring an alert management set up that works takes time. Here
 - Avoid noisy, unnecessary alerts by using silences, mute timings, or pausing alert rule evaluation.
 - Continually tune your alert rules to review effectiveness. Remove alert rules to avoid duplication or ineffective alerts.
 - Continually review your thresholds and evaluation rules.
+
+**How should you configure recording rules?**
+
+- Use frequent evaluation intervals. It is recommended to set a frequent evaluation interval for recording rules. Long intervals, such as an hour, can cause the recorded metric to be stale and lead to misaligned alert rule evaluations, especially when combined with a long pending period.
+- Understand query types. Grafana Alerting uses both **Instant** and **Range** queries. Instant queries fetch a single data point, while Range queries fetch a series of data points over time. When using a Range query in an alert condition, you must use a Reduce expression to aggregate the series into a single value.
+- Align alert evaluation with recording frequency. The evaluation interval of an alert rule that depends on a recorded metric should be aligned with the recording rule's interval. If a recording rule runs every 3 minutes, the alert rule should also be evaluated at a similar frequency to ensure it acts on fresh data.
+- Use `_over_time` functions for instant queries. Since all alert rules are ultimately executed as an instant query, you can use functions like `max_over_time(my_metric[1h])` as an instant query. This allows you to get an aggregated value over a period without using a range query and a reduce expression.
 
 {{< /shared >}}

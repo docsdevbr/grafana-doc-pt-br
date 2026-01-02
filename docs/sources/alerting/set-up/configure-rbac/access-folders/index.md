@@ -1,13 +1,13 @@
 ---
-# Copyright (c) 2025 Grafana Labs.
+# Copyright (c) 2026 Grafana Labs.
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
-
-# Documentation licensed under the GNU Affero General Public License.
+#
+# Documentation licensed under the GNU Affero General Public License Version 3.
 # For license exceptions, see LICENSING.md.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/grafana/grafana/blob/main/LICENSE
-# https://github.com/grafana/grafana/blob/main/LICENSING.md
+# https://github.com/grafana/grafana/blob/-/LICENSE
+# https://github.com/grafana/grafana/blob/-/LICENSING.md
 
 canonical: https://grafana.com/docs/grafana/latest/alerting/set-up/configure-rbac/access-folders/
 description: Manage access using folders
@@ -26,7 +26,7 @@ title: Manage access using folders or data sources
 weight: 200
 ---
 
-## Manage access using folders or data sources
+# Manage access using folders or data sources
 
 You can extend the access provided by a role to alert rules and rule-specific silences by assigning permissions to individual folders or data sources.
 

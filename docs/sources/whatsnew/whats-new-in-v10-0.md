@@ -1,13 +1,13 @@
 ---
-# Copyright (c) 2025 Grafana Labs.
+# Copyright (c) 2026 Grafana Labs.
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
-
-# Documentation licensed under the GNU Affero General Public License.
+#
+# Documentation licensed under the GNU Affero General Public License Version 3.
 # For license exceptions, see LICENSING.md.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/grafana/grafana/blob/main/LICENSE
-# https://github.com/grafana/grafana/blob/main/LICENSING.md
+# https://github.com/grafana/grafana/blob/-/LICENSE
+# https://github.com/grafana/grafana/blob/-/LICENSING.md
 
 description: Learn about new and updated features in Grafana v10.0
 keywords:
@@ -280,7 +280,7 @@ With the new user interface (UI), you can now configure SAML without needing to 
 
 The SAML UI is available in Grafana Enterprise, Cloud Pro, and Advanced. It's user-friendly, with clear instructions and helpful prompts to guide you through the process.
 
-For more information on how to set up SAML using the Grafana UI, refer to [Configure SAML authentication using the Grafana user interface](../../setup-grafana/configure-security/configure-authentication/saml-ui/).
+For more information on how to set up SAML using the Grafana UI, refer to [Configure SAML authentication using the Grafana user interface](../../setup-grafana/configure-access/configure-authentication/saml-ui/).
 
 ### Case-insensitive usernames and email addresses
 

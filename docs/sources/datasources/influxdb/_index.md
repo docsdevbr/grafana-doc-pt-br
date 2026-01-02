@@ -1,13 +1,13 @@
 ---
-# Copyright (c) 2025 Grafana Labs.
+# Copyright (c) 2026 Grafana Labs.
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
-
-# Documentation licensed under the GNU Affero General Public License.
+#
+# Documentation licensed under the GNU Affero General Public License Version 3.
 # For license exceptions, see LICENSING.md.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/grafana/grafana/blob/main/LICENSE
-# https://github.com/grafana/grafana/blob/main/LICENSING.md
+# https://github.com/grafana/grafana/blob/-/LICENSE
+# https://github.com/grafana/grafana/blob/-/LICENSING.md
 
 aliases:
   - ../data-sources/influxdb/
@@ -62,6 +62,7 @@ The following documents will help you get started with the InfluxDB data source 
 - [Configure the InfluxDB data source](./configure-influxdb-data-source/)
 - [InfluxDB query editor](./query-editor/)
 - [InfluxDB templates and variables](./template-variables/)
+- [Troubleshoot issues with the InfluxDB data source](./troubleshooting/)
 
 Once you have configured the data source you can:
 

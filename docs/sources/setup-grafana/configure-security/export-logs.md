@@ -1,13 +1,13 @@
 ---
-# Copyright (c) 2025 Grafana Labs.
+# Copyright (c) 2026 Grafana Labs.
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
-
-# Documentation licensed under the GNU Affero General Public License.
+#
+# Documentation licensed under the GNU Affero General Public License Version 3.
 # For license exceptions, see LICENSING.md.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/grafana/grafana/blob/main/LICENSE
-# https://github.com/grafana/grafana/blob/main/LICENSING.md
+# https://github.com/grafana/grafana/blob/-/LICENSE
+# https://github.com/grafana/grafana/blob/-/LICENSING.md
 
 aliases:
   - ../../enterprise/usage-insights/export-logs/
@@ -104,6 +104,14 @@ tls = true
 # Set the tenant ID for Loki communication, which is disabled by default.
 # The tenant ID is required to interact with Loki running in multi-tenant mode.
 tenant_id =
+# How long to wait before sending a request to Loki with the batch of events. Uses duration format: e.g. 5s, 1m
+# Whatever happens first between `batch_wait_duration` and `batch_size_bytes` will trigger the batch to be sent to Loki.
+# If the wait duration is very long and the `batch_size_bytes` is very high, events may take a long time to be sent.
+batch_wait_duration = 5s
+# How many events (in bytes) to accumulate in a single batch before sending it to Loki.
+# Whatever happens first between `batch_wait_duration` and `batch_size_bytes` will trigger the batch to be sent to Loki.
+# If you wish to always wait for the `batch_wait_duration`, set this to a very high number.
+batch_size_bytes = 102400 # 100KiB
 ```
 
 Using `logger` will print usage insights to your [Grafana server log](../../configure-grafana/#log).

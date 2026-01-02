@@ -1,13 +1,13 @@
 ---
-# Copyright (c) 2025 Grafana Labs.
+# Copyright (c) 2026 Grafana Labs.
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
-
-# Documentation licensed under the GNU Affero General Public License.
+#
+# Documentation licensed under the GNU Affero General Public License Version 3.
 # For license exceptions, see LICENSING.md.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/grafana/grafana/blob/main/LICENSE
-# https://github.com/grafana/grafana/blob/main/LICENSING.md
+# https://github.com/grafana/grafana/blob/-/LICENSE
+# https://github.com/grafana/grafana/blob/-/LICENSING.md
 
 description: Learn about breaking changes in Grafana v10.0
 keywords:
@@ -203,7 +203,7 @@ We strongly recommend not doing this in case you are using Azure AD as an identi
 #### Learn more
 
 - [CVE-2023-3128 Advisory](https://grafana.com/security/security-advisories/cve-2023-3128//)
-- [Enable email lookup](../../setup-grafana/configure-security/configure-authentication/)
+- [Enable email lookup](../../setup-grafana/configure-access/configure-authentication/)
 
 ### The "Alias" field in the CloudWatch data source is removed
 

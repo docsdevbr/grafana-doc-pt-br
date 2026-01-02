@@ -1,13 +1,13 @@
 ---
-# Copyright (c) 2025 Grafana Labs.
+# Copyright (c) 2026 Grafana Labs.
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
-
-# Documentation licensed under the GNU Affero General Public License.
+#
+# Documentation licensed under the GNU Affero General Public License Version 3.
 # For license exceptions, see LICENSING.md.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/grafana/grafana/blob/main/LICENSE
-# https://github.com/grafana/grafana/blob/main/LICENSING.md
+# https://github.com/grafana/grafana/blob/-/LICENSE
+# https://github.com/grafana/grafana/blob/-/LICENSING.md
 
 _build:
   list: false
@@ -235,11 +235,11 @@ This release includes a series of features that build on our new usage analytics
 
 ### SAML Role and Team Sync
 
-SAML support in Grafana Enterprise is improved by adding Role and Team Sync. Read more about how to use these features in the [SAML team sync documentation](../../setup-grafana/configure-security/configure-authentication/saml/#configure-team-sync).
+SAML support in Grafana Enterprise is improved by adding Role and Team Sync. Read more about how to use these features in the [SAML team sync documentation](../../setup-grafana/configure-access/configure-authentication/saml/#configure-team-sync).
 
 ### Okta OAuth Team Sync
 
-Okta gets its own provider which adds support for Team Sync. Read more about it in the [Okta documentation](../../setup-grafana/configure-security/configure-authentication/okta/).
+Okta gets its own provider which adds support for Team Sync. Read more about it in the [Okta documentation](../../setup-grafana/configure-access/configure-authentication/okta/).
 
 ## Changelog
 

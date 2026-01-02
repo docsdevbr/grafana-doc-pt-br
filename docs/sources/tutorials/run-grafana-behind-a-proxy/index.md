@@ -1,13 +1,13 @@
 ---
-# Copyright (c) 2025 Grafana Labs.
+# Copyright (c) 2026 Grafana Labs.
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
-
-# Documentation licensed under the GNU Affero General Public License.
+#
+# Documentation licensed under the GNU Affero General Public License Version 3.
 # For license exceptions, see LICENSING.md.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/grafana/grafana/blob/main/LICENSE
-# https://github.com/grafana/grafana/blob/main/LICENSING.md
+# https://github.com/grafana/grafana/blob/-/LICENSE
+# https://github.com/grafana/grafana/blob/-/LICENSING.md
 
 aliases:
   - /docs/grafana/latest/installation/behind_proxy/
@@ -276,7 +276,7 @@ http:
 You only need this if you don't handle the sub path serving via your reverse proxy configuration.
 {{< /admonition >}}
 
-If you don't want or can't use the reverse proxy to handle serving Grafana from a _sub path_, you can set the configuration variable `server_from_sub_path` to `true`.
+If you don't want or can't use the reverse proxy to handle serving Grafana from a _sub path_, you can set the configuration variable `serve_from_sub_path` to `true`.
 
 1. Include the sub path at the end of the `root_url`.
 1. Set `serve_from_sub_path` to `true`:

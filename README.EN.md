@@ -2,11 +2,11 @@
 
 [![README file in English][badge-readme-en]][readme-en]
 [![README file in Brazilian Portuguese][badge-readme-pt-br]][readme-pt-br]
-[![License: AGPL-3.0][badge-license]][license-gnu]
+[![License: AGPL-3.0][badge-license]][license]
 [![Contributors][badge-contributors]][contributors]
 [![GitHub Sponsors][badge-github-sponsors]][github-sponsors]
 
-Translation of the Grafana Documentation into Brazilian Portuguese.
+Translation of the Grafana documentation into Brazilian Portuguese.
 
 ## Contributing
 
@@ -20,20 +20,20 @@ We are committed to providing a welcoming community.
 Please read our [Code of Conduct][code-of-conduct] to understand our community
 standards.
 
-## Support
+## Sponsor
 
-You can support the project through [GitHub Sponsors][github-sponsors] or
-[Pix][sponsor].
+Please visit our [sponsor page][sponsor] to know how you can support the
+project.
 
 ## License
 
-Copyright (c) 2025 Grafana Labs.<br>
+Copyright (c) 2026 Grafana Labs.<br/>
 Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba Grafana
 Labs.
 
 Documentation licensed under the
-[GNU Affero General Public License Version 3][license-gnu].<br>
-For license exceptions, see [LICENSING][license-apache].<br>
+[GNU Affero General Public License Version 3][license].<br/>
+For license exceptions, see [LICENSING][licensing].<br/>
 The original work was translated from English into Brazilian Portuguese.
 
 [badge-contributors]: https://img.shields.io/github/contributors/docsdevbr/grafana-doc-pt-br
@@ -54,14 +54,14 @@ The original work was translated from English into Brazilian Portuguese.
 
 [github-sponsors]: https://github.com/sponsors/docsdevbr
 
-[license-gnu]: LICENSE
+[license]: LICENSE
 
-[license-apache]: https://github.com/grafana/grafana/blob/HEAD/LICENSING.md
+[licensing]: https://github.com/grafana/grafana/blob/HEAD/LICENSING.md
 
-[page]: https://pt.docs.dev.br/p/grafana/
+[page]: https://pt.docs.dev.br/tech/g/grafana/
 
 [readme-en]: README.EN.md
 
 [readme-pt-br]: README.md
 
-[sponsor]: https://pt.docs.dev.br/sponsor
+[sponsor]: https://en.docs.dev.br/sponsor

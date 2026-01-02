@@ -1,13 +1,13 @@
 ---
-# Copyright (c) 2025 Grafana Labs.
+# Copyright (c) 2026 Grafana Labs.
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
-
-# Documentation licensed under the GNU Affero General Public License.
+#
+# Documentation licensed under the GNU Affero General Public License Version 3.
 # For license exceptions, see LICENSING.md.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/grafana/grafana/blob/main/LICENSE
-# https://github.com/grafana/grafana/blob/main/LICENSING.md
+# https://github.com/grafana/grafana/blob/-/LICENSE
+# https://github.com/grafana/grafana/blob/-/LICENSING.md
 
 description: Learn how to configure Grafana Teams
 labels:
@@ -42,7 +42,7 @@ Before you begin creating and working with Grafana Teams:
     Recommended for `isolated` teams.
   - Viewer role - by default can view all resources. Recommended for `collaborative` teams.
 - Ensure team sync is turned on if you plan to manage team members through team sync.
-Refer to [Configure Team Sync](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-security/configure-team-sync/) for a list of providers and instructions on how to turn on team sync for each provider.
+Refer to [Configure Team Sync](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-access/configure-team-sync/) for a list of providers and instructions on how to turn on team sync for each provider.
 <!-- - Turn on nested folders.  __This is a new feature, add when it goes live.__ -->
 
 {{< admonition type="note" >}}

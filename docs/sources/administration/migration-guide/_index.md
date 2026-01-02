@@ -1,13 +1,13 @@
 ---
-# Copyright (c) 2025 Grafana Labs.
+# Copyright (c) 2026 Grafana Labs.
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
-
-# Documentation licensed under the GNU Affero General Public License.
+#
+# Documentation licensed under the GNU Affero General Public License Version 3.
 # For license exceptions, see LICENSING.md.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/grafana/grafana/blob/main/LICENSE
-# https://github.com/grafana/grafana/blob/main/LICENSING.md
+# https://github.com/grafana/grafana/blob/-/LICENSE
+# https://github.com/grafana/grafana/blob/-/LICENSING.md
 
 aliases:
   - /docs/grafana-cloud/account-management/e2c-guide/
@@ -19,6 +19,7 @@ keywords:
   - Grafana OSS
 menuTitle: Migrate from Grafana OSS/Enterprise to Grafana Cloud
 title: Migrate from Grafana OSS/Enterprise to Grafana Cloud
+weight: 7000
 ---
 
 # Migrate from Grafana OSS/Enterprise to Grafana Cloud

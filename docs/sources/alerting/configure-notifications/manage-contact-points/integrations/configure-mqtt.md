@@ -1,13 +1,13 @@
 ---
-# Copyright (c) 2025 Grafana Labs.
+# Copyright (c) 2026 Grafana Labs.
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
-
-# Documentation licensed under the GNU Affero General Public License.
+#
+# Documentation licensed under the GNU Affero General Public License Version 3.
 # For license exceptions, see LICENSING.md.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/grafana/grafana/blob/main/LICENSE
-# https://github.com/grafana/grafana/blob/main/LICENSING.md
+# https://github.com/grafana/grafana/blob/-/LICENSE
+# https://github.com/grafana/grafana/blob/-/LICENSING.md
 
 canonical: https://grafana.com/docs/grafana/latest/alerting/configure-notifications/manage-contact-points/integrations/configure-mqtt/
 description: Configure the MQTT notifier integration for Alerting
@@ -64,10 +64,10 @@ For more details on contact points, including how to test them and enable notifi
 
 ### Required Settings
 
-| Option     | Description                                  |
-| ---------- | -------------------------------------------- |
-| Broker URL | The URL of the MQTT broker.                  |
-| Topic      | The topic to which the message will be sent. |
+| Option     | Description                                                                                                             |
+| ---------- | ----------------------------------------------------------------------------------------------------------------------- |
+| Broker URL | The URL of the MQTT broker. This field is [protected](ref:configure-contact-points) from modification in Grafana Cloud. |
+| Topic      | The topic to which the message will be sent.                                                                            |
 
 ### Optional Settings
 

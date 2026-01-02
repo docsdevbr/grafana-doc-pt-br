@@ -1,13 +1,13 @@
 ---
-# Copyright (c) 2025 Grafana Labs.
+# Copyright (c) 2026 Grafana Labs.
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
-
-# Documentation licensed under the GNU Affero General Public License.
+#
+# Documentation licensed under the GNU Affero General Public License Version 3.
 # For license exceptions, see LICENSING.md.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/grafana/grafana/blob/main/LICENSE
-# https://github.com/grafana/grafana/blob/main/LICENSING.md
+# https://github.com/grafana/grafana/blob/-/LICENSE
+# https://github.com/grafana/grafana/blob/-/LICENSING.md
 
 description: Feature and improvement highlights for Grafana v11.2
 keywords:
@@ -264,7 +264,7 @@ This is a longstanding feature request from the community. We collaborated with 
 
 For Generic OAuth and Okta, you can configure the claim (using the `org_attribute_path` setting) that contains the organizations which the user belongs to. Other OAuth providers use the same attribute for organization mapping that is used for group mapping: Entra ID (previously Azure AD), GitLab and Google use the current user’s Groups, and GitHub uses the user’s Teams.
 
-To configure organization mapping for your instance, please check the documentation for the OAuth provider you are using in the [Grafana documentation](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-security/configure-authentication/). You can find an example of how to configure organization mapping on each OAuth provider page under the **Org roles mapping example** section.
+To configure organization mapping for your instance, please check the documentation for the OAuth provider you are using in the [Grafana documentation](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-access/configure-authentication/). You can find an example of how to configure organization mapping on each OAuth provider page under the **Org roles mapping example** section.
 
 ### Better SAML integration for Azure AD
 
@@ -276,7 +276,7 @@ When setting up Grafana with Azure AD using the SAML protocol, the Azure AD Grap
 
 With Grafana 11.2, we offer a mechanism for setting up an application as a Service Account in Azure AD and retrieving information from Graph API.
 
-Please refer to our [documentation](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-security/configure-authentication/saml/#configure-a-graph-api-application-in-azure-ad) on how to set up an Azure AD registered application for this setup.
+Please refer to our [documentation](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-access/configure-authentication/saml/#configure-a-graph-api-application-in-azure-ad) on how to set up an Azure AD registered application for this setup.
 
 ### API support for LDAP configuration
 

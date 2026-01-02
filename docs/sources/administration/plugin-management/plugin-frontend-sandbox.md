@@ -1,13 +1,13 @@
 ---
-# Copyright (c) 2025 Grafana Labs.
+# Copyright (c) 2026 Grafana Labs.
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
-
-# Documentation licensed under the GNU Affero General Public License.
+#
+# Documentation licensed under the GNU Affero General Public License Version 3.
 # For license exceptions, see LICENSING.md.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/grafana/grafana/blob/main/LICENSE
-# https://github.com/grafana/grafana/blob/main/LICENSING.md
+# https://github.com/grafana/grafana/blob/-/LICENSE
+# https://github.com/grafana/grafana/blob/-/LICENSING.md
 
 title: Isolate plugin code with the Plugin Frontend Sandbox
 description: Use the Plugin Frontend Sandbox to securely isolate plugin frontend code from the main Grafana application.
@@ -63,11 +63,7 @@ The following applies:
 
 ## Enable the Frontend Sandbox
 
-The Frontend Sandbox feature is currently behind the `pluginsFrontendSandbox` feature flag. To enable it, you need to:
-
-1. Enable the feature flag in your Grafana configuration. For more information about enabling feature flags, refer to [Configure feature toggles](/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-grafana/feature-toggles/).
-
-2. For self-hosted Grafana installations, add the plugin IDs you want to sandbox in the `security` section using the `enable_frontend_sandbox_for_plugins` configuration option.
+For self-hosted Grafana installations, add the plugin IDs you want to sandbox in the `security` section using the `enable_frontend_sandbox_for_plugins` configuration option.
 
 For Grafana Cloud users, you can simply use the toggle switch in the plugin catalog page to enable or disable the sandbox for each plugin. By default, the sandbox is disabled for all plugins.
 

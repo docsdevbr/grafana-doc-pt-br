@@ -1,13 +1,13 @@
 ---
-# Copyright (c) 2025 Grafana Labs.
+# Copyright (c) 2026 Grafana Labs.
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
-
-# Documentation licensed under the GNU Affero General Public License.
+#
+# Documentation licensed under the GNU Affero General Public License Version 3.
 # For license exceptions, see LICENSING.md.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/grafana/grafana/blob/main/LICENSE
-# https://github.com/grafana/grafana/blob/main/LICENSING.md
+# https://github.com/grafana/grafana/blob/-/LICENSE
+# https://github.com/grafana/grafana/blob/-/LICENSING.md
 
 description: Learn about new and updated features in Grafana v10.1
 keywords:
@@ -449,7 +449,7 @@ Grafana now supports GitLab OIDC through the `GitLab` OAuth provider in addition
 This change also allows Grafana to reduce the access scope to only the required scopes for authentication and authorization, instead
 of full read API access.
 
-To learn how to migrate your GitLab OAuth2 setup to OIDC, refer to our [GitLab authentication documentation](../../setup-grafana/configure-security/configure-authentication/gitlab/).
+To learn how to migrate your GitLab OAuth2 setup to OIDC, refer to our [GitLab authentication documentation](../../setup-grafana/configure-access/configure-authentication/gitlab/).
 
 ### Google OIDC and Team Sync support
 
@@ -461,7 +461,7 @@ Grafana now supports Google OIDC through the `Google` OAuth provider in addition
 
 This release also adds support for Google OIDC in Team Sync. You can now easily add users to teams by using their Google groups.
 
-To learn how to migrate your Google OAuth2 setup to OIDC and how to set up Team Sync, refer to our [Google authentication documentation](../../setup-grafana/configure-security/configure-authentication/google/).
+To learn how to migrate your Google OAuth2 setup to OIDC and how to set up Team Sync, refer to our [Google authentication documentation](../../setup-grafana/configure-access/configure-authentication/google/).
 
 ## Plugins
 

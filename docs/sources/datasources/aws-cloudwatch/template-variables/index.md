@@ -1,13 +1,13 @@
 ---
-# Copyright (c) 2025 Grafana Labs.
+# Copyright (c) 2026 Grafana Labs.
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
-
-# Documentation licensed under the GNU Affero General Public License.
+#
+# Documentation licensed under the GNU Affero General Public License Version 3.
 # For license exceptions, see LICENSING.md.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/grafana/grafana/blob/main/LICENSE
-# https://github.com/grafana/grafana/blob/main/LICENSING.md
+# https://github.com/grafana/grafana/blob/-/LICENSE
+# https://github.com/grafana/grafana/blob/-/LICENSING.md
 
 aliases:
   - ../../data-sources/aws-cloudwatch/template-variables/
@@ -26,7 +26,7 @@ labels:
     - oss
 menuTitle: Template variables
 title: CloudWatch template variables
-weight: 400
+weight: 300
 refs:
   variable-syntax:
     - pattern: /docs/grafana/
@@ -48,10 +48,11 @@ refs:
 # CloudWatch template variables
 
 Instead of hard-coding details such as server, application, and sensor names in metric queries, you can use variables.
-Grafana lists these variables in dropdown select boxes at the top of the dashboard to help you change the data displayed in your dashboard.
-Grafana refers to such variables as template variables.
+Grafana lists these variables in drop-down select boxes at the top of the dashboard to help you change the data displayed in your dashboard, and they are called template variables
 
-For an introduction to templating and template variables, refer to the [Templating](ref:variables) and [Add and manage variables](ref:add-template-variables) documentation.
+<!-- Grafana refers to such variables as template variables. -->
+
+For an introduction to templating and template variables, refer to [Templating](ref:variables) and [Add and manage variables](ref:add-template-variables).
 
 ## Use query variables
 
@@ -77,20 +78,23 @@ For details about the metrics CloudWatch provides, refer to the [CloudWatch docu
 
 ### Use variables in queries
 
-Use Grafana's variable syntax to include variables in queries.
+Use the Grafana variable syntax to include variables in queries. A query variable in dynamically retrieves values from your data source using a query.
 For details, refer to the [variable syntax documentation](ref:variable-syntax).
 
 ## Use ec2_instance_attribute
 
+The `ec2_instance_attribute` function in template variables allows Grafana to retrieve certain instance metadata from the EC2 metadata service, including `Instance ID` and `region`.
+
 ### Filters
 
-The `ec2_instance_attribute` query takes `filters` as a filter name and a comma-separated list of values.
+The `ec2_instance_attribute` query takes a `filters` parameter, where each key is a filter name (such as a tag or instance property), and each value is a comma-separated list of matching values.
+
 You can specify [pre-defined filters of ec2:DescribeInstances](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeInstances.html).
 
 ### Select attributes
 
 A query returns only one attribute per instance.
-You can select any attribute that has a single value and isn't an object or array, also known as a flat attribute:
+You can select any attribute that has a single value and isn't an object or array, also known as a `flat attribute`:
 
 - `AmiLaunchIndex`
 - `Architecture`

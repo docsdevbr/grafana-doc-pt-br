@@ -1,20 +1,20 @@
 ---
-# Copyright (c) 2025 Grafana Labs.
+# Copyright (c) 2026 Grafana Labs.
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
-
-# Documentation licensed under the GNU Affero General Public License.
+#
+# Documentation licensed under the GNU Affero General Public License Version 3.
 # For license exceptions, see LICENSING.md.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/grafana/grafana/blob/main/LICENSE
-# https://github.com/grafana/grafana/blob/main/LICENSING.md
+# https://github.com/grafana/grafana/blob/-/LICENSE
+# https://github.com/grafana/grafana/blob/-/LICENSING.md
 
 headless: true
 comments: |
   This file is used in the following files: developers/http_api/{_index.md,authentication.md}
 ---
 
-You can authenticate HTTP API requests using basic authentication, a service account token, or a session cookie (acquired via regular login or OAuth).
+You can authenticate HTTP API requests using basic authentication or a service account token.
 
 ### Basic auth
 

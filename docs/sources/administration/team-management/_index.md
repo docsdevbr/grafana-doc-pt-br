@@ -1,13 +1,13 @@
 ---
-# Copyright (c) 2025 Grafana Labs.
+# Copyright (c) 2026 Grafana Labs.
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
-
-# Documentation licensed under the GNU Affero General Public License.
+#
+# Documentation licensed under the GNU Affero General Public License Version 3.
 # For license exceptions, see LICENSING.md.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/grafana/grafana/blob/main/LICENSE
-# https://github.com/grafana/grafana/blob/main/LICENSING.md
+# https://github.com/grafana/grafana/blob/-/LICENSE
+# https://github.com/grafana/grafana/blob/-/LICENSING.md
 
 aliases:
   - ../manage-users/add-or-remove-user-from-team/
@@ -25,11 +25,11 @@ keywords:
   - microservices
   - architecture
 menuTitle: Grafana Teams
-title: Grafana Teams
-weight: 100
+title: Manage teams with Grafana Teams
+weight: 2000
 ---
 
-# Grafana Teams
+# Manage teams with Grafana Teams
 
 Grafana Teams makes it easy to organize and administer groups of users in your enterprise. Teams allows you to grant permissions to a group of users instead of granting permissions to individual users one at a time.
 
