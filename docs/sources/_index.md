@@ -27,8 +27,7 @@ description: |-
   Grafana OSS e Enterprise.
 keywords:
   - grafana
-  - começando
-  - primeiros passos
+  - introdução
   - documentação
 labels:
   products:
@@ -43,8 +42,8 @@ hero:
   image: /media/docs/grafana-cloud/infrastructure/grafanalogo.svg
   height: 100
   description: |-
-    Consulte, visualize, alerte e explore suas métricas, logs e traces onde quer
-    que estejam armazenados.
+    Consulte, visualize, gere alertas e explore suas métricas, logs e
+    rastreamentos, independentemente de onde estejam armazenados.
 cards:
   title_class: pt-0 lh-1
   items:
@@ -57,8 +56,8 @@ cards:
     - title: Introdução
       href: ./fundamentals/
       description: |-
-        Aprenda sobre tópicos de observabilidade em geral e alguns dos produtos
-        incluídos no Grafana.
+        Aprenda sobre tópicos de observabilidade em geral e sobre alguns dos
+        produtos incluídos no Grafana.
       height: 24
     - title: Configuração
       href: ./setup-grafana/
@@ -73,8 +72,8 @@ cards:
     - title: Dashboards
       href: ./dashboards/
       description: |-
-        Consulte, transforme, visualize e entenda seus dados, independentemente
-        de onde estejam armazenados.
+        Consulte, transforme, visualize e compreenda seus dados,
+        independentemente de onde estejam armazenados.
       height: 24
     - title: Painéis e visualizações
       href: ./panels-visualizations/
@@ -90,12 +89,12 @@ cards:
     - title: Alertas
       href: ./alerting/
       description: |-
-        Aprenda sobre problemas em seus sistemas momentos após eles ocorrerem.
+        Fique atento aos problemas em seus sistemas logo após eles ocorrerem.
       height: 24
     - title: Administração
       href: ./administration/
       description: |-
-        Execute tarefas administrativas, como configurar o gerenciamento de
+        Execute tarefas administrativas como configurar o gerenciamento de
         pessoas usuárias, funções e permissões.
       height: 24
     - title: Solução de problemas
@@ -105,8 +104,7 @@ cards:
     - title: Atualização
       href: ./upgrade-guide/
       description: |-
-        Atualize o Grafana para se manter atualizado com as últimas correções e
-        melhorias.
+        Atualize o Grafana para obter as correções e melhorias mais recentes.
       height: 24
 ---
 
@@ -116,18 +114,18 @@ cards:
 
 ## Visão geral
 
-O _Grafana Open Source Software (OSS)_ permite consultar, visualizar, emitir
-alertas e explorar suas métricas, logs e traces onde quer que estejam
-armazenados.
-Os plugins de fonte de dados do Grafana permitem consultar fontes de dados,
+O _Grafana Open Source Software (OSS)_ permite consultar, visualizar, gerar
+alertas e explorar suas métricas, logs e rastreamentos, independentemente de
+onde estejam armazenados.
+Os plugins de fontes de dados do Grafana permitem consultar fontes de dados,
 incluindo bancos de dados de séries temporais como Prometheus e CloudWatch,
 ferramentas de log como Loki e Elasticsearch, bancos de dados NoSQL/SQL como
 Postgres, ferramentas de CI/CD como GitHub e muito mais.
-O Grafana OSS fornece ferramentas para exibir esses dados em dashboards
-dinâmicos com gráficos e visualizações intuitivos.
+O Grafana OSS fornece ferramentas para exibir esses dados em dashboards em tempo
+real com gráficos e visualizações informativos.
 
 O _Grafana Enterprise_ é uma edição comercial do Grafana que inclui plugins
-exclusivos de fonte de dados e recursos adicionais não encontrados na versão de
+exclusivos de fontes de dados e recursos adicionais não encontrados na versão de
 código aberto.
 Você também recebe suporte e treinamento 24x7x365 da equipe principal do
 Grafana.
@@ -138,7 +136,7 @@ Para saber mais sobre esses recursos, consulte
 
 {{< guide
   name="whichgrafana"
-  title="Qual Grafana é ideal para você?"
+  title="Qual Grafana é o ideal para você?"
   text="Responda a algumas perguntas e o Grot ajudará você a decidir." >}}
 
 ## Aprenda
