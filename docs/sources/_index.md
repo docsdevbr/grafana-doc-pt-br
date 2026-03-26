@@ -9,7 +9,7 @@
 # https://github.com/grafana/grafana/blob/-/LICENSE
 # https://github.com/grafana/grafana/blob/-/LICENSING.md
 
-source_url: https://github.com/grafana/grafana/blob/release-12.4.2/docs/sources/_index.md
+source_url: https://github.com/grafana/grafana/blob/release-12.4.3/docs/sources/_index.md
 revision: a7a3bd313bdbcd303daa3738655416ca287e30bd
 status: ready
 
