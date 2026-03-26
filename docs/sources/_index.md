@@ -10,7 +10,7 @@
 # https://github.com/grafana/grafana/blob/-/LICENSING.md
 
 source_url: https://github.com/grafana/grafana/blob/main/docs/sources/_index.md
-revision: f43d39f8ad8aec6139fbcda7e8a54741f949064b
+revision: 651ca564f73c811020f174bb014c2116f784f05d
 status: ready
 
 aliases:
@@ -22,7 +22,7 @@ cascade:
   TEMPO_VERSION: latest
   ONCALL_VERSION: latest
   PYROSCOPE_VERSION: latest
-description: |-
+description: >-
   Encontre respostas para suas perguntas técnicas e saiba como usar os produtos
   Grafana OSS e Enterprise.
 keywords:
@@ -34,28 +34,28 @@ labels:
     - enterprise
     - oss
 menuTitle: Documentação do Grafana
-title: Grafana OSS and Enterprise
+title: Grafana OSS e Enterprise
 hero:
   title: Grafana OSS e Enterprise
   level: 1
   width: 100
   image: /media/docs/grafana-cloud/infrastructure/grafanalogo.svg
   height: 100
-  description: |-
-    Consulte, visualize, gere alertas e explore suas métricas, logs e
-    rastreamentos, independentemente de onde estejam armazenados.
+  description: >-
+    Consulte, visualize, gere alertas e explore suas métricas, logs e rastros,
+    independentemente de onde estejam armazenados.
 cards:
   title_class: pt-0 lh-1
   items:
     - title: Novidades
       href: ./whatsnew/
-      description: |-
+      description: >-
         Navegue pelos destaques de lançamentos, descontinuações e alterações
         significativas nas versões do Grafana.
       height: 24
     - title: Introdução
       href: ./fundamentals/
-      description: |-
+      description: >-
         Aprenda sobre tópicos de observabilidade em geral e sobre alguns dos
         produtos incluídos no Grafana.
       height: 24
@@ -65,35 +65,35 @@ cards:
       height: 24
     - title: Fontes de dados
       href: ./datasources/
-      description: |-
+      description: >-
         Gerencie fontes de dados e saiba como configurar ou consultar as fontes
         de dados integradas.
       height: 24
     - title: Dashboards
-      href: ./dashboards/
-      description: |-
+      href: ./visualizations/dashboards/
+      description: >-
         Consulte, transforme, visualize e compreenda seus dados,
         independentemente de onde estejam armazenados.
       height: 24
     - title: Painéis e visualizações
-      href: ./panels-visualizations/
-      description: |-
+      href: ./visualizations/panels-visualizations/
+      description: >-
         Colete, correlacione e visualize dados facilmente para tomar decisões
         informadas em tempo real.
       height: 24
     - title: Explore
-      href: ./explore/
-      description: |-
+      href: ./visualizations/explore/
+      description: >-
         Explore seus dados usando uma consulta em vez de criar um dashboard.
       height: 24
     - title: Alertas
       href: ./alerting/
-      description: |-
+      description: >-
         Fique atento aos problemas em seus sistemas logo após eles ocorrerem.
       height: 24
     - title: Administração
       href: ./administration/
-      description: |-
+      description: >-
         Execute tarefas administrativas como configurar o gerenciamento de
         pessoas usuárias, funções e permissões.
       height: 24
@@ -103,7 +103,7 @@ cards:
       height: 24
     - title: Atualização
       href: ./upgrade-guide/
-      description: |-
+      description: >-
         Atualize o Grafana para obter as correções e melhorias mais recentes.
       height: 24
 ---
@@ -115,8 +115,8 @@ cards:
 ## Visão geral
 
 O _Grafana Open Source Software (OSS)_ permite consultar, visualizar, gerar
-alertas e explorar suas métricas, logs e rastreamentos, independentemente de
-onde estejam armazenados.
+alertas e explorar suas métricas, logs e rastros, independentemente de onde
+estejam armazenados.
 Os plugins de fontes de dados do Grafana permitem consultar fontes de dados,
 incluindo bancos de dados de séries temporais como Prometheus e CloudWatch,
 ferramentas de log como Loki e Elasticsearch, bancos de dados NoSQL/SQL como
@@ -127,8 +127,7 @@ real com gráficos e visualizações informativos.
 O _Grafana Enterprise_ é uma edição comercial do Grafana que inclui plugins
 exclusivos de fontes de dados e recursos adicionais não encontrados na versão de
 código aberto.
-Você também recebe suporte e treinamento 24x7x365 da equipe principal do
-Grafana.
+Você também recebe suporte 24x7x365 e treinamento do time principal do Grafana.
 Para saber mais sobre esses recursos, consulte
 [Recursos corporativos](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/introduction/grafana-enterprise/#enterprise-features-in-grafana-cloud).
 
@@ -136,7 +135,7 @@ Para saber mais sobre esses recursos, consulte
 
 {{< guide
   name="whichgrafana"
-  title="Qual Grafana é o ideal para você?"
+  title="Qual é o Grafana ideal para você?"
   text="Responda a algumas perguntas e o Grot ajudará você a decidir." >}}
 
 ## Aprenda
