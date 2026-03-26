@@ -58,10 +58,10 @@ The original work was translated from English into Brazilian Portuguese.
 
 [licensing]: https://github.com/grafana/grafana/blob/HEAD/LICENSING.md
 
-[page]: https://pt.docs.dev.br/tech/g/grafana/
+[page]: https://pt.docs.dev.br/tech/g/grafana/index.html
 
 [readme-en]: README.EN.md
 
 [readme-pt-br]: README.md
 
-[sponsor]: https://en.docs.dev.br/sponsor
+[sponsor]: https://en.docs.dev.br/sponsor.html
