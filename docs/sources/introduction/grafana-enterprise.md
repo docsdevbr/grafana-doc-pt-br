@@ -9,9 +9,13 @@
 # https://github.com/grafana/grafana/blob/-/LICENSE
 # https://github.com/grafana/grafana/blob/-/LICENSING.md
 
+source_url: https://github.com/grafana/grafana/blob/release-12.4.3/docs/sources/introduction/grafana-enterprise.md
+revision: ba6a783997552ad5154918918f79ba1ab06584bc
+status: ready
+
 aliases:
   - ../enterprise/
-description: Grafana Enterprise overview
+description: Visão geral do Grafana Enterprise
 labels:
   products:
     - enterprise
@@ -21,27 +25,45 @@ weight: 200
 
 # Grafana Enterprise
 
-Grafana Enterprise is a commercial edition of Grafana that includes additional features not found in the open source version.
+O Grafana Enterprise é uma edição comercial do Grafana que inclui recursos
+adicionais não encontrados na versão de código aberto.
 
-Building on everything you already know and love about Grafana open source, Grafana Enterprise includes [exclusive data source plugins](#enterprise-data-sources) and [additional features](#enterprise-features). You also get 24x7x365 support and training from the core Grafana team.
+Baseado em tudo o que você já conhece e ama no Grafana de código aberto, o
+Grafana Enterprise inclui
+[plugins exclusivos de fontes de dados](#enterprise-data-sources) e
+[recursos adicionais](#enterprise-features).
+Você também recebe suporte 24x7x365 e treinamento da equipe principal do
+Grafana.
 
-To learn more about Grafana Enterprise, refer to [our product page](/enterprise).
+Para saber mais sobre o Grafana Enterprise, consulte
+[nossa página do produto](/enterprise).
 
-## Enterprise features in Grafana Cloud
+## Recursos do Grafana Enterprise no Grafana Cloud
 
-Many Grafana Enterprise features are also available in paid [Grafana Cloud](/docs/grafana-cloud) accounts. For details, refer to [Grafana Cloud features](/docs/grafana-cloud/introduction/understand-grafana-cloud-features/). For pricing and plans, refer to [Grafana Cloud pricing](https://grafana.com/pricing/).
+Muitos recursos do Grafana Enterprise também estão disponíveis em contas pagas
+do [Grafana Cloud](/docs/grafana-cloud).
+Para obter detalhes, consulte os
+[recursos do Grafana Cloud](/docs/grafana-cloud/introduction/understand-grafana-cloud-features/).
+Para obter informações sobre preços e planos, consulte os
+[preços do Grafana Cloud](https://grafana.com/pricing/).
 
-To migrate to Grafana Cloud, refer to [Migrate from Grafana Enterprise to Grafana Cloud](/docs/grafana/<GRAFANA_VERSION>/administration/migration-guide/)
+Para migrar para o Grafana Cloud, consulte
+[Migre do Grafana Enterprise para o Grafana Cloud](/docs/grafana/<GRAFANA_VERSION>/administration/migration-guide/).
 
-## Authentication
+## Autenticação
 
-Grafana Enterprise includes integrations with more ways to authenticate your users and enhanced authentication capabilities.
+O Grafana Enterprise inclui integrações com mais maneiras de autenticar suas
+pessoas usuárias e recursos de autenticação aprimorados.
 
-### Team sync
+### Sincronização de equipes
 
-[Team sync](/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-access/configure-team-sync/) allows you to set up synchronization between teams in Grafana and teams in your auth provider so that your users automatically end up in the right team.
+A
+[Sincronização de equipes](/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-access/configure-team-sync/)
+permite configurar a sincronização entre equipes no Grafana e equipes no seu
+provedor de autenticação, para que suas pessoas usuárias sejam automaticamente
+alocadas à equipe correta.
 
-Supported auth providers:
+Provedores de autenticação compatíveis:
 
 - [Auth Proxy](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-access/configure-authentication/auth-proxy#team-sync-enterprise-only)
 - [Entra ID OAuth](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-access/configure-authentication/azuread/#team-sync-enterprise-only)
@@ -53,38 +75,67 @@ Supported auth providers:
 - [Okta](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-access/configure-authentication/okta#configure-team-synchronization-enterprise-only)
 - [SAML](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-access/configure-authentication/saml#configure-team-sync)
 
-### Enhanced LDAP integration
+### Integração LDAP aprimorada
 
-With [enhanced LDAP integration](/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-access/configure-authentication/enhanced-ldap/), you can set up active LDAP synchronization.
+Com a
+[integração LDAP aprimorada](/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-access/configure-authentication/enhanced-ldap/),
+você pode configurar a sincronização LDAP ativa.
 
-### SAML authentication
+### Autenticação SAML
 
-[SAML authentication](/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-access/configure-authentication/saml/) enables users to authenticate with single sign-on services that use Security Assertion Markup Language (SAML).
+A
+[autenticação SAML](/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-access/configure-authentication/saml/)
+permite que as pessoas usuárias se autentiquem com serviços de logon único que
+utilizam a Linguagem de Marcação de Asserção de Segurança (SAML).
 
-### Protected roles
+### Funções protegidas
 
-With [protected roles](/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-access/configure-authentication/#protected-roles), you can define user roles that are exempt from being converted from one authentication type to another when changing auth providers.
+Com as
+[funções protegidas](/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-access/configure-authentication/#protected-roles),
+você pode definir funções de pessoas usuárias que não serão convertidas de um
+tipo de autenticação para outro ao trocar de provedor de autenticação.
 
-## Enterprise features
+## Recursos da versão Enterprise
 
-Grafana Enterprise adds the following features:
+O Grafana Enterprise adiciona os seguintes recursos:
 
-- [Role-based access control](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/administration/roles-and-permissions/access-control/) to control access with role-based permissions.
-- [Data source permissions](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/administration/data-source-management/#data-source-permissions) to restrict query access to specific teams and users.
-- [Data source query and resource caching](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/administration/data-source-management/#query-and-resource-caching) to temporarily store query results in Grafana to reduce data source load and rate limiting.
-- [Reporting](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/dashboards/create-reports/) to generate a PDF report from any dashboard and set up a schedule to have it emailed to whomever you choose.
-- [Export dashboard as PDF](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/dashboards/share-dashboards-panels/#export-a-dashboard-as-pdf)
-- [Custom branding](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-grafana/configure-custom-branding/) to customize Grafana from the brand and logo to the footer links.
-- [Usage insights](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/dashboards/assess-dashboard-usage/) to understand how your Grafana instance is used.
-- [Recorded queries](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/administration/recorded-queries/) to see trends over time for your data sources.
-- [Vault integration](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-security/configure-database-encryption/#encrypting-your-database-with-a-key-from-a-key-management-service-kms) to manage your configuration or provisioning secrets with Vault.
-- [Auditing](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-security/audit-grafana/) tracks important changes to your Grafana instance to help you manage and mitigate suspicious activity and meet compliance requirements.
-- [Request security](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-security/configure-request-security/) makes it possible to restrict outgoing requests from the Grafana server.
-- [Settings updates at runtime](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-grafana/settings-updates-at-runtime/) allows you to update Grafana settings at runtime without requiring a restart.
+- [Controle de acesso baseado em funções](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/administration/roles-and-permissions/access-control/)
+  para controlar o acesso com permissões baseadas em funções.
+- [Permissões da fonte de dados](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/administration/data-source-management/#data-source-permissions)
+  para restringir o acesso a consultas a equipes e pessoas usuárias específicas.
+- [Cache de consultas e recursos da fonte de dados](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/administration/data-source-management/#query-and-resource-caching)
+  para armazenar temporariamente os resultados das consultas no Grafana,
+  reduzindo a carga da fonte de dados e a limitação de taxa.
+- [Relatórios](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/dashboards/create-reports/)
+  para gerar um relatório em PDF a partir de qualquer dashboard e configurar um
+  agendamento para enviá-lo por e-mail para quem você escolher.
+- [Exportar dashboard como PDF](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/dashboards/share-dashboards-panels/#export-a-dashboard-as-pdf)
+- [Personalização da marca](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-grafana/configure-custom-branding/)
+  para personalizar o Grafana, desde a marca e o logotipo até os links do
+  rodapé.
+- [Informações de uso](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/dashboards/assess-dashboard-usage/)
+  para entender como sua instância do Grafana está sendo usada.
+- [Consultas gravadas](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/administration/recorded-queries/)
+  para visualizar tendências ao longo do tempo para suas fontes de dados.
+- [Integração com o Vault](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-security/configure-database-encryption/#encrypting-your-database-with-a-key-from-a-key-management-service-kms)
+  para gerenciar seus segredos de configuração ou provisionamento com o Vault.
+- A
+  [Auditoria](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-security/audit-grafana/)
+  rastreia alterações importantes na sua instância do Grafana para ajudar você a
+  gerenciar e mitigar atividades suspeitas e atender aos requisitos de
+  conformidade.
+- A
+  [Segurança de requisição](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-security/configure-request-security/)
+  permite restringir as requisições de saída do servidor Grafana.
+- A
+  [Atualização de configurações em tempo de execução](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-grafana/settings-updates-at-runtime/)
+  permite atualizar as configurações do Grafana em tempo de execução sem a
+  necessidade de reiniciá-lo.
 
-## Enterprise data sources
+## Fontes de dados corporativas
 
-With a Grafana Enterprise license, you also get access to premium data sources, including:
+Com uma licença Grafana Enterprise, você também obtém acesso a fontes de dados
+premium, incluindo:
 
 - [Adobe Analytics](/grafana/plugins/grafana-adobeanalytics-datasource)
 - [Amazon Aurora](/grafana/plugins/grafana-aurora-datasource)
@@ -97,6 +148,7 @@ With a Grafana Enterprise license, you also get access to premium data sources, 
 - [CockroachDB](/grafana/plugins/grafana-cockroachdb-datasource)
 - [Databricks](/grafana/plugins/grafana-databricks-datasource)
 - [DataDog](/grafana/plugins/grafana-datadog-datasource)
+- [IBM Db2](/grafana/plugins/grafana-ibmdb2-datasource)
 - [Drone](/grafana/plugins/grafana-drone-datasource)
 - [DynamoDB](/grafana/plugins/grafana-dynamodb-datasource/)
 - [Dynatrace](/grafana/plugins/grafana-dynatrace-datasource)
@@ -125,6 +177,7 @@ With a Grafana Enterprise license, you also get access to premium data sources, 
 - [Wavefront](/grafana/plugins/grafana-wavefront-datasource)
 - [Zendesk](/grafana/plugins/grafana-zendesk-datasource)
 
-## Try Grafana Enterprise
+## Experimente o Grafana Enterprise
 
-To purchase or obtain a trial license, contact the Grafana Labs [Sales Team](/contact?about=grafana-enterprise-stack).
+Para comprar ou obter uma licença de avaliação, entre em contato com a
+[Equipe de Vendas](/contact?about=grafana-enterprise-stack) da Grafana Labs.
