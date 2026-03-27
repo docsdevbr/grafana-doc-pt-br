@@ -9,95 +9,220 @@
 # https://github.com/grafana/grafana/blob/-/LICENSE
 # https://github.com/grafana/grafana/blob/-/LICENSING.md
 
+source_url: https://github.com/grafana/grafana/blob/main/docs/sources/introduction/_index.md
+revision: e48eaa567edcc5ea9cda19c2042dcfc83d02056a
+status: ready
+
 aliases:
   - guides/what-is-grafana/
   - oss-details/
-description: Learn about Grafana OSS, Grafana Enterprise, and Grafana Cloud.
+description: Saiba mais sobre Grafana OSS, Grafana Enterprise e Grafana Cloud.
 labels:
   products:
     - cloud
     - enterprise
     - oss
-title: About Grafana
+title: Sobre o Grafana
 weight: 5
 ---
 
-# About Grafana
+# Sobre o Grafana
 
-[Grafana open source software](/oss/) enables you to query, visualize, alert on, and explore your metrics, logs, and traces wherever they are stored. Grafana OSS provides you with tools to turn your time-series database (TSDB) data into insightful graphs and visualizations. The Grafana OSS plugin framework also enables you to connect other data sources like NoSQL/SQL databases, ticketing tools like Jira or ServiceNow, and CI/CD tooling like GitLab.
+O [software de código aberto Grafana](/oss/) permite consultar, visualizar,
+configurar alertas e explorar suas métricas, logs e rastros, independentemente
+de onde estejam armazenados.
+O Grafana OSS oferece ferramentas para transformar os dados do seu banco de
+dados de séries temporais (TSDB) em gráficos e visualizações esclarecedoras.
+O framework de plugins do Grafana OSS também permite conectar outras fontes de
+dados, como bancos de dados NoSQL/SQL, ferramentas de gerenciamento de tickets
+como Jira ou ServiceNow e ferramentas de CI/CD como GitLab.
 
-After you have [installed Grafana](../setup-grafana/installation/) and set up your first dashboard using instructions in [Getting started with Grafana](../getting-started/build-first-dashboard/), you will have many options to choose from depending on your requirements. For example, if you want to view weather data and statistics about your smart home, then you can create a [playlist](../dashboards/create-manage-playlists/). If you are the administrator for an enterprise and are managing Grafana for multiple teams, then you can set up [provisioning](../administration/provisioning/) and [authentication](../setup-grafana/configure-access/configure-authentication/).
+Após [instalar o Grafana](../setup-grafana/installation/) e configurar seu
+primeiro painel seguindo as instruções em
+[Começando com o Grafana](../getting-started/build-first-dashboard/), você terá
+diversas opções à sua disposição, dependendo das suas necessidades.
+Por exemplo, se você quiser visualizar dados meteorológicos e estatísticas sobre
+sua casa inteligente, poderá criar uma
+[playlist](../dashboards/create-manage-playlists/).
+Se você for a pessoa administradora de uma empresa e gerenciar o Grafana para
+várias equipes, poderá configurar o
+[provisionamento](../administration/provisioning/) e a
+[autenticação](../setup-grafana/configure-access/configure-authentication/).
 
-The following sections provide an overview of Grafana features and links to product documentation to help you learn more. For more guidance and ideas, check out our [Grafana Community forums](https://community.grafana.com/).
+As seções a seguir fornecem uma visão geral dos recursos do Grafana e links para
+a documentação do produto para aprender mais sobre ele.
+Para obter mais orientações e ideias, consulte nossos
+[fóruns da Comunidade Grafana](https://community.grafana.com/).
 
-## Explore metrics, logs, and traces
+## Explore métricas, logs e rastros
 
-Explore your data through ad-hoc queries and dynamic drilldown. Split view and compare different time ranges, queries and data sources side by side. Refer to [Explore](../explore/) for more information.
+Explore seus dados por meio de consultas ad-hoc e detalhamento dinâmico.
+Divida a visualização e compare diferentes intervalos de tempo, consultas e
+fontes de dados lado a lado.
+Consulte [Explore](../explore/) para obter mais informações.
 
-## Alerts
+## Alertas
 
-If you're using Grafana Alerting, then you can have alerts sent through a number of different alert notifiers, including PagerDuty, SMS, email, VictorOps, OpsGenie, or Slack.
+Se você usa o Grafana Alerting, pode configurar alertas para serem enviados por
+meio de diversos notificadores, incluindo PagerDuty, SMS, e-mail, VictorOps,
+OpsGenie ou Slack.
 
-Alert hooks allow you to create different notifiers with a bit of code if you prefer some other channels of communication. Visually define [alert rules](../alerting/alerting-rules/) for your most important metrics.
+Os hooks de alerta permitem criar diferentes notificadores com um pouco de
+código, caso prefira outros canais de comunicação.
+Defina visualmente [regras de alerta](../alerting/alerting-rules/) para suas
+métricas mais importantes.
 
-## Annotations
+## Anotações
 
-Annotate graphs with rich events from different data sources. Hover over events to see the full event metadata and tags.
+Anote gráficos com eventos detalhados de diferentes fontes de dados.
+Passe o cursor sobre os eventos para ver os metadados e tags completos.
 
-This feature, which shows up as a graph marker in Grafana, is useful for correlating data in case something goes wrong. You can create the annotations manually—just control-click on a graph and input some text—or you can fetch data from any data source. Refer to [Annotations](../dashboards/build-dashboards/annotate-visualizations/) for more information.
+Este recurso, que aparece como um marcador no gráfico do Grafana, é útil para
+correlacionar dados caso algo dê errado.
+Você pode criar as anotações manualmente — basta clicar com o botão direito do
+mouse em um gráfico e inserir algum texto — ou pode buscar dados de qualquer
+fonte de dados.
+Consulte [Anotações](../dashboards/build-dashboards/annotate-visualizations/)
+para obter mais informações.
 
-## Dashboard variables
+## Variáveis de dashboard
 
-[Template variables](../dashboards/variables/) allow you to create dashboards that can be reused for lots of different use cases. Values aren't hard-coded with these templates, so for instance, if you have a production server and a test server, you can use the same dashboard for both.
+[Variáveis de template](../dashboards/variables/) permitem criar painéis que
+podem ser reutilizados para diversos casos de uso.
+Os valores não são fixos nesses templates; portanto, por exemplo, se você tiver
+um servidor de produção e um servidor de teste, poderá usar o mesmo painel para
+ambos.
 
-Templating allows you to drill down into your data, say, from all data to North America data, down to Texas data, and beyond. You can also share these dashboards across teams within your organization—or if you create a great dashboard template for a popular data source, you can contribute it to the whole community to customize and use.
+A criação de templates permite que você explore seus dados em detalhes, por
+exemplo, desde todos os dados até os dados da América do Norte, depois até os
+dados do Texas e assim por diante.
+Você também pode compartilhar esses painéis com outras equipes dentro da sua
+organização — ou, se criar um ótimo modelo de painel para uma fonte de dados
+popular, pode compartilhá-lo com toda a comunidade para que todas as pessoas
+possam personalizá-lo e usá-lo.
 
-## Configure Grafana
+## Configure o Grafana
 
-If you're a Grafana administrator, then you'll want to thoroughly familiarize yourself with [Grafana configuration options](../setup-grafana/configure-grafana/) and the [Grafana CLI](../cli/).
+Se você for uma pessoa administradora do Grafana, é importante familiarizar-se
+completamente com as
+[opções de configuração do Grafana](../setup-grafana/configure-grafana/) e com a
+[CLI do Grafana](../cli/).
 
-Configuration covers both config files and environment variables. You can set up default ports, logging levels, email IP addresses, security, and more.
+A configuração abrange tanto arquivos de configuração quanto variáveis de
+ambiente.
+Você pode definir portas padrão, níveis de logging, endereços IP de e-mail,
+segurança e muito mais.
 
-## Import dashboards and plugins
+## Importe dashboards e plugins
 
-Discover hundreds of [dashboards](/grafana/dashboards) and [plugins](/grafana/plugins) in the official library. Thanks to the passion and momentum of community members, new ones are added every week.
+Descubra centenas de [dashboards](/grafana/dashboards) e
+[plugins](/grafana/plugins) na biblioteca oficial.
+Graças à paixão e ao dinamismo das pessoas da comunidade, novos recursos são
+adicionados semanalmente.
 
-## Authentication
+## Autenticação
 
-Grafana supports different authentication methods, such as LDAP and OAuth, and allows you to map users to organizations. Refer to the [User authentication overview](../setup-grafana/configure-access/configure-authentication/) for more information.
+O Grafana oferece suporte a diferentes métodos de autenticação, como LDAP e
+OAuth, e permite mapear pessoas usuárias para organizações.
+Consulte a
+[Visão geral da autenticação de pessoas usuárias](../setup-grafana/configure-access/configure-authentication/)
+para obter mais informações.
 
-In Grafana Enterprise, you can also map users to teams: If your company has its own authentication system, Grafana allows you to map the teams in your internal systems to teams in Grafana. That way, you can automatically give people access to the dashboards designated for their teams. Refer to [Grafana Enterprise](grafana-enterprise/) for more information.
+No Grafana Enterprise, você também pode mapear pessoas usuárias para equipes: se
+sua empresa possui um sistema de autenticação próprio, o Grafana permite mapear
+as equipes em seus sistemas internos para equipes no Grafana.
+Dessa forma, você pode conceder acesso automático às equipes designadas para
+cada uma delas.
+Consulte o [Grafana Enterprise](grafana-enterprise/) para obter mais
+informações.
 
-## Provisioning
+## Provisionamento
 
-While it's easy to click, drag, and drop to create a single dashboard, power users in need of many dashboards will want to automate the setup with a script. You can script anything in Grafana.
+Embora seja fácil clicar, arrastar e soltar para criar um único dashboard,
+pessoas usuárias avançadas que precisam de vários dashboards podem optar por
+automatizar a configuração com um script.
+É possível criar scripts para qualquer coisa no Grafana.
 
-For example, if you're spinning up a new Kubernetes cluster, you can also spin up a Grafana automatically with a script that would have the right server, IP address, and data sources preset and locked in so users cannot change them. It's also a way of getting control over a lot of dashboards. Refer to [Provisioning](../administration/provisioning/) for more information.
+Por exemplo, ao criar um novo cluster Kubernetes, você também pode criar um
+Grafana automaticamente com um script que terá o servidor, o endereço IP e as
+fontes de dados corretos predefinidos e bloqueados para que as pessoas usuárias
+não possam alterá-los.
+Essa também é uma maneira de controlar vários dashboards.
+Consulte [Provisionamento](../administration/provisioning/) para obter mais
+informações.
 
-## Permissions
+## Permissões
 
-When organizations have one Grafana and multiple teams, they often want the ability to both keep things separate and share dashboards. You can create a team of users and then set permissions on [folders and dashboards](../administration/user-management/manage-dashboard-permissions/), and down to the [data source level](../administration/data-source-management/#data-source-permissions) if you're using [Grafana Enterprise](grafana-enterprise/).
+Quando as organizações têm uma única instalação do Grafana e várias equipes,
+geralmente desejam manter os ambientes separados e, ao mesmo tempo, compartilhar
+dashboards.
+Você pode criar uma equipe de pessoas usuárias e definir permissões para
+[pastas e dashboards](../administration/user-management/manage-dashboard-permissions/)
+e até o
+[nível da fonte de dados](../administration/data-source-management/#data-source-permissions)
+se estiver usando o [Grafana Enterprise](grafana-enterprise/).
 
-## Other Grafana Labs OSS Projects
+## Outros projetos de código aberto do Grafana Labs
 
-In addition to Grafana, Grafana Labs also provides the following open source projects:
+Além do Grafana, o Grafana Labs também oferece os seguintes projetos de código
+aberto:
 
-**Grafana Loki:** Grafana Loki is an open source, set of components that can be composed into a fully featured logging stack. For more information, refer to [Grafana Loki documentation](/docs/loki/latest/).
+**Grafana Loki:** O Grafana Loki é um conjunto de componentes de código aberto
+que podem ser combinados para formar uma pilha de logging completa.
+Para obter mais informações, consulte a
+[documentação do Grafana Loki](/docs/loki/latest/).
 
-**Grafana Tempo:** Grafana Tempo is an open source, easy-to-use and high-volume distributed tracing backend. For more information, refer to [Grafana Tempo documentation](/docs/tempo/latest/?pg=oss-tempo&plcmt=hero-txt/).
+**Grafana Tempo:** O Grafana Tempo é um backend de rastros distribuído de código
+aberto, fácil de usar e de alto volume.
+Para mais informações, consulte a
+[documentação do Grafana Tempo](/docs/tempo/latest/?pg=oss-tempo&plcmt=hero-txt/).
 
-**Grafana Mimir:** Grafana Mimir is an open source software project that provides a scalable long-term storage for Prometheus. For more information about Grafana Mimir, refer to [Grafana Mimir documentation](/docs/mimir/latest/).
+**Grafana Mimir:** O Grafana Mimir é um projeto de software de código aberto que
+fornece armazenamento escalável de longo prazo para o Prometheus.
+Para mais informações sobre o Grafana Mimir, consulte a
+[documentação do Grafana Mimir](/docs/mimir/latest/).
 
-**Grafana Pyroscope:** Grafana Pyroscope is an open source software project for aggregating continuous profiling data. Continuous profiling is an observability signal that allows you to understand your workload's resources (CPU, memory, for example) usage down to the line number. For more information about Grafana Pyroscope, refer to [Grafana Pyroscope documentation](/docs/pyroscope/latest/).
+**Grafana Pyroscope:** O Grafana Pyroscope é um projeto de software de código
+aberto para agregação de dados de profiling contínuo.
+O profiling contínuo é um sinal de observabilidade que permite entender o uso de
+recursos da sua carga de trabalho (CPU, memória, por exemplo) até o nível do
+número de linha.
+Para obter mais informações sobre o Grafana Pyroscope, consulte a
+[documentação do Grafana Pyroscope](/docs/pyroscope/latest/).
 
-**Grafana Faro:** Grafana Faro is an open source JavaScript agent that embeds in web applications to collect real user monitoring (RUM) data: performance metrics, logs, exceptions, events, and traces. For more information about using Grafana Faro, refer to [Grafana Faro documentation](/docs/grafana-cloud/monitor-applications/frontend-observability/faro-web-sdk/).
+**Grafana Faro:** O Grafana Faro é um agente JavaScript de código aberto que se
+integra a aplicações web para coletar dados de monitoramento de pessoas usuárias
+reais (RUM): métricas de desempenho, logs, exceções, eventos e rastros.
+Para obter mais informações sobre como usar o Grafana Faro, consulte a
+[documentação do Grafana Faro](/docs/grafana-cloud/monitor-applications/frontend-observability/faro-web-sdk/).
 
-**Grafana Beyla:** Grafana Beyla is an eBPF-based application auto-instrumentation tool for application observability. eBPF is used to automatically inspect application executables and the OS networking layer as well as capture basic trace spans related to web transactions and Rate-Errors-Duration (RED) metrics for Linux HTTP/S and gRPC services. All data capture occurs without any modifications to application code or configuration. For more information about Grafana Beyla, refer to [Grafana Beyla documentation](/docs/beyla/latest/).
+**Grafana Beyla:** O Grafana Beyla é uma ferramenta de instrumentação automática
+de aplicações baseada em eBPF para observabilidade de aplicações.
+O eBPF é usado para inspecionar automaticamente os executáveis da aplicação e a
+camada de rede do sistema operacional, bem como capturar trechos de rastros
+básicos relacionados a transações web e métricas de Rate-Errors-Duration (RED)
+para serviços Linux HTTP/S e gRPC.
+Toda a captura de dados ocorre sem qualquer modificação no código ou na
+configuração da aplicação.
+Para obter mais informações sobre o Grafana Beyla, consulte a
+[documentação do Grafana Beyla](/docs/beyla/latest/).
 
-**Grafana Alloy:** Grafana Alloy is a flexible, high performance, vendor-neutral distribution of the [OpenTelemetry](https://opentelemetry.io/) (OTel) Collector.
-It's fully compatible with the most popular open source observability standards such as OpenTelemetry (OTel) and Prometheus.
-For more information about Grafana Alloy, refer to the [Grafana Alloy documentation](https://grafana.com/docs/alloy/latest/).
+**Grafana Alloy:** O Grafana Alloy é uma distribuição flexível, de alto
+desempenho e independente de fornecedor do coletor
+[OpenTelemetry](https://opentelemetry.io/) (OTel).
+É totalmente compatível com os padrões de observabilidade de código aberto mais
+populares, como OpenTelemetry (OTel) e Prometheus.
+Para obter mais informações sobre o Grafana Alloy, consulte a
+[documentação do Grafana Alloy](https://grafana.com/docs/alloy/latest/).
 
-**Grafana k6:** Grafana k6 is an open-source load testing tool that makes performance testing easy and productive for engineering teams. For more information about Grafana k6, refer to [Grafana k6 documentation](/docs/k6/latest/).
+**Grafana k6:** O Grafana k6 é uma ferramenta de código aberto para testes de
+carga que facilita e aumenta a produtividade dos testes de desempenho para
+equipes de engenharia.
+Para mais informações sobre o Grafana k6, consulte a
+[documentação do Grafana k6](/docs/k6/latest/).
 
-**Grafana OnCall:** Grafana OnCall is an open source incident response management tool built to help teams improve their collaboration and resolve incidents faster. For more information about Grafana OnCall, refer to [Grafana OnCall documentation](/docs/oncall/latest/).
+**Grafana OnCall:** O Grafana OnCall é uma ferramenta de código aberto para
+gerenciamento de resposta a incidentes, criada para ajudar as equipes a
+aprimorarem a colaboração e resolverem incidentes mais rapidamente.
+Para mais informações sobre o Grafana OnCall, consulte a
+[documentação do Grafana OnCall](/docs/oncall/latest/).
