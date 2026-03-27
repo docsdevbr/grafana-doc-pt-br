@@ -25,7 +25,7 @@ weight: 300
 
 O Grafana Cloud é uma plataforma OpenSaaS de logs e métricas altamente
 disponível, rápida e totalmente gerenciada.
-Ele oferece tudo o que você adora no Grafana, hospedado pela Grafana Labs.
+Ele oferece tudo o que você ama no Grafana, hospedado pela Grafana Labs.
 
 Visite a [documentação do Grafana Cloud](/docs/grafana-cloud) para obter mais
 informações.
