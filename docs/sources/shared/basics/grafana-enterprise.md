@@ -9,6 +9,10 @@
 # https://github.com/grafana/grafana/blob/-/LICENSE
 # https://github.com/grafana/grafana/blob/-/LICENSING.md
 
+source_url: https://github.com/grafana/grafana/blob/main/docs/sources/shared/basics/grafana-enterprise.md
+revision: 5fc07abef1cfb317aebbf00c9691ae58d15456c1
+status: ready
+
 labels:
   products:
     - enterprise
@@ -18,6 +22,15 @@ title: Grafana Enterprise
 
 ## Grafana Enterprise
 
-Grafana Enterprise is the commercial edition of Grafana that includes additional features not found in the open source version. Building on everything you already know and love about Grafana, Grafana Enterprise adds enterprise data sources, advanced authentication options, more permission controls, 24x7x365 support, and training from the core Grafana team.
+O Grafana Enterprise é a edição comercial do Grafana que inclui recursos
+adicionais não encontrados na versão de código aberto.
+Baseado em tudo o que você já conhece e ama no Grafana, o Grafana Enterprise
+adiciona fontes de dados corporativas, opções avançadas de autenticação, mais
+controles de permissão, suporte 24x7x365 e treinamento do time principal do
+Grafana.
 
-[Learn more about Grafana Enterprise](https://grafana.com/enterprise) and contact the Grafana Labs [Sales Team](https://grafana.com/contact?about=grafana-enterprise-stack) to purchase an Enterprise license. You can also obtain a trial license before the purchase.
+[Saiba mais sobre o Grafana Enterprise](https://grafana.com/enterprise) e entre
+em contato com a
+[Equipe de Vendas](https://grafana.com/contact?about=grafana-enterprise-stack)
+da Grafana Labs para adquirir uma licença Enterprise.
+Você também pode obter uma licença de avaliação antes da compra.
