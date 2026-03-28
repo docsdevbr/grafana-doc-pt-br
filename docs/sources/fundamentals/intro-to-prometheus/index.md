@@ -9,6 +9,10 @@
 # https://github.com/grafana/grafana/blob/-/LICENSE
 # https://github.com/grafana/grafana/blob/-/LICENSING.md
 
+source_url: https://github.com/grafana/grafana/blob/main/docs/sources/fundamentals/intro-to-prometheus/index.md
+revision: c10dba5c63caca417bb819a2bbc665113e8bb2d2
+status: ready
+
 aliases:
   - ../basics/timeseries/
   - /docs/grafana-cloud/introduction/prometheus/
