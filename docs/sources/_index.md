@@ -122,7 +122,7 @@ incluindo bancos de dados de séries temporais como Prometheus e CloudWatch,
 ferramentas de log como Loki e Elasticsearch, bancos de dados NoSQL/SQL como
 Postgres, ferramentas de CI/CD como GitHub e muito mais.
 O Grafana OSS fornece ferramentas para exibir esses dados em dashboards em tempo
-real com gráficos e visualizações informativos.
+real com gráficos e visualizações esclarecedores.
 
 O _Grafana Enterprise_ é uma edição comercial do Grafana que inclui plugins
 exclusivos de fontes de dados e recursos adicionais não encontrados na versão de
