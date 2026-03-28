@@ -32,8 +32,7 @@ Baseado em tudo o que você já conhece e ama no Grafana de código aberto, o
 Grafana Enterprise inclui
 [plugins exclusivos de fontes de dados](#enterprise-data-sources) e
 [recursos adicionais](#enterprise-features).
-Você também recebe suporte 24x7x365 e treinamento da equipe principal do
-Grafana.
+Você também recebe suporte 24x7x365 e treinamento do time principal do Grafana.
 
 Para saber mais sobre o Grafana Enterprise, consulte
 [nossa página do produto](/enterprise).
