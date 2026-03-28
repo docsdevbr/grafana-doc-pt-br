@@ -32,7 +32,7 @@ O [software de código aberto Grafana](/oss/) permite consultar, visualizar,
 configurar alertas e explorar suas métricas, logs e rastros, independentemente
 de onde estejam armazenados.
 O Grafana OSS oferece ferramentas para transformar os dados do seu banco de
-dados de séries temporais (TSDB) em gráficos e visualizações esclarecedoras.
+dados de séries temporais (TSDB) em gráficos e visualizações esclarecedores.
 O framework de plugins do Grafana OSS também permite conectar outras fontes de
 dados, como bancos de dados NoSQL/SQL, ferramentas de gerenciamento de tickets
 como Jira ou ServiceNow e ferramentas de CI/CD como GitLab.

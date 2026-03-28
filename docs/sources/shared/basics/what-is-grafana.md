@@ -9,6 +9,10 @@
 # https://github.com/grafana/grafana/blob/-/LICENSE
 # https://github.com/grafana/grafana/blob/-/LICENSING.md
 
+source_url: https://github.com/grafana/grafana/blob/release-12.4.3/docs/sources/shared/basics/what-is-grafana.md
+revision: c37a9ea8cb40a1796ede69cebebb7177be8cd98e
+status: ready
+
 labels:
   products:
     - enterprise
@@ -18,24 +22,38 @@ title: Grafana Open Source
 
 ## Grafana Open Source
 
-Grafana open source is open source visualization and analytics software. It allows you to query, visualize, alert on, and explore your metrics, logs, and traces no matter where they are stored. It provides you with tools to turn your time-series database (TSDB) data into insightful graphs and visualizations.
+O Grafana Open Source é um software de visualização e análise de código aberto.
+Ele permite consultar, visualizar, configurar alertas e explorar suas métricas,
+logs e rastros, independentemente de onde estejam armazenados.
+Ele fornece ferramentas para transformar seus dados de banco de dados de séries
+temporais (TSDB) em gráficos e visualizações esclarecedores.
 
 ### Grafana Loki
 
-Grafana Loki is an open-source set of components that can be composed into a fully featured logging stack. For more information, refer to [Loki documentation](https://grafana.com/docs/loki/<LOKI_VERSION>/).
+O Grafana Loki é um conjunto de componentes de código aberto que podem ser
+combinados para formar uma pilha de logging completa.
+Para obter mais informações, consulte a
+[documentação do Loki](https://grafana.com/docs/loki/<LOKI_VERSION>/).
 
 ### Grafana Tempo
 
-Grafana Tempo is an open source, easy-to-use and high-volume distributed tracing backend. For more information, refer to [Tempo documentation](https://grafana.com/docs/tempo/<TEMPO_VERSION>/).
+O Grafana Tempo é um backend de rastreamento distribuído de código aberto, fácil
+de usar e de alto volume.
+Para obter mais informações, consulte a
+[documentação do Tempo](https://grafana.com/docs/tempo/<TEMPO_VERSION>/).
 
 ### Grafana Mimir
 
-Grafana Mimir is an open source software project that provides a scalable long-term storage for Prometheus. For more information about Grafana Mimir, refer to [Grafana Mimir documentation](https://grafana.com/docs/mimir/<MIMIR_VERSION>/).
+O Grafana Mimir é um projeto de software de código aberto que fornece
+armazenamento escalável de longo prazo para o Prometheus.
+Para obter mais informações sobre o Grafana Mimir, consulte a
+[documentação do Grafana Mimir](https://grafana.com/docs/mimir/<MIMIR_VERSION>/).
 
 ### Grafana Pyroscope
 
-Grafana Pyroscope is an open source software project for aggregating continuous profiling data. Continuous profiling is an observability signal that helps you understand your workload’s resources usage. For more information, refer to [Grafana Pyroscope documentation](https://grafana.com/docs/pyroscope/<PYROSCOPE_VERSION>/).
-
-### Grafana Oncall
-
-Grafana OnCall is an open source incident response management tool built to help teams improve their collaboration and resolve incidents faster. For more information about Grafana OnCall, refer to [Grafana OnCall documentation](https://grafana.com/docs/oncall/<ONCALL_VERSION>/).
+O Grafana Pyroscope é um projeto de software de código aberto para agregar dados
+de profiling contínuo.
+O profiling contínuo é um sinal de observabilidade que ajuda a entender o uso de
+recursos da sua carga de trabalho.
+Para obter mais informações, consulte a
+[documentação do Grafana Pyroscope](https://grafana.com/docs/pyroscope/<PYROSCOPE_VERSION>/).
