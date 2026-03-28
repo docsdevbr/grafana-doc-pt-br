@@ -9,6 +9,10 @@
 # https://github.com/grafana/grafana/blob/-/LICENSE
 # https://github.com/grafana/grafana/blob/-/LICENSING.md
 
+source_url: https://github.com/grafana/grafana/blob/main/docs/sources/shared/basics/grafana-cloud.md
+revision: 7eb17bcccae0881d794f02ceb39bf80e5709810b
+status: ready
+
 labels:
   products:
     - enterprise
@@ -18,4 +22,7 @@ title: Grafana Cloud
 
 ## Grafana Cloud
 
-Grafana Cloud is a highly available, fast, fully managed OpenSaaS logging and metrics platform. It is everything you love about Grafana, but Grafana Labs hosts it for you and handles all the headaches.
+O Grafana Cloud é uma plataforma OpenSaaS de logging e métricas altamente
+disponível, rápida e totalmente gerenciada.
+Ele tem tudo o que você ama no Grafana, mas a Grafana Labs hospeda tudo para
+você e cuida de todas as dores de cabeça.
