@@ -1,10 +1,24 @@
 ---
+# Copyright (c) 2026 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+#
+# Documentation licensed under the GNU Affero General Public License Version 3.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/-/LICENSE
+# https://github.com/grafana/grafana/blob/-/LICENSING.md
+
+source_url: https://github.com/grafana/grafana/blob/release-12.4.3/docs/sources/fundamentals/timeseries-dimensions/index.md
+revision: 244ffad99d873bab23a1c749ed93384b6822f5b7
+status: ready
+
 aliases:
   - ../basics/timeseries-dimensions/
   - ../getting-started/timeseries-dimensions/
   - ../guides/timeseries-dimensions/
   - /docs/grafana-cloud/introduction/timeseries-dimensions/
-description: time series dimensions
+description: Dimensões das séries temporais.
 keywords:
   - grafana
   - intro
@@ -17,7 +31,7 @@ labels:
     - cloud
     - enterprise
     - oss
-title: Time series dimensions
+title: Dimensões das séries temporais
 weight: 500
 refs:
   create-grafana-managed-rule:
@@ -32,37 +46,63 @@ refs:
       destination: /docs/grafana/<GRAFANA_VERSION>/fundamentals/timeseries/#time-series-databases
 ---
 
-# Time series dimensions
+# Dimensões das séries temporais
 
-In [Introduction to time series](ref:time-series-databases), the concept of _labels_, also called _tags_, is introduced:
+Em [Introdução a séries temporais](ref:time-series-databases), o conceito de
+_labels_ (rótulos), também chamados de _tags_, é apresentado:
 
-> Another feature of a TSDB is the ability to filter measurements using _tags_. Each data point is labeled with a tag that adds context information, such as where the measurement was taken.
+> Outro recurso de um TSDB é a capacidade de filtrar medições usando _tags_.
+> Cada ponto de dados é rotulado com uma tag que adiciona informações
+> contextuais, como o local onde a medição foi feita.
 
-With time series data, the data often contain more than a single series, and is a set of multiple time series. Many Grafana data sources support this type of data.
+Com dados de séries temporais, os dados geralmente contêm mais de uma série,
+sendo um conjunto de múltiplas séries temporais.
+Muitas fontes de dados do Grafana suportam esse tipo de dado.
 
-{{< figure src="/static/img/docs/example_graph_multi_dim.png" class="docs-image--no-shadow" max-width="850px" alt="Temperature by location" >}}
+{{< figure src="/static/img/docs/example_graph_multi_dim.png" class="docs-image--no-shadow" max-width="850px" alt="Temperatura por localização" >}}
 
-The common case is issuing a single query for a measurement with one or more additional properties as dimensions. For example, querying a temperature measurement along with a location property. In this case, multiple series are returned back from that single query and each series has unique location as a dimension.
+O caso comum é a emissão de uma única consulta para uma medição com uma ou mais
+propriedades adicionais como dimensões.
+Por exemplo, consultar uma medição de temperatura juntamente com uma propriedade
+de localização.
+Nesse caso, várias séries são retornadas a partir de uma única consulta, e cada
+série possui uma localização única como dimensão.
 
-To identify unique series within a set of time series, Grafana stores dimensions in _labels_.
+Para identificar séries únicas em um conjunto de séries temporais, o Grafana
+armazena as dimensões em _labels_.
 
 ## Labels
 
-Each time series in Grafana optionally has labels. Labels are a set of key/value pairs for identifying dimensions. Example labels could be `{location=us}` or `{country=us,state=ma,city=boston}`. Within a set of time series, the combination of its name and labels identifies each series. For example, `temperature {country=us,state=ma,city=boston}` could identify the series of temperature values for the city of Boston in the US.
+Cada série temporal no Grafana pode ter labels.
+Labels são um conjunto de pares chave/valor para identificar dimensões.
+Exemplos de labels podem ser `{location=us}` ou
+`{country=us,state=ma,city=boston}`.
+Em um conjunto de séries temporais, a combinação do nome e das labels identifica
+cada série.
+Por exemplo, `temperature {country=us,state=ma,city=boston}` pode identificar a
+série de valores de temperatura para a cidade de Boston, nos EUA.
 
-Different sources of time series data have dimensions stored natively, or common storage patterns that allow the data to be extracted into dimensions.
+Diferentes fontes de dados de séries temporais armazenam dimensões nativamente
+ou possuem padrões de armazenamento comuns que permitem que os dados sejam
+extraídos para dimensões.
 
-Time series databases (TSDBs) usually natively support dimensionality. Prometheus also stores dimensions in _labels_. In TSDBs such as Graphite or OpenTSDB the term _tags_ is used instead.
+Bancos de dados de séries temporais (TSDBs) geralmente oferecem suporte nativo à
+dimensionalidade.
+O Prometheus também armazena dimensões em _labels_.
+Em TSDBs como Graphite ou OpenTSDB, o termo _tags_ é usado em vez de labels.
 
-In table databases such SQL, these dimensions are generally the `GROUP BY` parameters of a query.
+Em bancos de dados de tabelas, como SQL, essas dimensões são geralmente os
+parâmetros `GROUP BY` de uma consulta.
 
-## Multiple dimensions in table format
+## Múltiplas dimensões em formato de tabela
 
-In SQL or SQL-like databases that return table responses, additional dimensions are usually represented as columns in the query response table.
+Em bancos de dados SQL ou similares que retornam respostas em formato de tabela,
+as dimensões adicionais são geralmente representadas como colunas na tabela de
+resposta da consulta.
 
-### Single dimension
+### Dimensão única
 
-For example, consider a query like:
+Por exemplo, considere uma consulta como:
 
 ```sql
 SELECT BUCKET(StartTime, 1h), AVG(Temperature) AS Temp, Location FROM T
@@ -70,7 +110,8 @@ SELECT BUCKET(StartTime, 1h), AVG(Temperature) AS Temp, Location FROM T
   ORDER BY time asc
 ```
 
-This query would return a table with three columns with data types time, number, and string respectively:
+Esta consulta retornaria uma tabela com três colunas, cada uma com um tipo de
+dados: time, number e string, respectivamente:
 
 | StartTime | Temp | Location |
 | --------- | ---- | -------- |
@@ -79,13 +120,22 @@ This query would return a table with three columns with data types time, number,
 | 10:00     | 26   | LGA      |
 | 10:00     | 22   | BOS      |
 
-The table format is a _long_ formatted time series, also called _tall_. It has repeated time stamps, and repeated values in Location. In this case, we have two time series in the set that would be identified as `Temp {Location=LGA}` and `Temp {Location=BOS}`.
+O formato da tabela é uma série temporal _long_ (longa), também chamada de
+_tall_ (alta).
+Ela possui registros de data e hora repetidos e valores repetidos em Location.
+Neste caso, temos duas séries temporais no conjunto que seriam identificadas
+como `Temp {Local=LGA}` e `Temp {Local=BOS}`.
 
-Individual time series from the set are extracted by using the time typed column `StartTime` as the time index of the time series, the numeric typed column `Temp` as the series name, and the name and values of the string typed `Location` column to build the labels, such as Location=LGA.
+As séries temporais individuais do conjunto são extraídas usando a coluna do
+tipo time `StartTime` como índice temporal da série, a coluna do tipo number
+`Temp` como nome da série e o nome e os valores da coluna do tipo string
+`Location` para construir as labels, como Location=LGA.
 
-### Multiple dimensions
+### Múltiplas dimensões
 
-If the query is updated to select and group by more than just one string column, for example, `GROUP BY BUCKET(StartTime, 1h), Location, Sensor`, then an additional dimension is added:
+Se a consulta for atualizada para selecionar e agrupar por mais de uma coluna de
+string, por exemplo, `GROUP BY BUCKET(StartTime, 1h), Location, Sensor`, uma
+dimensão adicional será adicionada:
 
 | StartTime | Temp | Location | Sensor |
 | --------- | ---- | -------- | ------ |
@@ -98,19 +148,33 @@ If the query is updated to select and group by more than just one string column,
 | 10:00     | 22   | BOS      | A      |
 | 10:00     | 22.2 | BOS      | B      |
 
-In this case the labels that represent the dimensions will have two keys based on the two string typed columns `Location` and `Sensor`. This data results four series: `Temp {Location=LGA,Sensor=A}`, `Temp {Location=LGA,Sensor=B}`, `Temp {Location=BOS,Sensor=A}`, and `Temp {Location=BOS,Sensor=B}`.
+Neste caso, as labels que representam as dimensões terão duas chaves baseadas
+nas duas colunas do tipo string `Location` e `Sensor`.
+Esses dados resultam em quatro séries: `Temp {Location=LGA,Sensor=A}`,
+`Temp {Location=LGA,Sensor=B}`, `Temp {Location=BOS,Sensor=A}` e
+`Temp {Location=BOS,Sensor=B}`.
 
 {{< admonition type="note" >}}
-More than one dimension is currently only supported in the Logs queries within the Azure Monitor service as of version 7.1.
+Mais de uma dimensão é atualmente suportada apenas em consultas de Logs no
+serviço Azure Monitor, a partir da versão 7.1.
 {{< /admonition >}}
 
 {{< admonition type="note" >}}
-Multiple dimensions are not supported in a way that maps to multiple alerts in Grafana, but rather they are treated as multiple conditions to a single alert.
-For more information, see the documentation on [creating alerts with multiple series](ref:create-grafana-managed-rule).
+Múltiplas dimensões não são suportadas para mapear vários alertas no Grafana,
+mas sim tratadas como múltiplas condições para um único alerta.
+Para obter mais informações, consulte a documentação sobre
+[criação de alertas com várias séries](ref:create-grafana-managed-rule).
 {{< /admonition >}}
 
-### Multiple values
+### Múltiplos valores
 
-In the case of SQL-like data sources, more than one numeric column can be selected, with or without additional string columns to be used as dimensions. For example, `AVG(Temperature) AS AvgTemp, MAX(Temperature) AS MaxTemp`. This, if combined with multiple dimensions, can result in a lot of series. Selecting multiple values is currently only designed to be used with visualization.
+No caso de fontes de dados do tipo SQL, é possível selecionar mais de uma coluna
+numérica, com ou sem colunas de string adicionais para serem usadas como
+dimensões.
+Por exemplo, `AVG(Temperature) AS AvgTemp, MAX(Temperature) AS MaxTemp`.
+Isso, se combinado com várias dimensões, pode resultar em muitas séries.
+A seleção de múltiplos valores destina-se atualmente apenas à visualização.
 
-Additional technical information on tabular time series formats and how dimensions are extracted can be found in [the developer documentation on data frames as time series](https://grafana.com/developers/plugin-tools/key-concepts/data-frames#data-frames-as-time-series).
+Informações técnicas adicionais sobre formatos de séries temporais tabulares e
+como as dimensões são extraídas podem ser encontradas na
+[documentação da pessoa desenvolvedora sobre data frames como séries temporais](https://grafana.com/developers/plugin-tools/key-concepts/data-frames#data-frames-as-time-series).
