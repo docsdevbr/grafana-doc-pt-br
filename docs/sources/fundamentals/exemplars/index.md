@@ -9,10 +9,14 @@
 # https://github.com/grafana/grafana/blob/-/LICENSE
 # https://github.com/grafana/grafana/blob/-/LICENSING.md
 
+source_url: https://github.com/grafana/grafana/blob/main/docs/sources/fundamentals/exemplars/index.md
+revision: a5ee2124401d82051e7f2351d2b89e5f486659e6
+status: ready
+
 aliases:
   - ../basics/exemplars/
   - ../basics/exemplars/view-exemplars/
-description: Introduction to exemplars
+description: Introdução aos exemplares.
 keywords:
   - grafana
   - concepts
@@ -24,104 +28,155 @@ labels:
     - enterprise
     - oss
 menuTitle: Exemplars
-title: Introduction to exemplars
+title: Introdução aos exemplares
 weight: 800
 ---
 
-# Introduction to exemplars
+# Introdução aos exemplares
 
-An exemplar is a specific trace representative of measurement taken in a given time interval.
-While metrics excel at giving you an aggregated view of your system, traces give you a fine grained view of a single request; exemplars are a way to link the two.
+Um exemplar é um rastro específico que representa uma medição feita em um
+determinado intervalo de tempo.
+Enquanto as métricas são excelentes para fornecer uma visão agregada do seu
+sistema, os rastros oferecem uma visão detalhada de uma única requisição; os
+exemplares são uma maneira de conectar os dois.
 
-Suppose your company website is experiencing a surge in traffic volumes.
-While more than eighty percent of the users are able to access the website in under two seconds, some users are experiencing a higher than normal response time resulting in bad user experience.
+Suponha que o site da sua empresa esteja experimentando um aumento repentino no
+volume de tráfego.
+Embora mais de 80% das pessoas usuárias consigam acessar o site em menos de dois
+segundos, algumas pessoas usuárias estão experimentando um tempo de resposta
+maior do que o normal, resultando em uma experiência ruim.
 
-To identify the factors that are contributing to the latency, you must compare a trace for a fast response against a trace for a slow response.
-Given the vast amount of data in a typical production environment, it's an extremely laborious and time-consuming effort.
+Para identificar os fatores que contribuem para a latência, você deve comparar
+um rastro de uma resposta rápida com um rastro de uma resposta lenta.
+Dada a vasta quantidade de dados em um ambiente de produção típico, essa é uma
+tarefa extremamente trabalhosa e demorada.
 
-Use exemplars to help isolate problems within your data distribution by pinpointing query traces exhibiting high latency within a time interval.
-After you localize the latency problem to a few exemplar traces, you can combine it with additional system based information or location properties to perform a root cause analysis faster, leading to quick resolutions to performance issues.
+Use exemplares para isolar problemas na sua distribuição de dados, identificando
+rastros de consultas que apresentam alta latência em um determinado intervalo de
+tempo.
+Após localizar o problema de latência em alguns exemplares de rastro, você pode
+combiná-los com informações adicionais do sistema ou propriedades de localização
+para realizar uma análise de causa raiz mais rapidamente, levando a soluções
+rápidas para problemas de desempenho.
 
-Support for exemplars is available for the Prometheus data source only.
-After you enable the functionality, exemplar data is available by default.
-For more information on exemplar configuration and how to enable exemplars, refer to the Exemplars section in [Prometheus configuration options](https://grafana.com/docs/grafana/latest/datasources/prometheus/configure/#configuration-options).
+O suporte para exemplares está disponível apenas para a fonte de dados do
+Prometheus.
+Após habilitar a funcionalidade, os dados de exemplares ficam disponíveis por
+padrão.
+Para obter mais informações sobre a configuração de exemplares e como
+habilitá-los, consulte a seção Exemplares em
+[Opções de configuração do Prometheus](https://grafana.com/docs/grafana/latest/datasources/prometheus/configure/#configuration-options).
 
-Grafana shows exemplars alongside a metric in the Explore view and in dashboards.
-Each exemplar displays as a highlighted star.
-You can hover your cursor over an exemplar to view the unique trace ID, which is a combination of a key value pair.
-To investigate further, click the blue button next to the `traceID` property.
+O Grafana exibe exemplares com uma métrica na visualização Explore e nos
+dashboards.
+Cada exemplar é exibido como uma estrela destacada.
+Você pode passar o cursor sobre um exemplar para visualizar o ID único do
+rastro, que é uma combinação de um par chave-valor.
+Para investigar mais a fundo, clique no botão azul ao lado da propriedade
+`traceID`.
 
-{{< figure src="/media/docs/grafana/exemplars/screenshot-exemplars.png" class="docs-image--no-shadow" max-width= "750px" caption="Screenshot showing the detail window of an exemplar" >}}
+{{< figure src="/media/docs/grafana/exemplars/screenshot-exemplars.png" class="docs-image--no-shadow" max-width= "750px" caption="Captura de tela mostrando a janela de detalhes de um exemplar" >}}
 
-Refer to [View exemplar data](#view-exemplar-data) for instructions on how to drill down and view exemplar trace details from metrics and logs.
-To know more about exemplars, refer to the blog post [Intro to exemplars, which enable Grafana Tempo’s distributed tracing at massive scale](/blog/2021/03/31/intro-to-exemplars-which-enable-grafana-tempos-distributed-tracing-at-massive-scale/).
+Consulte [Visualizar dados de exemplares](#view-exemplar-data) para obter
+instruções sobre como detalhar e visualizar os detalhes do rastro de exemplares
+a partir de métricas e logs.
+Para saber mais sobre exemplares, consulte a postagem do blog
+[Introdução aos exemplares, que habilitam o rastreamento distribuído do Grafana Tempo em grande escala](/blog/2021/03/31/intro-to-exemplars-which-enable-grafana-tempos-distributed-tracing-at-massive-scale/).
 
-## View exemplar data
+## Visualizar dados de exemplares
 
-When support for exemplar support is enabled for a Prometheus data source, you can view exemplar data either in the Explore view or from the Loki log details.
+Quando o suporte a exemplares está habilitado para uma fonte de dados do
+Prometheus, você pode visualizar os dados de exemplares na visualização Explore
+ou nos detalhes de log do Loki.
 
-### In Explore
+### No Explore
 
-Explore visualizes exemplar traces as highlighted stars alongside metrics data.
-For more information on how Explore visualizes trace data, refer to [Tracing in Explore](../../explore/trace-integration/).
+O Explore visualiza os rastros de exemplares como estrelas destacadas junto aos
+dados de métricas.
+Para obter mais informações sobre como o Explore visualiza os dados de rastros,
+consulte [Rastreamento no Explore](../../explore/trace-integration/).
 
-To examine the details of an exemplar trace:
+Para examinar os detalhes de um rastro de exemplar:
 
-1. Place your cursor over an exemplar (highlighted star).
-   Depending on the trace data source you are using, you may see a blue button with the label `Query with <DATA SOURCE NAME>`.
-   In the following example, the tracing data source is Tempo.
+1. Posicione o cursor sobre um exemplar (estrela destacada).
+   Dependendo da fonte de dados do rastro que você estiver usando, poderá ver um
+   botão azul com o rótulo `Query with <NOME DA FONTE DE DADOS>`.
+   No exemplo a seguir, a fonte de dados de rastreamento é o Tempo.
 
-   {{< figure src="/media/docs/grafana/exemplars/screenshot-exemplar-details.png" class="docs-image--no-shadow" max-width= "350px" caption="Screenshot showing exemplar details" >}}
+   {{< figure src="/media/docs/grafana/exemplars/screenshot-exemplar-details.png" class="docs-image--no-shadow" max-width= "350px" caption="Captura de tela mostrando detalhes do exemplar" >}}
 
-1. Click the **Query with Tempo** option next to the `traceID` property.
-   The trace details, including the spans within the trace are listed in a separate panel on the right.
+1. Clique na opção **Query with Tempo** ao lado da propriedade `traceID`.
+   Os detalhes do rastro, incluindo os spans (trechos) dentro do rastro, são
+   listados em um painel separado à direita.
 
-   {{< figure src="/media/docs/grafana/exemplars/screenshot-exemplar-explore-view.png" class="docs-image--no-shadow" max-width= "900px" caption="Explorer view with panel showing trace details" >}}
+   {{< figure src="/media/docs/grafana/exemplars/screenshot-exemplar-explore-view.png" class="docs-image--no-shadow" max-width= "900px" caption="Visualização do Explorer com painel mostrando detalhes do rastro" >}}
 
-For more information on how to drill down and analyze the trace and span details, refer to the [Analyze trace and span details](#analyze-trace-and-spans) section.
+Para obter mais informações sobre como detalhar e analisar os detalhes do rastro
+e dos spans, consulte a seção
+[Analisar detalhes do rastro e dos spans](#analisar-detalhes-do-rastro-e-dos-spans).
 
-### In logs
+### Nos logs
 
-You can also view exemplar trace details from the Loki logs in Explore.
-Use regular expressions within the Derived fields links for Loki to extract the `traceID` information.
-Now when you expand Loki logs, you can see a `traceID` property under the **Detected fields** section.
-To learn more about how to extract a part of a log message into an internal or external link, refer to [using derived fields in Loki](../../explore/logs-integration/).
+Você também pode visualizar detalhes do rastro de exemplares dos logs do Loki no
+Explore.
+Use expressões regulares nos links de campos derivados do Loki para extrair as
+informações de `traceID`.
+Agora, ao expandir os logs do Loki, você verá a propriedade `traceID` na seção
+**Detected fields**.
+Para saber mais sobre como extrair parte de uma mensagem de log para um link
+interno ou externo, consulte
+[usando campos derivados no Loki](../../explore/logs-integration/).
 
-To view the details of an exemplar trace:
+Para visualizar os detalhes de um rastro de exemplar:
 
-1. Expand a log line and scroll down to the `Fields` section.
-   Depending on your backend trace data source, you may see a blue button with the label `<DATA SOURCE NAME>`.
+1. Expanda uma linha de log e role para baixo até a seção `Fields`.
+   Dependendo da fonte de dados do seu backend de rastros, você poderá ver um
+   botão azul com o rótulo `<NOME DA FONTE DE DADOS>`.
 
-1. Click the blue button next to the `traceID` property.
-   Typically, it has the name of the backend data source.
-   In the following example, the tracing data source is Tempo.
-   The trace details, including the spans within the trace are listed in a separate panel on the right.
+1. Clique no botão azul ao lado da propriedade `traceID`.
+   Normalmente, ele contém o nome da fonte de dados do backend.
+   No exemplo a seguir, a fonte de dados de rastreamento é Tempo.
+   Os detalhes do rastro, incluindo os spans dentro do rastro, são listados em
+   um painel separado à direita.
 
-{{< figure src="/media/docs/grafana/exemplars/screenshot-exemplar-loki-logs.png" class="docs-image--no-shadow" max-width= "750px" caption="Explorer view with panel showing trace details" >}}
+{{< figure src="/media/docs/grafana/exemplars/screenshot-exemplar-loki-logs.png" class="docs-image--no-shadow" max-width= "750px" caption="Visualização Explorer com painel mostrando detalhes do rastro" >}}
 
-For more information on how to drill down and analyze the trace and span details, refer to the [Analyze trace and span details](#analyze-trace-and-spans) section.
+Para obter mais informações sobre como detalhar e analisar os detalhes do rastro
+e dos spans, consulte a seção
+[Analisar detalhes do rastro e dos spans](#analisar-detalhes-do-rastro-e-dos-spans).
 
-### Analyze trace and spans
+### Analisar detalhes do rastro e dos spans
 
-This panel shows the details of the trace in different segments.
+Este painel mostra os detalhes do rastro em diferentes segmentos.
 
-- The top segment displays the trace ID to indicate that the query results correspond to the specific trace.
+- O segmento superior exibe o ID do rastro para indicar que os resultados da
+  consulta correspondem ao rastro específico.
 
-  You can add more traces to the results using the `Add query` button.
+  Você pode adicionar mais rastros aos resultados usando o botão `Add query`.
 
-- The next segment shows the entire span for the specific trace as a narrow strip.
-  All levels of the trace from the client all the way down to database query is displayed, which provides a bird's eye view of the time distribution across all layers over which the HTTP request was processed.
-  1. You can click within this strip view to display a magnified view of a smaller time segment within the span. This magnified view shows up in the bottom segment of the panel.
+- O próximo segmento mostra todo o span do rastro específico como uma faixa
+  estreita.
+  Todos os níveis do rastro, desde o cliente até a consulta ao banco de dados,
+  são exibidos, o que proporciona uma visão geral da distribuição de tempo em
+  todas as camadas pelas quais a requisição HTTP foi processada.
 
-  1. In the magnified view, you can expand or collapse the various levels of the trace to drill down to the specific span of interest.
+  1. Você pode clicar dentro desta faixa de visualização para exibir uma
+     visualização ampliada de um segmento de tempo menor dentro do span.
+     Essa visualização ampliada aparece no segmento inferior do painel.
 
-     For example, if the strip view shows that most of the latency was within the app layer, you can expand the trace down the app layer to investigate the problem further.
-     To expand a particular layer of span, click the left icon.
-     The same button can collapse an expanded span.
+  2. Na visualização ampliada, você pode expandir ou recolher os vários níveis
+     do rastro para detalhar o span específico de interesse.
 
-- To see the details of the span at any level, click the span itself.
+     Por exemplo, se a faixa de visualização mostrar que a maioria da latência
+     estava na camada da aplicação, você pode expandir o rastro para baixo na
+     camada da aplicação para investigar o problema mais a fundo.
+     Para expandir uma camada específica do span, clique no ícone à esquerda.
+     O mesmo botão pode recolher um span expandido.
 
-  This displays additional metadata associated with the span.
-  The metadata itself is initially shown in a narrow strip but you can see more details by clicking the metadata strip.
+- Para ver os detalhes do span em qualquer nível, clique no próprio span.
 
-  {{< figure src="/media/docs/grafana/exemplars/screenshot-exemplar-span-details.png" class="docs-image--no-shadow" max-width= "600px" caption="Span details" >}}
+  Isso exibe metadados adicionais associados ao span.
+  Os metadados em si são inicialmente exibidos em uma faixa estreita, mas você
+  pode ver mais detalhes clicando na faixa de metadados.
+
+  {{< figure src="/media/docs/grafana/exemplars/screenshot-exemplar-span-details.png" class="docs-image--no-shadow" max-width= "600px" caption="Detalhes do span" >}}
