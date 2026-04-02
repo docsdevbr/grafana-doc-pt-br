@@ -9,10 +9,14 @@
 # https://github.com/grafana/grafana/blob/-/LICENSE
 # https://github.com/grafana/grafana/blob/-/LICENSING.md
 
+source_url: https://github.com/grafana/grafana/blob/main/docs/sources/fundamentals/intro-histograms/index.md
+revision: 62fc451f7ae7cb8c2829442f0e6c57fae8bccdbd
+status: ready
+
 aliases:
   - ../basics/intro-histograms/
   - ../getting-started/intro-histograms/
-description: An introduction to histograms and heatmaps
+description: Uma introdução a histogramas e mapas de calor.
 keywords:
   - grafana
   - heatmap
@@ -24,8 +28,8 @@ labels:
     - cloud
     - enterprise
     - oss
-menuTitle: Histograms and heatmaps
-title: Introduction to histograms and heatmaps
+menuTitle: Histogramas e mapas de calor
+title: Introdução a histogramas e mapas de calor
 weight: 650
 refs:
   heatmap:
@@ -40,58 +44,82 @@ refs:
       destination: /docs/grafana/<GRAFANA_VERSION>/panels-visualizations/visualizations/histogram/
 ---
 
-# Introduction to histograms and heatmaps
+# Introdução a histogramas e mapas de calor
 
-A histogram is a graphical representation of the distribution of numerical data. It groups values into buckets
-(sometimes also called bins) and then counts how many values fall into each bucket.
+Um histograma é uma representação gráfica da distribuição de dados numéricos.
+Ele agrupa valores em intervalos (às vezes também chamados de classes) e, em
+seguida, conta quantos valores se enquadram em cada intervalo.
 
-Instead of graphing the actual values, histograms graph the buckets. Each bar represents a bucket,
-and the bar height represents the frequency (such as count) of values that fell into that bucket's interval.
+Em vez de representar graficamente os valores reais, os histogramas representam
+graficamente os intervalos.
+Cada barra representa um intervalo, e a altura da barra representa a frequência
+(como a contagem) dos valores que se enquadram naquele intervalo.
 
-## Histogram example
+## Exemplo de histograma
 
-This _histogram_ shows the value distribution of a couple of time series. You can easily see that
-most values land between 240-300 with a peak between 260-280.
+Este _histograma_ mostra a distribuição de valores de algumas séries temporais.
+Você pode notar facilmente que a maioria dos valores se concentra entre 240 e
+300, com um pico entre 260 e 280.
 
-![Histogram example](/static/img/docs/v43/heatmap_histogram.png)
+![Exemplo de histograma](/static/img/docs/v43/heatmap_histogram.png)
 
-Here is an example showing height distribution of people.
+Aqui está um exemplo mostrando a distribuição de altura das pessoas.
 
-{{< figure src="/static/img/docs/histogram-panel/histogram-example-v8-0.png" max-width="625px" caption="Bar chart example" >}}
+{{< figure src="/static/img/docs/histogram-panel/histogram-example-v8-0.png" max-width="625px" caption="Exemplo de gráfico de barras" >}}
 
-For more information about histogram visualization options, refer to [Histogram](ref:histogram).
+Para obter mais informações sobre as opções de visualização de histogramas,
+consulte [Histograma](ref:histogram).
 
-Histograms only look at _value distributions_ over a specific time range. The problem with histograms is that you cannot see any trends or changes in the distribution over time. This is where heatmaps become useful.
+Os histogramas analisam apenas a _distribuição de valores_ em um intervalo de
+tempo específico.
+O problema com os histogramas é que não é possível observar tendências ou
+mudanças na distribuição ao longo do tempo.
+É aí que os mapas de calor se tornam úteis.
 
-## Heatmaps
+## Mapas de calor
 
-A _heatmap_ is like a histogram, but over time, where each time slice represents its own histogram. Instead of using bar height as a representation of frequency, it uses cells, and colors the cell proportional to the number of values in the bucket.
+Um _mapa de calor_ é semelhante a um histograma, mas ao longo do tempo, onde
+cada intervalo de tempo representa seu próprio histograma.
+Em vez de usar a altura da barra como representação da frequência, ele usa
+células e colore a célula proporcionalmente ao número de valores no intervalo.
 
-In this example, you can clearly see what values are more common and how they trend over time.
+Neste exemplo, você pode notar claramente quais valores são mais comuns e como
+eles se comportam ao longo do tempo.
 
-![Heatmap example](/static/img/docs/v43/heatmap_histogram_over_time.png)
+![Exemplo de mapa de calor](/static/img/docs/v43/heatmap_histogram_over_time.png)
 
-For more information about heatmap visualization options, refer to [Heatmap](ref:heatmap).
+Para obter mais informações sobre as opções de visualização de mapas de calor,
+consulte [Mapa de calor](ref:heatmap).
 
-## Pre-bucketed data
+## Dados pré-agrupados
 
-There are a number of data sources supporting histogram over time, like Elasticsearch (by using a Histogram bucket
-aggregation) or Prometheus (with [histogram](https://prometheus.io/docs/concepts/metric_types/#histogram) metric type
-and _Format as_ option set to Heatmap). But generally, any data source could be used as long as it meets the requirement
-that it either returns series with names representing bucket bounds, or that it returns series sorted by the bounds
-in ascending order.
+Existem diversas fontes de dados que suportam histogramas ao longo do tempo,
+como o Elasticsearch (usando uma agregação de intervalos de histograma) ou o
+Prometheus (com o tipo de métrica
+[histogram](https://prometheus.io/docs/concepts/metric_types/#histogram) e a
+opção _Format as_ definida como Heatmap).
+Mas, em geral, qualquer fonte de dados pode ser usada, desde que atenda ao
+requisito de retornar séries com nomes que representem os limites dos intervalos
+ou de retornar séries classificadas pelos limites em ordem crescente.
 
-## Raw data vs aggregated
+## Dados brutos vs. agregados
 
-If you use the heatmap with regular time series data (not pre-bucketed), then it's important to keep in mind that your data
-is often already aggregated by your time series backend. Most time series queries do not return raw sample data,
-but instead include a group by time interval or maxDataPoints limit coupled with an aggregation function (usually average).
+Se você usar o mapa de calor com dados de séries temporais regulares (não
+pré-agrupados), é importante ter em mente que seus dados geralmente já estão
+agregados pelo seu backend de séries temporais.
+A maioria das consultas de séries temporais não retorna dados de amostra brutos,
+mas inclui um agrupamento por intervalo de tempo ou limite de maxDataPoints,
+juntamente com uma função de agregação (geralmente a média).
 
-This all depends on the time range of your query of course. But the important point is to know that the histogram bucketing
-that Grafana performs might be done on already aggregated and averaged data. To get more accurate heatmaps, it is better
-to do the bucketing during metric collection, or to store the data in Elasticsearch or any other data source which
-supports doing histogram bucketing on the raw data.
+Tudo isso depende do intervalo de tempo da sua consulta, é claro.
+Mas o ponto importante é saber que o agrupamento de histograma que o Grafana
+realiza pode ser feito em dados já agregados e calculados em média.
+Para obter mapas de calor mais precisos, é melhor fazer o agrupamento durante a
+coleta de métricas ou armazenar os dados no Elasticsearch ou em qualquer outra
+fonte de dados que suporte o agrupamento de histograma em dados brutos.
 
-If you remove or lower the group by time (or raise maxDataPoints) in your query to return more data points, your heatmap will be
-more accurate, but this can also be very CPU and memory taxing for your browser, possibly causing hangs or crashes if the number of
-data points becomes unreasonably large.
+Se você remover ou diminuir o agrupamento por tempo (ou aumentar o
+maxDataPoints) em sua consulta para retornar mais pontos de dados, seu mapa de
+calor será mais preciso, mas isso também pode sobrecarregar muito a CPU e a
+memória do seu navegador, possivelmente causando travamentos ou falhas se o
+número de pontos de dados se tornar excessivamente grande.
