@@ -37,7 +37,7 @@ weight: 400
 Imagine que você queira saber como a temperatura externa varia ao longo do dia.
 A cada hora, você verificaria o termômetro e anotaria o horário e a temperatura
 atual.
-Depois de um tempo, você teria algo assim:
+Após um tempo, você teria algo assim:
 
 | Tempo | Valor |
 | ----- | ----- |
@@ -144,8 +144,8 @@ especificamente para dados de séries temporais.
 Embora seja possível usar qualquer banco de dados comum para armazenar medições,
 um TSDB oferece algumas otimizações úteis.
 
-Os bancos de dados de séries temporais modernos aproveitam o fato de que as
-medições são apenas adicionadas e raramente atualizadas ou removidas.
+Os bancos de dados de séries temporais modernos aproveitam que as medições são
+apenas adicionadas e raramente atualizadas ou removidas.
 Por exemplo, os timestamps de cada medição mudam muito pouco ao longo do tempo,
 o que resulta no armazenamento de dados redundantes.
 
