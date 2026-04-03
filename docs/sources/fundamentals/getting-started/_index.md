@@ -1,20 +1,48 @@
 ---
+# Copyright (c) 2026 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+#
+# Documentation licensed under the GNU Affero General Public License Version 3.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/-/LICENSE
+# https://github.com/grafana/grafana/blob/-/LICENSING.md
+
+source_url: https://github.com/grafana/grafana/blob/main/docs/sources/fundamentals/getting-started/_index.md
+revision: 51babdffba669cdc0e7dba1bd97607af81fdf1d3
+status: ready
+
 aliases:
   - ../guides/what-is-grafana/ # /docs/grafana/latest/guides/what-is-grafana/
   - ../getting-started/ # /docs/grafana/latest/getting-started/
-description: Learn how to build your first dashboard after you have installed Grafana.
+description: Aprenda como criar seu primeiro dashboard após instalar o Grafana.
 labels:
   products:
     - enterprise
     - oss
-title: Get started with Grafana Open Source
+title: Comece a usar o Grafana Open Source
 weight: 1000
 ---
 
-# Get started with Grafana Open Source
+# Comece a usar o Grafana Open Source
 
-Grafana helps you collect, correlate, and visualize data with beautiful dashboards — the open source data visualization and monitoring solution that drives informed decisions, enhances system performance, and streamlines troubleshooting.
+O Grafana ajuda você a coletar, correlacionar e visualizar dados com dashboards
+incríveis — a solução de monitoramento e visualização de dados de código aberto
+que impulsiona decisões informadas, aprimora o desempenho do sistema e
+simplifica a solução de problemas.
 
-This section provides guidance to our open source community about how to build your first dashboard after you have installed Grafana. It also provides step-by-step instructions on how to add a Prometheus, InfluxDB, or an MS SQL Server data source. If you are connecting a different data source, please refer to our complete list of supported [Data sources](/docs/grafana/<GRAFANA_VERSION>/datasources/#built-in-core-data-sources). If you would like to learn how to get started with Grafana Cloud, our fully managed observability stack, visit the [Grafana Cloud documentation](https://grafana.com/docs/grafana-cloud/quickstart/) for more information.
+Esta seção fornece orientações para nossa comunidade de código aberto sobre como
+criar seu primeiro dashboard após a instalação do Grafana.
+Ela também fornece instruções passo a passo sobre como adicionar uma fonte de
+dados Prometheus, InfluxDB ou MS SQL Server.
+Se você estiver conectando uma fonte de dados diferente, consulte nossa lista
+completa de
+[Fontes de dados](/docs/grafana/<GRAFANA_VERSION>/datasources/#built-in-core-data-sources)
+suportadas.
+Se você quiser aprender como começar a usar o Grafana Cloud, nossa plataforma de
+observabilidade totalmente gerenciada, visite a
+[documentação do Grafana Cloud](https://grafana.com/docs/grafana-cloud/quickstart/)
+para obter mais informações.
 
 {{< section >}}
