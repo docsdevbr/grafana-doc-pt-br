@@ -1,132 +1,207 @@
 ---
+# Copyright (c) 2026 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
+source_url: https://github.com/grafana/grafana/blob/main/docs/sources/fundamentals/getting-started/first-dashboards/get-started-grafana-prometheus.md
+revision: 83e190a160cc4ea88e606b9d43b09d4ab8ceb1fa
+status: ready
+
 aliases:
   - ../../../getting-started/getting-started-prometheus/ #/docs/grafana/latest/getting-started/getting-started-prometheus
   - ../../../getting-started/get-started-grafana-prometheus/
-description: Learn how to build your first Prometheus dashboard in Grafana.
+description: Aprenda a criar seu primeiro dashboard do Prometheus no Grafana.
 labels:
   products:
     - enterprise
     - oss
-title: Get started with Grafana and Prometheus
+title: Comece a usar o Grafana e o Prometheus
 weight: 300
 ---
 
-# Get started with Grafana and Prometheus
+# Comece a usar o Grafana e o Prometheus
 
-Prometheus is an open source monitoring system for which Grafana provides out-of-the-box support. This topic walks you through the steps to create a series of dashboards in Grafana to display system metrics for a server monitored by Prometheus.
+O Prometheus é um sistema de monitoramento de código aberto para o qual o
+Grafana oferece suporte imediato.
+Este tópico orienta você nos passos para criar uma série de dashboards no
+Grafana para exibir métricas de sistema de um servidor monitorado pelo
+Prometheus.
 
 {{< admonition type="tip" >}}
-Check out our Prometheus **Learning Journeys**.
+Confira nossas **Jornadas de aprendizagem** do Prometheus.
 
-- [Connect to a Prometheus data source in Grafana Cloud](https://www.grafana.com/docs/learning-journeys/prometheus/) to visualize your metrics directly from where they are stored.
-- [Send metrics to Grafana Cloud using Prometheus remote write](https://www.grafana.com/docs/learning-journeys/prom-remote-write/) to explore Grafana Cloud without making significant changes to your existing configuration.
-  {{< /admonition >}}
+- [Conecte-se a uma fonte de dados Prometheus no Grafana Cloud](https://www.grafana.com/docs/learning-journeys/prometheus/)
+  para visualizar suas métricas diretamente de onde elas estão armazenadas.
+- [Envie métricas para o Grafana Cloud usando a gravação remota do Prometheus](https://www.grafana.com/docs/learning-journeys/prom-remote-write/)
+  para explorar o Grafana Cloud sem fazer alterações significativas em sua
+  configuração existente.
+{{< /admonition >}}
 
-_Grafana and Prometheus_:
+_Grafana e Prometheus_:
 
-1. Download Prometheus and Node exporter
-1. Install Prometheus Node exporter
-1. Install and configure Prometheus
-1. Configure Prometheus for Grafana
-1. Check Prometheus metrics in Grafana Explore view
-1. Start building dashboards
+1. Baixe o Prometheus e o Node Exporter.
+1. Instale o Prometheus Node Exporter.
+1. Instale e configure o Prometheus.
+1. Configure o Prometheus para o Grafana.
+1. Verifique as métricas do Prometheus na visualização Explore do Grafana.
+1. Comece a criar dashboards.
 
-## Download Prometheus and Node exporter
+## Baixe o Prometheus e o Node Exporter
 
-Download the following components:
+Baixe os seguintes componentes:
 
 - [Prometheus](https://prometheus.io/download/#prometheus)
 - [Node exporter](https://prometheus.io/download/#node_exporter)
 
-Like Grafana, you can install Prometheus on many different operating systems. Refer to the [Prometheus download page](https://prometheus.io/download/) to see a list of stable versions of Prometheus components.
+Assim como o Grafana, você pode instalar o Prometheus em diversos sistemas
+operacionais.
+Consulte a [página de download do Prometheus](https://prometheus.io/download/)
+para ver uma lista das versões estáveis dos componentes do Prometheus.
 
-## Install Prometheus Node exporter
+## Instale o Prometheus Node Exporter
 
-Install Node exporter on all hosts you want to monitor. This guide shows you how to install it locally.
+Instale o Node Exporter em todos os hosts que você deseja monitorar.
+Este guia mostra como instalá-lo localmente.
 
-Prometheus Node exporter is a widely used tool that exposes system metrics. For instructions on installing Node exporter, refer to the [Installing and running the Node exporter](https://prometheus.io/docs/guides/node-exporter/#installing-and-running-the-node-exporter) section in the Prometheus documentation.
+O Prometheus Node Exporter é uma ferramenta amplamente utilizada que expõe
+métricas do sistema.
+Para obter instruções sobre como instalar o Node exporter, consulte a seção
+[Instalando e executando o Node exporter](https://prometheus.io/docs/guides/node-exporter/#installing-and-running-the-node-exporter)
+na documentação do Prometheus.
 
-When you run Node exporter locally, navigate to `http://localhost:9100/metrics` to check that it is exporting metrics.
+Ao executar o Node exporter localmente, acesse `http://localhost:9100/metrics`
+para verificar se ele está exportando métricas.
 
 {{< admonition type="note" >}}
-The instructions in the referenced topic are intended for Linux users. You may have to alter the instructions slightly depending on your operating system. For example, if you are on Windows, use the [windows_exporter](https://github.com/prometheus-community/windows_exporter) instead.
+As instruções no tópico referenciado são destinadas a pessoas usuárias do Linux.
+Você pode precisar adaptá-las ligeiramente dependendo do seu sistema
+operacional.
+Por exemplo, se você estiver no Windows, use o
+[windows_exporter](https://github.com/prometheus-community/windows_exporter).
 {{< /admonition >}}
 
-## Install and configure Prometheus
+## Instale e configure o Prometheus
 
-1. After [downloading Prometheus](https://prometheus.io/download/#prometheus), extract it and navigate to the directory.
+1. Após [baixar o Prometheus](https://prometheus.io/download/#prometheus),
+   extraia-o e navegue até o diretório.
 
    ```
    tar xvfz prometheus-*.tar.gz
    cd prometheus-*
    ```
 
-1. Locate the `prometheus.yml` file in the directory.
+1. Localize o arquivo `prometheus.yml` no diretório.
 
-1. Modify the Prometheus configuration file to monitor the hosts where you installed Node exporter.
+1. Modifique o arquivo de configuração do Prometheus para monitorar os hosts
+   onde você instalou o Node Exporter.
 
-By default, Prometheus looks for the file `prometheus.yml` in the current working directory. This behavior can be changed via the `--config.file` command line flag. For example, some Prometheus installers use it to set the configuration file to `/etc/prometheus/prometheus.yml`.
+Por padrão, o Prometheus procura o arquivo `prometheus.yml` no diretório de
+trabalho atual.
+Esse comportamento pode ser alterado através da flag de linha de comando
+`--config.file`.
+Por exemplo, alguns instaladores do Prometheus a utilizam para definir o arquivo
+de configuração como `/etc/prometheus/prometheus.yml`.
 
-The following example shows you the code you should add. Notice that static configs targets are set to `['localhost:9100']` to target node-explorer when running it locally.
+O exemplo a seguir mostra o código que você deve adicionar.
+Observe que os alvos de configuração estática são definidos como
+`['localhost:9100']` para direcionar o node-explorer quando executado
+localmente.
 
 ```
- # A scrape configuration containing exactly one endpoint to scrape from Node exporter running on a host:
+ # Uma configuração de coleta contendo exatamente um endpoint para coletar dados
+ # do Node exporter em execução em um host:
  scrape_configs:
-     # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+     # O nome da tarefa é adicionado como um rótulo `job=<nome_da_tarefa>` a
+     # qualquer série temporal extraída dessa configuração.
      - job_name: 'node'
 
-     # metrics_path defaults to '/metrics'
-     # scheme defaults to 'http'.
+     # O padrão para metrics_path é '/metrics'
+     # O padrão para scheme é 'http'.
 
        static_configs:
        - targets: ['localhost:9100']
 ```
 
-1. Start the Prometheus service:
+1. Inicie o serviço Prometheus:
 
    ```
     ./prometheus --config.file=./prometheus.yml
    ```
 
-1. Confirm that Prometheus is running by navigating to `http://localhost:9090`.
+1. Confirme se o Prometheus está em execução acessando `http://localhost:9090`.
 
-You can see that the Node exporter metrics have been delivered to Prometheus. Next, the metrics will be sent to Grafana.
+Você pode ver que as métricas do Node Exporter foram entregues ao Prometheus.
+Em seguida, as métricas serão enviadas ao Grafana.
 
-## Configure Prometheus for Grafana
+## Configure o Prometheus para o Grafana
 
-When running Prometheus locally, there are two ways to configure Prometheus for Grafana. You can use a hosted Grafana instance at [Grafana Cloud](/) or run Grafana locally.
+Ao executar o Prometheus localmente, existem duas maneiras de configurá-lo para
+o Grafana.
+Você pode usar uma instância hospedada do Grafana no [Grafana Cloud](/) ou
+executar o Grafana localmente.
 
-This guide describes configuring Prometheus in a hosted Grafana instance on Grafana Cloud.
+Este guia descreve a configuração do Prometheus em uma instância hospedada do
+Grafana no Grafana Cloud.
 
-1. Sign up for [https://grafana.com/](/auth/sign-up/create-user). Grafana gives you a Prometheus instance out of the box.
+1. Cadastre-se em [https://grafana.com/](/auth/sign-up/create-user).
+   O Grafana fornece uma instância do Prometheus pronta para uso.
 
-![Prometheus details in Grafana.com](/static/img/docs/getting-started/screenshot-grafana-prometheus-details.png)
+![Detalhes do Prometheus em Grafana.com](/static/img/docs/getting-started/screenshot-grafana-prometheus-details.png)
 
-1. Because you are running your own Prometheus instance locally, you must `remote_write` your metrics to the Grafana.com Prometheus instance. Grafana provides code to add to your `prometheus.yml` config file. This includes a remote write endpoint, your user name and password.
+1. Como você está executando sua própria instância do Prometheus localmente,
+   você precisa usar o comando `remote_write` para enviar suas métricas para a
+   instância do Prometheus hospedada no Grafana.com.
+   O Grafana fornece o código a ser adicionado ao seu arquivo de configuração
+   `prometheus.yml`.
+   Isso inclui um endpoint de escrita remota, seu nome de usuário e senha.
 
-Add the following code to your prometheus.yml file to begin sending metrics to your hosted Grafana instance.
+Adicione o seguinte código ao seu arquivo `prometheus.yml` para começar a enviar
+métricas para sua instância hospedada do Grafana.
 
 ```
 remote_write:
-- url: <https://your-remote-write-endpoint>
+- url: <https://seu-endpoint-de-gravação-remota>
   basic_auth:
-    username: <your user name>
-    password: <Your Grafana.com API Key>
+    username: <seu nome de usuário>
+    password: <sua chave de API do Grafana.com>
 ```
 
 {{< admonition type="note" >}}
-To configure your Prometheus instance to work with Grafana locally instead of Grafana Cloud, install Grafana [here](/grafana/download) and follow the configuration steps listed [here](/docs/grafana/latest/datasources/prometheus/#configure-the-data-source).
+Para configurar sua instância do Prometheus para funcionar com o Grafana
+localmente em vez do Grafana Cloud, instale o Grafana [aqui](/grafana/download)
+e siga as etapas de configuração listadas
+[aqui](/docs/grafana/latest/datasources/prometheus/#configure-the-data-source).
 {{< /admonition >}}
 
-## Troubleshooting
+## Solução de problemas
 
-These are some of the troubleshooting steps you can try if Prometheus isn’t running or functioning as expected. The steps provided have been selected based on the Learning Journeys we offer for Prometheus. If you’d like to explore further, check out the [Prometheus Learning Journey](https://grafana.com/docs/learning-journeys/prometheus/) if you want to visualize data in Grafana Cloud without sending or storing data in Grafana Cloud, such as for local retention needs. Alternatively, if you already have a Prometheus setup and want to explore Grafana Cloud without making significant changes, visit the [Prometheus remote write learning journey](https://grafana.com/docs/learning-journeys/prom-remote-write/).
+Estas são algumas etapas de solução de problemas que você pode tentar se o
+Prometheus não estiver em execução ou funcionando como esperado.
+As etapas fornecidas foram selecionadas com base nas Jornadas de aprendizagem
+que oferecemos para o Prometheus.
+Se você quiser explorar mais, confira a
+[Jornada de aprendizagem do Prometheus](https://grafana.com/docs/learning-journeys/prometheus/)
+se desejar visualizar dados no Grafana Cloud sem enviar ou armazenar dados no
+Grafana Cloud, como para necessidades de retenção local.
+Como alternativa, se você já possui uma configuração do Prometheus e deseja
+explorar o Grafana Cloud sem fazer alterações significativas, visite a
+[Jornada de aprendizagem de gravação remota do Prometheus](https://grafana.com/docs/learning-journeys/prom-remote-write/).
 
-### 1. Checking if Prometheus is running
+### 1. Verificando se o Prometheus está em execução
 
-If the Prometheus web UI is inaccessible (e.g., "Connection refused" error in the browser) or Prometheus queries fail (e.g., errors in Grafana like "Data source unavailable" or "No data points"), a good place to start is confirming that the Prometheus process and service are running.
+Se a interface web do Prometheus estiver inacessível (por exemplo, erro
+"Connection refused" no navegador) ou se as consultas ao Prometheus falharem
+(por exemplo, erros no Grafana como "Data source unavailable" ou "No data
+points"), um bom ponto de partida é confirmar se o processo e o serviço do
+Prometheus estão em execução.
 
-You can do this by checking the system process or verifying the service status:
+Você pode fazer isso verificando o processo do sistema ou o status do serviço:
 
 **Linux**
 
@@ -134,7 +209,7 @@ You can do this by checking the system process or verifying the service status:
 sudo systemctl status prometheus
 ```
 
-- Shows whether the process is running and if the service is active.
+- Mostra se o processo está em execução e se o serviço está ativo.
 
 **MacOS**
 
@@ -142,7 +217,7 @@ sudo systemctl status prometheus
 pgrep prometheus
 ```
 
-- Returns the process ID (PID) if Prometheus is running.
+- Retorna o ID do processo (PID) se o Prometheus estiver em execução.
 
 **Windows** (`PowerShell`)
 
@@ -150,17 +225,20 @@ pgrep prometheus
 Get-Process -Name prometheus -ErrorAction SilentlyContinue
 ```
 
-- Checks if the Prometheus process is running by name.
+- Verifica se o processo do Prometheus está em execução, pelo nome.
 
-### 2. If Prometheus is not running
+### 2. Se o Prometheus não estiver em execução
 
-Start by checking for common causes:
+Comece verificando as causas comuns:
 
-**Check for port conflicts**.
+**Verifique se há conflitos de porta**.
 
-Prometheus runs on port 9090 by default. If another process is using this port, Prometheus may fail to start. You can check for port conflicts with:
+O Prometheus utiliza a porta 9090 por padrão.
+Se outro processo estiver usando essa porta, o Prometheus poderá falhar em
+iniciar.
+Você pode verificar se há conflitos de porta com:
 
-**Linux & MacOS**
+**Linux e macOS**
 
 ```bash
 lsof -i :9090
@@ -172,57 +250,65 @@ lsof -i :9090
 netstat -ano | findstr :9090
 ```
 
-- Shows if another process is using port **9090**.
+- Mostra se outro processo está usando a porta **9090**.
 
-**Verify the Prometheus binary placement**: ensure Prometheus binaries (`prometheus` and `promtool`) are correctly installed.
+**Verifique a localização dos binários do Prometheus**: certifique-se de que os
+binários do Prometheus (`prometheus` e `promtool`) estejam instalados
+corretamente.
 
-**Linux & MacOS**
+**Linux e macOS**
 
 ```bash
 ls /usr/local/bin/prometheus /usr/local/bin/promtool
 ```
 
-- If missing, move them to `/usr/local/bin` or a directory in your system’s **PATH**.
+- Se estiverem ausentes, mova-os para `/usr/local/bin` ou para um diretório no
+  **PATH** do seu sistema.
 
-**Check if Prometheus is in the path**.
+**Verifique se o Prometheus está no PATH**.
 
 ```bash
 which prometheus
 which promtool
 ```
 
-- If there’s **no output**, the binaries are not in the system **PATH**.
+- Se **não houver saída**, os binários não estão no **PATH** do sistema.
 
-**Ensure configuration & data files are in place**.
+**Verifique se os arquivos de configuração e dados estão no lugar certo**.
 
-**Linux & MacOs**
+**Linux e macOS**
 
 ```bash
 ls /etc/prometheus /var/lib/prometheus
 ls /etc/prometheus/prometheus.yml
 ```
 
-- Makes sure that Prometheus has its necessary configuration and data storage directories.
+- Certifica que o Prometheus tem os diretórios de configuração e armazenamento
+  de dados necessários.
 
-**Check permissions**: If Prometheus is running as a dedicated user, ensure the correct ownership:
+**Verifique as permissões**: Se o Prometheus estiver sendo executado como um
+usuário dedicado, verifique se a propriedade está correta:
 
 ```bash
 sudo chown -R prometheus:prometheus /etc/prometheus /var/lib/prometheus
 ```
 
-(Optional) **Secure Prometheus by creating a dedicated user**
+(Opcional) **Proteja o Prometheus criando um usuário dedicado**
 
 ```bash
 sudo useradd --no-create-home --shell /bin/false prometheus
 ```
 
-- Recommended for security: runs Prometheus as a non-login user.
+- Recomendado por motivos de segurança: execute o Prometheus como um usuário sem
+  privilégios de login.
 
-### 3. Checking if Prometheus is running as a service
+### 3. Verificando se o Prometheus está sendo executado como um serviço
 
-If Prometheus is running as a process, check whether it is properly set up and managed as a service to ensure it restarts automatically after reboots or failures.
+Se o Prometheus estiver sendo executado como um processo, verifique se ele está
+configurado e gerenciado corretamente como um serviço para garantir que reinicie
+automaticamente após reinicializações ou falhas.
 
-**Check Prometheus service status**
+**Verifique o status do serviço Prometheus**
 
 **Linux**
 
@@ -236,38 +322,43 @@ systemctl status prometheus.service
 sc query prometheus
 ```
 
-**MacOs**
+**macOS**
 
 ```bash
 pgrep prometheus
 ```
 
-- If the service is **inactive (dead) or stopped**, proceed to the next steps.
+- Se o serviço estiver **inativo (morto) ou parado**, prossiga para os próximos
+  passos.
 
-### 4. If Prometheus is not running as a service
+### 4. Se o Prometheus não estiver sendo executado como um serviço
 
-If Prometheus is not running as a managed service, ensure it is correctly configured and can restart automatically.
+Se o Prometheus não estiver sendo executado como um serviço gerenciado,
+verifique se ele está configurado corretamente e se pode reiniciar
+automaticamente.
 
-**Verify service configuration** **(Linux & MacOs)**
+**Verifique a configuração do serviço** **(Linux e macOS)**
 
-Check the service unit file to ensure correct paths:
+Verifique o arquivo de unidade do serviço para garantir que os caminhos estejam
+corretos:
 
 ```bash
 sudo nano /etc/systemd/system/prometheus.service
 ```
 
-- Look for the `ExecStart` line:
+- Procure pela linha `ExecStart`:
 
 ```bash
 ExecStart=/usr/local/bin/prometheus --config.file=/etc/prometheus/prometheus.yml --storage.tsdb.path=/var/lib/prometheus/
 ```
 
-- Ensure:
-  - The **binary path** (`/usr/local/bin/prometheus`) is correct.
-  - The **configuration file** (`/etc/prometheus/prometheus.yml`) is in place.
-  - The **storage path** (`/var/lib/prometheus/`) exists.
+- Certifique-se de que:
+  - O **caminho do binário** (`/usr/local/bin/prometheus`) esteja correto.
+  - O **arquivo de configuração** (`/etc/prometheus/prometheus.yml`) esteja
+    presente.
+  - O **caminho de armazenamento** (`/var/lib/prometheus/`) exista.
 
-**Restart and enable Prometheus service (Linux & MacOs)**
+**Reinicie e habilite o serviço Prometheus (Linux e macOS)**
 
 ```bash
 sudo systemctl daemon-reload
@@ -276,48 +367,59 @@ sudo systemctl start prometheus
 sudo systemctl status prometheus
 ```
 
-**Check Prometheus health status**
+**Verifique o estado de saúde do Prometheus**
 
-After restarting, verify if Prometheus is responsive:
+Após reiniciar, verifique se o Prometheus está respondendo:
 
 ```bash
 curl -s http://localhost:9090/-/ready
 ```
 
-- If successful, this confirms Prometheus is **ready to serve requests**.
+- Se a operação for bem-sucedida, isso confirma que o Prometheus está **pronto
+  para atender solicitações**.
 
-**Restart Prometheus service (Windows)**
+**Reinicie o serviço Prometheus (Windows)**
 
-If running as a Windows service, restart it:
+Se estiver sendo executado como um serviço do Windows, reinicie-o:
 
 ```powershell
 net stop prometheus
 net start prometheus
 ```
 
-### 5. Checking if Prometheus is capturing metrics
+### 5. Verificando se o Prometheus está capturando métricas
 
-If you installed [Node exporter](#install-prometheus-node-exporter) to expose your system metrics, you can check if Prometheus is capturing metrics by sending a request to the `/metrics` endpoint.
+Se você instalou o [Node exporter](#install-prometheus-node-exporter) para expor
+as métricas do seu sistema, você pode verificar se o Prometheus está capturando
+métricas enviando uma requisição para o endpoint `/metrics`.
 
 ```bash
 curl http://localhost:9090/metrics
 ```
 
-- It should return a number of metrics and metadata about the metrics being exposed.
+- Deve retornar uma série de métricas e metadados sobre as métricas expostas.
 
-## Check Prometheus metrics in Grafana Metics Drilldown
+## Verifique as métricas do Prometheus no Grafana Metrics Drilldown
 
-In your Grafana instance, go to the [Drilldown](https://www.grafana.com/docs/grafana/latest/explore/simplified-exploration/metrics/) view and experience query-less browsing of Prometheus-compatible metrics.
+Na sua instância do Grafana, acesse a visualização
+[Drilldown](https://www.grafana.com/docs/grafana/latest/explore/simplified-exploration/metrics/)
+e experimente a navegação sem consultas pelas métricas compatíveis com o
+Prometheus.
 
-## Start building dashboards
+## Começar a criar dashboards
 
-Now that you have a curated list of queries, create [dashboards](../../dashboards/) to render system metrics monitored by Prometheus. When you install Prometheus and Node exporter or windows_exporter, you will find recommended dashboards for use.
+Agora que você tem uma lista selecionada de consultas, crie
+[dashboards](../../dashboards/) para exibir as métricas do sistema monitoradas
+pelo Prometheus.
+Ao instalar o Prometheus e o Node Exporter ou o windows_exporter, você
+encontrará dashboards recomendados para uso.
 
-The following image shows a dashboard with three panels showing some system metrics.
+A imagem a seguir mostra um dashboard com três painéis exibindo algumas métricas
+do sistema.
 
-![Prometheus dashboards](/static/img/docs/getting-started/simple_grafana_prom_dashboard.png)
+![Dashboards do Prometheus](/static/img/docs/getting-started/simple_grafana_prom_dashboard.png)
 
-To learn more:
+Para saber mais:
 
-- Grafana documentation: [Prometheus data source](../../datasources/prometheus/)
-- Prometheus documentation: [What is Prometheus?](https://prometheus.io/docs/introduction/overview/)
+- Documentação do Grafana: [Fonte de dados do Prometheus](../../datasources/prometheus/)
+- Documentação do Prometheus: [O que é o Prometheus?](https://prometheus.io/docs/introduction/overview/)
