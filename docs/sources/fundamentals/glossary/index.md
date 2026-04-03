@@ -9,6 +9,10 @@
 # https://github.com/grafana/grafana/blob/-/LICENSE
 # https://github.com/grafana/grafana/blob/-/LICENSING.md
 
+source_url: https://github.com/grafana/grafana/blob/release-12.4.3/docs/sources/fundamentals/glossary/index.md
+revision: ada14df9fd1c9f8f7b93ce7ca33f5a60ecd4cc85
+status: ready
+
 aliases:
   - ../basics/glossary/
   - ../getting-started/glossary/
@@ -24,130 +28,179 @@ labels:
     - cloud
     - enterprise
     - oss
-title: Glossary
+title: Glossário
 weight: 850
 ---
 
-# Glossary
+# Glossário
 
-This topic lists words and abbreviations that are commonly used in the Grafana documentation and community.
+Este tópico lista palavras e abreviações comumente usadas na documentação e na
+comunidade do Grafana.
 
 <table>
   <tr>
-    <td style="vertical-align: top">app plugin</td>
+    <td style="vertical-align: top">app plugin (plugin de aplicação)</td>
     <td>
-      An extension of Grafana that allows users to provide additional functionality to enhance their experience by including a set of panel and data source plugins, as well as custom pages. See also <i>data source plugin</i>, <i>panel plugin</i>, and <i>plugin</i>.
+      Uma extensão do Grafana que permite às pessoas usuárias adicionar
+      funcionalidades para aprimorar sua experiência, incluindo um conjunto de
+      plugins de painel e de fonte de dados, além de páginas personalizadas.
+      Veja também <i>data source plugin</i>, <i>panel plugin</i> e
+      <i>plugin</i>.
     </td>
   </tr>
   <tr>
     <td style="vertical-align: top">dashboard</td>
     <td>
-      A set of one or more panels, organized and arranged into one or more rows, that provide an at-a-glance view of related information.
+      Um conjunto de um ou mais painéis, organizados e dispostos em uma ou mais
+      linhas, que fornecem uma visão geral de informações relacionadas.
     </td>
   </tr>
   <tr>
-    <td style="vertical-align: top">data source</td>
+    <td style="vertical-align: top">data source (fonte de dados)</td>
     <td>
-      A file, database, or service providing the data. Grafana supports several data sources by default, and can be extended to support additional data sources through plugins.
+      Um arquivo, banco de dados ou serviço que fornece os dados.
+      O Grafana suporta diversas fontes de dados por padrão e pode ser estendido
+      para suportar fontes de dados adicionais por meio de plugins.
     </td>
   </tr>
   <tr>
-    <td style="vertical-align: top">data source plugin</td>
+    <td style="vertical-align: top">data source plugin (plugin de fonte de dados)</td>
     <td>
-      Extends Grafana with support for additional data sources. See also <i>data source</i>, <i>app plugin</i>, <i>panel plugin</i>, and <i>plugin</i>.
+      Estende o Grafana com suporte para fontes de dados adicionais.
+      Veja também <i>data source</i>, <i>app plugin</i>, <i>panel plugin</i>,
+      e <i>plugin</i>.
     </td>
   </tr>
   <tr>
     <td style="vertical-align: top">exemplar</td>
     <td>
-      An exemplar is any data that serves as a detailed example of one of the observations aggregated into a metric. An exemplar contains the observed value together with an optional timestamp and arbitrary labels, which are typically used to reference a trace.
+      Um exemplar é qualquer dado que sirva como um exemplo detalhado de uma das
+      observações agregadas em uma métrica.
+      Um exemplar contém o valor observado juntamente com um timestamp opcional
+      e rótulos arbitrários, que normalmente são usados para referenciar um
+      rastro.
     </td>
   </tr>
   <tr>
     <td style="vertical-align: top">Explore</td>
     <td>
-      Explore allows a user to focus on building a query. Users can refine the query to return the expected metrics before building a dashboard. For more information, refer to the <a href="https://grafana.com/docs/grafana/latest/explore">Explore</a> topic.
+      O Explore permite que a pessoa usuária se concentre na criação de uma
+      consulta.
+      As pessoas usuárias podem refinar a consulta para retornar as métricas
+      esperadas antes de criar um dashboard.
+      Para obter mais informações, consulte o tópico
+      <a href="https://grafana.com/docs/grafana/latest/explore">Explore</a>.
     </td>
   </tr>
   <tr>
-    <td style="vertical-align: top">export or import dashboard</td>
+    <td style="vertical-align: top">exportar ou importar dashboard</td>
     <td>
-      Grafana includes the ability to export your dashboards to a file containing JSON. Community members sometimes share their created dashboards on the <a href="https://grafana.com/grafana/dashboards">Grafana Dashboards page</a>. Dashboards previously exported or found on this site may be imported by other users.
+      O Grafana inclui a capacidade de exportar seus dashboards para um arquivo
+      contendo JSON.
+      Pessoas membros da comunidade às vezes compartilham seus dashboards
+      criados na
+      <a href="https://grafana.com/grafana/dashboards">página Dashboards do Grafana</a>.
+      Dashboards previamente exportados ou encontrados neste site podem ser
+      importados por outras pessoas usuárias.
     </td>
   </tr>
   <tr>
-    <td style="vertical-align: top">exporter</td>
+    <td style="vertical-align: top">exporter (exportador)</td>
     <td>
-      An exporter translates data that comes out of a data source into a format that Prometheus can digest.
+      Um exporter traduz os dados provenientes de uma fonte de dados para um
+      formato que o Prometheus possa interpretar.
     </td>
   </tr>
   <tr>
     <td style="vertical-align: top">Integration (Grafana Cloud)</td>
     <td>
-      Each Integration in Grafana Cloud uses the cloud agent to connect your data source to Grafana Cloud for visualizing. Note: Prometheus uses the word “integrations” to refer to software that exposes Prometheus metrics without needing an exporter, which is a different use of the same word we use here.
+      Cada Integration no Grafana Cloud usa o agente da nuvem para conectar sua
+      fonte de dados ao Grafana Cloud para visualização.
+      Observação: o Prometheus usa a palavra "integrations" para se referir a
+      softwares que expõem métricas do Prometheus sem a necessidade de um
+      exporter, que é um uso diferente da mesma palavra que usamos aqui.
     </td>
   </tr>
   <tr>
-    <td style="vertical-align: top">graph</td>
+    <td style="vertical-align: top">gráfico</td>
     <td>
-      A commonly-used visualization that displays data as points, lines, or bars.
+      Uma visualização comumente usada que exibe dados como pontos, linhas ou
+      barras.
     </td>
   </tr>
   <tr>
     <td style="vertical-align: top"><code>grafanactl</code></td>
     <td>
-      A command-line tool that enables users to authenticate, manage multiple environments, and perform administrative tasks through Grafana's REST API.
+      Uma ferramenta de linha de comando que permite às pessoas usuárias
+      autenticar, gerenciar múltiplos ambientes e executar tarefas
+      administrativas por meio da API REST do Grafana.
+    </td>
   </tr>
   <tr>
     <td style="vertical-align: top">mixin</td>
     <td>
-      A mixin is a set of Grafana dashboards and Prometheus rules and alerts, written in Jsonnet and packaged together in a bundle.
+      Um mixin é um conjunto de dashboards do Grafana e regras e alertas do
+      Prometheus, escritos em Jsonnet e agrupados em um pacote.
     </td>
   </tr>
   <tr>
-    <td style="vertical-align: top">panel</td>
+    <td style="vertical-align: top">painel</td>
     <td>
-      Basic building block in Grafana, composed by a query and a visualization. Can be moved and resized within a dashboard.
+      Elemento básico do Grafana, composto por uma consulta e uma visualização.
+      Pode ser movido e redimensionado em um dashboard.
     </td>
   </tr>
   <tr>
-    <td style="vertical-align: top">panel plugin</td>
+    <td style="vertical-align: top">panel plugin (plugin de painel)</td>
     <td>
-      Extends Grafana with additional visualization options. See also <i>panel</i>, <i>plugin</i>, <i>app plugin</i>, and <i>data source plugin</i>.
+      Amplia o Grafana com opções de visualização adicionais.
+      Veja também <i>panel</i>, <i>plugin</i>, <i>app plugin</i> e <i>data source plugin</i>.
     </td>
   </tr>
   <tr>
     <td style="vertical-align: top">plugin</td>
     <td>
-      An extension of Grafana that allows users to provide additional functionality to enhance their experience. See also <i>app plugin</i>, <i>data source plugin</i>, and <i>panel plugin</i>.
+      Uma extensão do Grafana que permite às pessoas usuárias adicionar
+      funcionalidades para melhorar a sua experiência.
+      Veja também <i>app plugin</i>, <i>data source plugin</i> e
+      <i>panel plugin</i>.
     </td>
   </tr>
   <tr>
-    <td style="vertical-align: top">query</td>
+    <td style="vertical-align: top">query (consulta)</td>
     <td>
-      Used to request data from a data source. The structure and format of the query depend on the specific data source.
+      Usada para solicitar dados de uma fonte de dados.
+      A estrutura e o formato da consulta dependem da fonte de dados específica.
     </td>
   </tr>
   <tr>
-    <td style="vertical-align: top">time series</td>
+    <td style="vertical-align: top">time series (séries temporais)</td>
     <td>
-      A series of measurements, ordered by time. Time series are stored in data sources and returned as the result of a query.
+      Uma série de medições, ordenadas por tempo.
+      As séries temporais são armazenadas em fontes de dados e retornadas como
+      resultado de uma consulta.
     </td>
   </tr>
   <tr>
-    <td style="vertical-align: top">trace</td>
+    <td style="vertical-align: top">trace (rastro)</td>
     <td>
-      An observed execution path of a request through a distributed system. For more information, refer to <a href="https://opentracing.io/docs/overview/what-is-tracing/">What is Distributed Tracing?</a>
+      Um caminho de execução observado de uma requisição em um sistema
+      distribuído.
+      Para obter mais informações, consulte
+      <a href="https://opentracing.io/docs/overview/what-is-tracing/">What is Distributed Tracing?</a>
     </td>
   </tr>
   <tr>
-    <td style="vertical-align: top">transformation</td>
+    <td style="vertical-align: top">transformação</td>
     <td>
-      Transformations process the result set of a query before it’s passed on for visualization. For more information, refer to the <a href="https://grafana.com/docs/grafana/latest/panels/transformations">Transformations overview</a> topic.
+      As transformações processam o conjunto de resultados de uma consulta antes
+      de serem passadas para visualização.
+      Para obter mais informações, consulte o tópico
+      <a href="https://grafana.com/docs/grafana/latest/panels/transformations">Visão geral das transformações</a>.
     </td>
   </tr>
   <tr>
-    <td style="vertical-align: top">visualization</td>
-    <td>A graphical representation of query results.</td>
+    <td style="vertical-align: top">visualização</td>
+    <td>Uma representação gráfica dos resultados da consulta.</td>
   </tr>
 </table>
