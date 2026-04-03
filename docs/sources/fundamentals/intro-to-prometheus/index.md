@@ -260,7 +260,7 @@ você deseja reportar, sua origem e destino.
 Uma vez que os dados estejam no Grafana, eles podem ser armazenados em um banco
 de dados Grafana Mimir.
 Os dashboards do Grafana consistem em visualizações preenchidas com dados
-consultados da fonte de dados do Prometheus.
+consultados da fonte de dados Prometheus.
 A consulta PromQL filtra e agrega os dados para fornecer as informações
 necessárias.
 Com essas etapas, passamos de números brutos, gerados por software, para o
@@ -281,5 +281,5 @@ construir?
   métricas com muitos dados e consultas rápidas, confira o Grafana Mimir.
 - Se você tiver interesse em trabalhar diretamente com dados do Prometheus no
   Grafana, consulte a documentação da
-  [fonte de dados do Prometheus](ref:prometheus) ou confira as
+  [fonte de dados Prometheus](ref:prometheus) ou confira as
   [noções básicas de PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/).

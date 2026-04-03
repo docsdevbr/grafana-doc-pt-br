@@ -119,7 +119,7 @@ acessam o serviço por segundo.
 
 Ao trabalhar com fontes de dados, é crucial reconhecer que cada uma possui sua
 própria linguagem de consulta distinta.
-Por exemplo, as fontes de dados do Prometheus usam
+Por exemplo, as fontes de dados Prometheus usam
 [PromQL](/blog/2020/02/04/introduction-to-promql-the-prometheus-query-language/),
 enquanto [LogQL](/docs/loki/latest/logql/) é usada para logs, e alguns bancos de
 dados específicos empregam SQL.
