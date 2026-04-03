@@ -59,14 +59,14 @@ Para entrar no Grafana pela primeira vez:
    A porta HTTP padrão que o Grafana utiliza é a `3000`, a menos que você tenha
    configurado uma porta diferente.
 
-2. Na página de login, digite `admin` como nome de usuário e senha.
+1. Na página de login, digite `admin` como nome de usuário e senha.
 
-3. Clique em **Sign in**.
+1. Clique em **Sign in**.
 
    Se o login for bem-sucedido, você verá uma mensagem solicitando a alteração
    da senha.
 
-5. Clique em **OK** na mensagem e altere sua senha.
+1. Clique em **OK** na mensagem e altere sua senha.
 
 {{< admonition type="note" >}}
 Recomendamos fortemente que você altere a senha padrão do usuário administrador.
