@@ -1,91 +1,137 @@
 ---
+# Copyright (c) 2026 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
+source_url: https://github.com/grafana/grafana/blob/release-12.4.3/docs/sources/fundamentals/getting-started/first-dashboards/_index.md
+revision: 1bd1f8a92f03a4a6e241ccccb4f072162d21cb1e
+status: ready
+
 aliases:
   - ../../guides/getting_started/ # /docs/grafana/latest/guides/getting_started/
   - ../../guides/gettingstarted/ # /docs/grafana/latest/guides/gettingstarted/
   - ../../getting-started/build-first-dashboard/ # /docs/grafana/latest/getting-started/build-first-dashboard/
-description: Learn how to get started with Grafana by adding a preconfigured dashboard.
+description: >-
+  Aprenda como começar a usar o Grafana adicionando um dashboard
+  pré-configurado.
 labels:
   products:
     - enterprise
     - oss
-title: Build your first dashboard
+title: Crie seu primeiro dashboard
 weight: 200
 ---
 
-# Build your first dashboard
+# Crie seu primeiro dashboard
 
-This topic helps you get started with Grafana and build your first dashboard using the built-in `Grafana` data source. To learn more about Grafana, refer to [Introduction to Grafana](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/introduction/).
-
-{{< admonition type="note" >}}
-Grafana also offers a [free account with Grafana Cloud](/signup/cloud/connect-account?pg=gsdocs) to help getting started even easier and faster. You can install Grafana to self-host or get a free Grafana Cloud account.
-{{< /admonition >}}
-
-#### Install Grafana
-
-Grafana can be installed on many different operating systems. For a list of the minimum hardware and software requirements, as well as instructions on installing Grafana, refer to [Install Grafana](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/setup-grafana/installation/).
-
-#### Sign in to Grafana
-
-To sign in to Grafana for the first time:
-
-1. Open your web browser and go to http://localhost:3000/.
-
-   The default HTTP port that Grafana listens to is `3000` unless you have configured a different port.
-
-1. On the sign-in page, enter `admin` for both the username and password.
-1. Click **Sign in**.
-
-   If successful, you'll see a prompt to change the password.
-
-1. Click **OK** on the prompt and change your password.
+Este tópico ajuda você a começar a usar o Grafana e a criar seu primeiro
+dashboard usando a fonte de dados integrada `Grafana`.
+Para saber mais sobre o Grafana, consulte a
+[Introdução ao Grafana](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/introduction/).
 
 {{< admonition type="note" >}}
-We strongly recommend that you change the default administrator password.
+O Grafana também oferece uma
+[conta gratuita no Grafana Cloud](/signup/cloud/connect-account?pg=gsdocs) para
+ajudar você a começar de forma ainda mais fácil e rápida.
+Você pode instalar o Grafana em seu próprio servidor ou obter uma conta gratuita
+no Grafana Cloud.
 {{< /admonition >}}
 
-#### Create a dashboard
+#### Instale o Grafana
 
-If you've already set up a data source that you know how to query, refer to [Create a dashboard](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/dashboards/build-dashboards/create-dashboard/) instead.
+O Grafana pode ser instalado em diversos sistemas operacionais.
+Para obter uma lista dos requisitos mínimos de hardware e software, bem como
+instruções de instalação, consulte
+[Instale o Grafana](https://grafana.com/docs/grafana/<VERSÃO_DO_GRAFANA>/setup-grafana/installation/).
 
-To create your first dashboard using the built-in `-- Grafana --` data source:
+#### Entre no Grafana
 
-1. Click **Dashboards** in the main menu.
-1. On the **Dashboards** page, click **New** and select **New Dashboard** from the drop-down menu.
-1. On the dashboard, click **+ Add visualization**.
+Para entrar no Grafana pela primeira vez:
 
-   ![Empty dashboard state](/media/docs/grafana/dashboards/empty-dashboard-10.2.png)
+1. Abra seu navegador e acesse http://localhost:3000/.
 
-1. In the dialog box that opens, click `-- Grafana --`:
+   A porta HTTP padrão que o Grafana utiliza é a `3000`, a menos que você tenha
+   configurado uma porta diferente.
 
-   {{< figure class="float-right"  src="/media/docs/grafana/dashboards/screenshot-data-source-selector-10.0.png" max-width="800px" alt="Select data source dialog box" >}}
+1. Na página de login, digite `admin` como nome de usuário e senha.
 
-   This configures your [query](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/panels-visualizations/query-transform-data/#add-a-query) and generates the Random Walk dashboard.
+1. Clique em **Sign in**.
 
-1. Click **Refresh** to query the data source.
-1. When you've finished editing your panel, click **Save dashboard**.
+   Se o login for bem-sucedido, você verá uma mensagem solicitando a alteração
+   da senha.
 
-   Alternatively, click **Back to dashboard** if you want to see your changes applied to the dashboard first. Then click **Save dashboard** when you're ready.
+1. Clique em **OK** na mensagem e altere sua senha.
 
-1. Add a descriptive title for the dashboard, or have Grafana create one using [generative AI features](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/dashboards/manage-dashboards#set-up-generative-ai-features-for-dashboards), and then click **Save**.
-1. Click **Back to dashboard** and then **Exit edit**.
+{{< admonition type="note" >}}
+Recomendamos fortemente que você altere a senha padrão do usuário administrador.
+{{< /admonition >}}
 
-Congratulations, you have created your first dashboard and it's displaying results.
+#### Crie um dashboard
 
-#### Next steps
+Se você já configurou uma fonte de dados que sabe como consultar, consulte
+[Crie um dashboard](https://grafana.com/docs/grafana/<VERSÃO_DO_GRAFANA>/dashboards/build-dashboards/create-dashboard/).
 
-Continue to experiment with what you have built, try the [explore workflow](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/explore/) or another visualization feature. Refer to [Data sources](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/datasources/) for a list of supported data sources and instructions on how to [add a data source](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/datasources/#add-a-data-source). The following topics will be of interest to you:
+Para criar seu primeiro dashboard usando a fonte de dados integrada
+`-- Grafana --`:
 
-- [Panels and visualizations](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/panels-visualizations/)
+1. Clique em **Dashboards** no menu principal.
+1. Na página **Dashboards**, clique em **New** e selecione **New Dashboard** no
+   menu suspenso.
+1. No dashboard, clique em **+ Add visualization**.
+
+   ![Estado do dashboard vazio](/media/docs/grafana/dashboards/empty-dashboard-10.2.png)
+
+1. Na caixa de diálogo que se abre, clique em `-- Grafana --`:
+
+   {{< figure class="float-right"  src="/media/docs/grafana/dashboards/screenshot-data-source-selector-10.0.png" max-width="800px" alt="Caixa de diálogo Select data source" >}}
+
+   Isso configura sua
+   [consulta](https://grafana.com/docs/grafana/<VERSÃO_DO_GRAFANA>/panels-visualizations/query-transform-data/#add-a-query)
+   e gera o dashboard Random Walk.
+
+1. Clique em **Refresh** para consultar a fonte de dados.
+1. Ao terminar de editar o painel, clique em **Save dashboard**.
+
+   Como alternativa, clique em **Back to dashboard** se quiser ver as alterações
+   aplicadas ao dashboard primeiro.
+   Em seguida, clique em **Save dashboard** quando tiver terminado.
+
+1. Adicione um título descritivo para o dashboard ou peça ao Grafana para criar
+   um usando
+   [recursos de IA generativa](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/dashboards/manage-dashboards#set-up-generative-ai-features-for-dashboards)
+   e clique em **Save**.
+1. Clique em **Back to dashboard** e depois em **Exit edit**.
+
+Parabéns, você criou seu primeiro dashboard e ele está exibindo resultados.
+
+#### Próximos passos
+
+Continue a experimentar com o que você criou, tente o
+[fluxo de trabalho do Explore](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/explore/)
+ou outro recurso de visualização.
+Consulte [Fontes de dados](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/datasources/)
+para obter uma lista das fontes de dados suportadas e instruções sobre como
+[adicionar uma fonte de dados](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/datasources/#add-a-data-source).
+Os seguintes tópicos serão do seu interesse:
+
+- [Painéis e visualizações](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/panels-visualizations/)
 - [Dashboards](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/dashboards/)
-- [Keyboard shortcuts](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/dashboards/use-dashboards/#keyboard-shortcuts)
+- [Atalhos de teclado](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/dashboards/use-dashboards/#keyboard-shortcuts)
 - [Plugins](/grafana/plugins?orderBy=weight&direction=asc)
 
-##### Admins
+##### Pessoas administradoras
 
-The following topics are of interest to Grafana server admin users:
+Os seguintes tópicos são de interesse para pessoas usuárias administradoras do
+servidor Grafana:
 
-- [Grafana configuration](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-grafana/)
-- [Authentication](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-access/configure-authentication/)
-- [User permissions and roles](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/administration/roles-and-permissions/)
-- [Provisioning](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/administration/provisioning/)
-- [Grafana CLI](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/cli/)
+- [Configuração do Grafana](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-grafana/)
+- [Autenticação](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/setup-grafana/configure-access/configure-authentication/)
+- [Permissões e funções de usuário](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/administration/roles-and-permissions/)
+- [Provisionamento](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/administration/provisioning/)
+- [CLI do Grafana](https://grafana.com/docs/grafana/<GRAFANA_VERSION>/cli/)
