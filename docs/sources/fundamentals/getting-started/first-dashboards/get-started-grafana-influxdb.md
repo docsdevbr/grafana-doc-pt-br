@@ -1,114 +1,195 @@
 ---
+# Copyright (c) 2026 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+
+# Documentation licensed under the GNU Affero General Public License.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/main/LICENSE
+# https://github.com/grafana/grafana/blob/main/LICENSING.md
+
+source_url: https://github.com/grafana/grafana/blob/release-12.4.3/docs/sources/fundamentals/getting-started/first-dashboards/get-started-grafana-influxdb.md
+revision: 83e190a160cc4ea88e606b9d43b09d4ab8ceb1fa
+status: ready
+
 aliases:
   - ../../../getting-started/getting-started-influxdb/ # /docs/grafana/latest/getting-started/getting-started-influxdb
   - ../../../getting-started/get-started-grafana-influxdb/ # /docs/grafana/latest/getting-started/get-started-grafana-influxdb
-description: Learn how to build your first InfluxDB dashboard in Grafana.
+description: Aprenda a criar seu primeiro dashboard do InfluxDB no Grafana.
 labels:
   products:
     - enterprise
     - oss
-title: Get started with Grafana and InfluxDB
+title: Comece a usar o Grafana e o InfluxDB
 weight: 400
 ---
 
-# Get started with Grafana and InfluxDB
+# Comece a usar o Grafana e o InfluxDB
 
 {{< docs/shared lookup="influxdb/intro.md" source="grafana" version="<GRAFANA VERSION>" >}}
 
-#### Get InfluxDB
+#### Baixe o InfluxDB
 
-You can [download InfluxDB](https://portal.influxdata.com/downloads/) and install it locally or you can sign up for [InfluxDB Cloud](https://www.influxdata.com/products/influxdb-cloud/). Windows installers are not available for some versions of InfluxDB.
+Você pode [baixar o InfluxDB](https://portal.influxdata.com/downloads/) e
+instalá-lo localmente ou pode se inscrever no
+[InfluxDB Cloud](https://www.influxdata.com/products/influxdb-cloud/).
+Instaladores para Windows não estão disponíveis para algumas versões do InfluxDB.
 
-#### Install other InfluxDB software
+#### Instale outros softwares do InfluxDB
 
-[Install Telegraf](https://docs.influxdata.com/telegraf/v1.18/introduction/installation/). This tool is an agent that helps you get metrics into InfluxDB. For more information, refer to [Telegraf documentation](https://docs.influxdata.com/telegraf/v1.18/).
+[Instale o Telegraf](https://docs.influxdata.com/telegraf/v1.18/introduction/installation/).
+Esta ferramenta é um agente que ajuda você a importar métricas para o InfluxDB.
+Para obter mais informações, consulte a
+[documentação do Telegraf](https://docs.influxdata.com/telegraf/v1.18/).
 
-If you chose to use InfluxDB Cloud, then you should [download and install the InfluxDB Cloud CLI](https://portal.influxdata.com/downloads/). This tool allows you to send command line instructions to your cloud account. For more information, refer to [Influx CLI documentation](https://docs.influxdata.com/influxdb/cloud/write-data/developer-tools/influx-cli/).
+Se você optar por usar o InfluxDB Cloud, deverá
+[baixar e instalar a CLI do InfluxDB Cloud](https://portal.influxdata.com/downloads/).
+Essa ferramenta permite enviar instruções de linha de comando para sua conta na
+nuvem.
+Para obter mais informações, consulte a
+[documentação da CLI do InfluxDB](https://docs.influxdata.com/influxdb/cloud/write-data/developer-tools/influx-cli/).
 
-#### Get data into InfluxDB
+#### Importe dados para o InfluxDB
 
-If you downloaded and installed InfluxDB on your local machine, then use the [Quick Start](https://docs.influxdata.com/influxdb/v2.0/write-data/#quick-start-for-influxdb-oss) feature to visualize InfluxDB metrics.
+Se você baixou e instalou o InfluxDB em sua máquina local, use o recurso
+[Início Rápido](https://docs.influxdata.com/influxdb/v2.0/write-data/#quick-start-for-influxdb-oss)
+para visualizar as métricas do InfluxDB.
 
-If you are using the cloud account, then the wizards will guide you through the initial process. For more information, refer to [Configure Telegraf](https://docs.influxdata.com/influxdb/cloud/write-data/no-code/use-telegraf/#configure-telegraf).
+Se você estiver usando uma conta na nuvem, os assistentes o guiarão pelo
+processo inicial.
+Para obter mais informações, consulte
+[Configurar o Telegraf](https://docs.influxdata.com/influxdb/cloud/write-data/no-code/use-telegraf/#configure-telegraf).
 
-##### Note for Windows users:
+##### Observação para pessoas usuárias do Windows:
 
-Windows users might need to make additional adjustments. Look for special instructions in the InfluxData documentation and [Using Telegraf on Windows](https://www.influxdata.com/blog/using-telegraf-on-windows/) blog post. The regular system monitoring template in InfluxDB Cloud is not compatible with Windows. Windows users who use InfluxDB Cloud to monitor their system will need to use the [Windows System Monitoring Template](https://github.com/influxdata/community-templates/tree/master/windows_system).
+Usuários do Windows podem precisar fazer ajustes adicionais.
+Consulte as instruções específicas na documentação do InfluxData e na postagem
+do blog
+[Usando o Telegraf no Windows](https://www.influxdata.com/blog/using-telegraf-on-windows/).
+O modelo padrão de monitoramento de sistema no InfluxDB Cloud não é compatível
+com o Windows.
+Pessoas usuárias do Windows que utilizam o InfluxDB Cloud para monitorar seus
+sistemas precisarão usar o
+[Template de Monitoramento de Sistema para Windows](https://github.com/influxdata/community-templates/tree/master/windows_system).
 
-#### Add your InfluxDB data source to Grafana
+#### Adicione sua fonte de dados do InfluxDB ao Grafana
 
-You can have more than one InfluxDB data source defined in Grafana.
+Você pode ter mais de uma fonte de dados do InfluxDB definida no Grafana.
 
-1. Follow the general instructions to [add a data source](../../datasources/#add-a-data-source).
-1. Decide if you will use InfluxQL or Flux as your query language.
-   - [Configure the data source](../../datasources/influxdb/#configure-the-data-source) for your chosen query language.
-     Each query language has its own unique data source settings.
-   - For querying features specific to each language, see the data source's [query editor documentation](../../datasources/influxdb/query-editor/).
+1. Siga as instruções gerais para
+   [adicionar uma fonte de dados](../../datasources/#add-a-data-source).
+1. Decida se você usará InfluxQL ou Flux como linguagem de consulta.
+   - [Configure a fonte de dados](../../datasources/influxdb/#configure-the-data-source)
+     para a linguagem de consulta escolhida.
+     Cada linguagem de consulta possui suas próprias configurações de fonte de
+     dados exclusivas.
+   - Para consultar recursos específicos de cada idioma, consulte a
+     [documentação do editor de consultas](../../datasources/influxdb/query-editor/)
+     da fonte de dados.
 
-##### InfluxDB guides
+##### Guias do InfluxDB
 
-InfluxDB publishes guidance for connecting different versions of their product to Grafana.
+O InfluxDB publica guias para conectar diferentes versões do seu produto ao
+Grafana.
 
-- **InfluxDB OSS or Enterprise 1.8+.** To turn on Flux, refer to [Configure InfluxDB](https://docs.influxdata.com/influxdb/v1.8/administration/config/#flux-enabled-false.). Select your InfluxDB version in the upper right corner.
-- **InfluxDB OSS or Enterprise 2.x.** Refer to [Use Grafana with InfluxDB](https://docs.influxdata.com/influxdb/v2.0/tools/grafana/). Select your InfluxDB version in the upper right corner.
-- **InfluxDB Cloud.** Refer to [Use Grafana with InfluxDB Cloud](https://docs.influxdata.com/influxdb/cloud/tools/grafana/).
+- **InfluxDB OSS ou Enterprise 1.8+.**
+  Para ativar o Flux, consulte
+  [Configurar o InfluxDB](https://docs.influxdata.com/influxdb/v1.8/administration/config/#flux-enabled-false).
+  Selecione sua versão do InfluxDB no canto superior direito.
+- **InfluxDB OSS ou Enterprise 2.x.**
+  Consulte [Usar o Grafana com o InfluxDB](https://docs.influxdata.com/influxdb/v2.0/tools/grafana/).
+  Selecione sua versão do InfluxDB no canto superior direito.
+- **InfluxDB Cloud.**
+  Consulte
+  [Usar o Grafana com o InfluxDB Cloud](https://docs.influxdata.com/influxdb/cloud/tools/grafana/).
 
-##### Important tips
+##### Dicas importantes
 
-- Make sure your Grafana token has read access. If it doesn't, then you'll get an authentication error and be unable to connect Grafana to InfluxDB.
-- Avoid apostrophes and other non-standard characters in bucket and token names.
-- If the text name of the organization or bucket doesn't work, then try the ID number.
-- If you change your bucket name in InfluxDB, then you must also change it in Grafana and your Telegraf .conf file as well.
+- Certifique-se de que seu token do Grafana tenha permissão de leitura.
+  Caso contrário, você receberá um erro de autenticação e não conseguirá
+  conectar o Grafana ao InfluxDB.
+- Evite apóstrofos e outros caracteres não padronizados nos nomes de buckets e
+  tokens.
+- Se o nome da organização ou do bucket não funcionar, tente usar o número de
+  ID.
+- Se você alterar o nome do seu bucket no InfluxDB, também deverá alterá-lo no
+  Grafana e no seu arquivo .conf do Telegraf.
 
-#### Add a query
+#### Adicione uma consulta
 
-This step varies depending on the query language that you selected when you set up your data source in Grafana.
+Esta etapa varia dependendo da linguagem de consulta que você selecionou ao
+configurar sua fonte de dados no Grafana.
 
-##### InfluxQL query language
+##### Linguagem de consulta InfluxQL
 
-In the query editor, click **select measurement**.
+No editor de consultas, clique em **select measurement**.
 
-![InfluxQL query](/static/img/docs/influxdb/influxql-query-7-5.png)
+![Consulta InfluxQL](/static/img/docs/influxdb/influxql-query-7-5.png)
 
-Grafana displays a list of possible series. Click one to select it, and Grafana graphs any available data. If there is no data to display, then try another selection or check your data source.
+O Grafana exibe uma lista de séries possíveis.
+Clique em uma para selecioná-la e o Grafana criará um gráfico com os dados
+disponíveis.
+Se não houver dados para exibir, tente outra seleção ou verifique sua fonte de
+dados.
 
-##### Flux query language
+##### Linguagem de consulta Flux
 
-Create a simple Flux query.
+Crie uma consulta Flux simples.
 
-1. [Add a panel](../../dashboards/build-dashboards/create-dashboard/).
-1. In the query editor, select your InfluxDB-Flux data source. For more information, refer to [Queries](../../panels-visualizations/query-transform-data/).
-1. Select the **Table** visualization.
-1. In the query editor text field, enter `buckets()` and then click outside of the query editor.
+1. [Adicione um painel](../../dashboards/build-dashboards/create-dashboard/).
+1. No editor de consultas, selecione sua fonte de dados InfluxDB-Flux.
+   Para obter mais informações, consulte
+   [Consultas](../../panels-visualizations/query-transform-data/).
+1. Selecione a visualização **Table**.
+1. No campo de texto do editor de consultas, digite `buckets()` e clique fora do
+   editor de consultas.
 
-This generic query returns a list of buckets.
+Esta consulta genérica retorna uma lista de buckets.
 
-![Flux query](/static/img/docs/influxdb/flux-query-7-5.png)
+![Consulta Flux](/static/img/docs/influxdb/flux-query-7-5.png)
 
-You can also create Flux queries in the InfluxDB Explore view.
+Você também pode criar consultas Flux na visualização Explore do InfluxDB.
 
-1. In your browser, log in to the InfluxDB native UI (OSS is typically something like http://localhost:8086 or for InfluxDB Cloud use: https://cloud2.influxdata.com).
-1. Click **Explore** to open the Data Explorer.
-1. The InfluxDB Data Explorer provides two mechanisms for creating Flux queries: a graphical query editor and a script editor. Using the graphical query editor, [create a query](https://docs.influxdata.com/influxdb/cloud/query-data/execute-queries/data-explorer/). It will look something like this:
+1. No seu navegador, faça login na interface nativa do InfluxDB (a versão OSS
+   geralmente é algo como http://localhost:8086 ou, para uso com o InfluxDB
+   Cloud: https://cloud2.influxdata.com).
+1. Clique em **Explore** para abrir o Data Explorer.
+1. O Data Explorer do InfluxDB oferece dois mecanismos para criar consultas
+   Flux: um editor gráfico de consultas e um editor de scripts.
+   Usando o editor gráfico de consultas,
+   [crie uma consulta](https://docs.influxdata.com/influxdb/cloud/query-data/execute-queries/data-explorer/).
+   Ela terá uma aparência semelhante a esta:
 
-   ![InfluxDB Explore query](/static/img/docs/influxdb/influx-explore-query-7-5.png)
+   ![Consulta do InfluxDB Explore](/static/img/docs/influxdb/influx-explore-query-7-5.png)
 
-1. Click **Script Editor** to view the text of the query, and then copy all the lines of your Flux code, which will look something like this:
+1. Clique em **Script Editor** para visualizar o texto da consulta e copie todas
+   as linhas do seu código Flux, que ficará semelhante a este:
 
-   ![InfluxDB Explore Script Editor](/static/img/docs/influxdb/explore-query-text-7-5.png)
+   ![Script Editor do InfluxDB Explore](/static/img/docs/influxdb/explore-query-text-7-5.png)
 
-1. In Grafana, [add a panel](../../dashboards/build-dashboards/create-dashboard/) and then paste your Flux code into the query editor.
-1. Click **Apply**. Your new panel should be visible with data from your Flux query.
+1. No Grafana,
+   [adicione um painel](../../dashboards/build-dashboards/create-dashboard/) e
+   cole seu código Flux no editor de consultas.
+1. Clique em **Apply**.
+   Seu novo painel deverá estar visível com os dados da sua consulta Flux.
 
-#### Check InfluxDB metrics in Grafana Explore
+#### Verifique as métricas do InfluxDB no Grafana Explore
 
-In your Grafana instance, go to the [Explore](../../explore/) view and build queries to experiment with the metrics you want to monitor. Here you can also debug issues related to collecting metrics.
+Na sua instância do Grafana, acesse a visualização [Explore](../../explore/) e
+crie consultas para experimentar com as métricas que deseja monitorar.
+Aqui você também pode depurar problemas relacionados à coleta de métricas.
 
-#### Start building dashboards
+#### Comece a criar dashboards
 
-There you go! Use Explore and Data Explorer to experiment with your data, and add the queries that you like to your dashboard as panels. Have fun!
+Pronto!
+Use o Explore e o Data Explorer para experimentar com seus dados e adicione as
+consultas que você gostar ao seu dashboard como painéis.
+Divirta-se!
 
-Here are some resources to learn more:
+Aqui estão alguns recursos para aprender mais:
 
-- Grafana documentation: [InfluxDB data source](../../datasources/influxdb/)
-- InfluxDB documentation: [Comparison of Flux vs InfluxQL](https://docs.influxdata.com/influxdb/v1.8/flux/flux-vs-influxql/)
+- Documentação do Grafana:
+  [Fonte de dados InfluxDB](../../datasources/influxdb/)
+- Documentação do InfluxDB:
+  [Comparação de Flux vs InfluxQL](https://docs.influxdata.com/influxdb/v1.8/flux/flux-vs-influxql/)
