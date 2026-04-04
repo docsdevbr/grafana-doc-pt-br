@@ -1,69 +1,106 @@
 ---
+# Copyright (c) 2026 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+#
+# Documentation licensed under the GNU Affero General Public License Version 3.
+# For license exceptions, see LICENSING.md.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/grafana/grafana/blob/-/LICENSE
+# https://github.com/grafana/grafana/blob/-/LICENSING.md
+
+source_url: https://github.com/grafana/grafana/blob/main/docs/sources/fundamentals/getting-started/first-dashboards/get-started-grafana-ms-sql-server.md
+revision: 83e190a160cc4ea88e606b9d43b09d4ab8ceb1fa
+status: ready
+
 aliases:
   - ../../../getting-started/getting-started-sql/ # /docs/grafana/latest/getting-started/getting-started-sql
   - ../../../getting-started/get-started-grafana-ms-sql-server/ # /docs/grafana/latest/getting-started/get-started-grafana-ms-sql-server
-description: Learn how to build your first MS SQL Server dashboard in Grafana.
+description: Aprenda a criar seu primeiro dashboard do MS SQL Server no Grafana.
 labels:
   products:
     - enterprise
     - oss
-title: Get started with Grafana and MS SQL Server
+title: Comece a usar o Grafana e o MS SQL Server
 weight: 500
 ---
 
-# Get started with Grafana and MS SQL Server
+# Comece a usar o Grafana e o MS SQL Server
 
-Microsoft SQL Server is a popular relational database management system that is widely used in development and production environments. This topic walks you through the steps to create a series of dashboards in Grafana to display metrics from a MS SQL Server database.
+O Microsoft SQL Server é um sistema de gerenciamento de banco de dados
+relacional popular e amplamente utilizado em ambientes de desenvolvimento e
+produção.
+Este tópico orienta você nos passos para criar uma série de dashboards no
+Grafana para exibir métricas de um banco de dados MS SQL Server.
 
-#### Download MS SQL Server
+#### Baixe o MS SQL Server
 
-MS SQL Server can be installed on Windows or Linux operating systems and also on Docker containers. Refer to the [MS SQL Server downloads page](https://www.microsoft.com/en-us/sql-server/sql-server-downloads), for a complete list of all available options.
+O MS SQL Server pode ser instalado em sistemas operacionais Windows ou Linux,
+bem como em contêineres Docker.
+Consulte a
+[página de downloads do MS SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+para obter uma lista completa de todas as opções disponíveis.
 
-#### Install MS SQL Server
+#### Instale o MS SQL Server
 
-You can install MS SQL Server on the host running Grafana or on a remote server. To install the software from the [downloads page](https://www.microsoft.com/en-us/sql-server/sql-server-downloads), follow their setup prompts.
+Você pode instalar o MS SQL Server no host que executa o Grafana ou em um
+servidor remoto.
+Para instalar o software a partir da
+[página de downloads](https://www.microsoft.com/en-us/sql-server/sql-server-downloads),
+siga as instruções de instalação.
 
-If you are on a Windows host but want to use Grafana and MS SQL data source on a Linux environment, refer to the [WSL to set up your Grafana development environment](/blog/2021/03/03/how-to-set-up-a-grafana-development-environment-on-a-windows-pc-using-wsl) blog post. This will allow you to leverage the resources available in [grafana/grafana](https://github.com/grafana/grafana) GitHub repository. Here you will find a collection of supported data sources, including MS SQL Server, along with test data and pre-configured dashboards for use.
+Se você estiver em um host Windows, mas quiser usar o Grafana e a fonte de dados
+MS SQL em um ambiente Linux, consulte a postagem do blog
+[WSL para configurar seu ambiente de desenvolvimento do Grafana](/blog/2021/03/03/how-to-set-up-a-grafana-development-environment-on-a-windows-pc-using-wsl).
+Isso permitirá que você aproveite os recursos disponíveis no repositório GitHub
+[grafana/grafana](https://github.com/grafana/grafana).
+Lá você encontrará uma coleção de fontes de dados compatíveis, incluindo o MS
+SQL Server, juntamente com dados de teste e dashboards pré-configurados para
+uso.
 
-#### Add the MS SQL data source
+#### Adicione a fonte de dados MS SQL
 
-There are several ways to authenticate in MSSQL. Start by:
+Existem várias maneiras de autenticar no MSSQL. Comece por:
 
-1. Click **Connections** in the left-side menu and filter by `mssql`.
-1. Select the **Microsoft SQL Server** option.
-1. Click **Create a Microsoft SQL Server data source** in the top right corner to open the configuration page.
-1. Select the desired authentication method and fill in the right information as detailed below.
-1. Click **Save & test**.
+1. Clique em **Connections** no menu à esquerda e filtre por `mssql`.
+1. Selecione a opção **Microsoft SQL Server**.
+1. Clique em **Create a Microsoft SQL Server data source** no canto superior
+   direito para abrir a página de configuração.
+1. Selecione o método de autenticação desejado e preencha as informações
+   corretas, conforme detalhado abaixo.
+1. Clique em **Save & test**.
 
-##### General configuration
+##### Configuração geral
 
-| Name       | Description                                                                                                           |
-| ---------- | --------------------------------------------------------------------------------------------------------------------- |
-| `Name`     | The data source name. This is how you refer to the data source in panels and queries.                                 |
-| `Host`     | The IP address/hostname and optional port of your MS SQL instance. If port is omitted, the default 1433 will be used. |
-| `Database` | Name of your MS SQL database.                                                                                         |
+| Nome       | Descrição                                                                                                                           |
+|------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| `Name`     | O nome da fonte de dados. É como você se refere à fonte de dados em painéis e consultas.                                            |
+| `Host`     | O endereço IP/nome do host e a porta (opcional) da sua instância do MS SQL. Se a porta for omitida, a porta padrão 1433 será usada. |
+| `Database` | Nome do seu banco de dados MS SQL.                                                                                                  |
 
-##### SQL Server Authentication
+##### Autenticação do SQL Server
 
-| Name       | Description                     |
-| ---------- | ------------------------------- |
-| `User`     | Database user's login/username. |
-| `Password` | Database user's password.       |
+| Nome       | Descrição                                                  |
+|------------|------------------------------------------------------------|
+| `User`     | Login/nome de usuário da pessoa usuária do banco de dados. |
+| `Password` | Senha do usuário do banco de dados.                        |
 
-##### Windows Active Directory (Kerberos)
+#### Windows Active Directory (Kerberos)
 
-Below are the four possible ways to authenticate via Windows Active Directory/Kerberos.
+Abaixo estão as quatro maneiras possíveis de autenticar via Windows Active
+Directory/Kerberos.
 
 {{< admonition type="note" >}}
-Windows Active Directory (Kerberos) authentication is not supported in Grafana Cloud at the moment.
+A autenticação do Windows Active Directory (Kerberos) não é suportada no Grafana
+Cloud no momento.
 {{< /admonition >}}
 
-| Method                    | Description                                                                                                                                                  |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Username + password**   | Enter the domain user and password                                                                                                                           |
-| **Keytab file**           | Specify the path to a valid keytab file to use that for authentication.                                                                                      |
-| **Credential cache**      | Log in on the host via `kinit` and pass the path to the credential cache. The cache path can be found by running `klist` on the host in question.            |
-| **Credential cache file** | This option allows multiple valid configurations to be present and matching is performed on host, database, and user. See the example JSON below this table. |
+| Método                    | Descrição                                                                                                                                                                            |
+|---------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Username + password**   | Insira o usuário e a senha do domínio.                                                                                                                                               |
+| **Keytab file**           | Especifique o caminho para um arquivo keytab válido para usar na autenticação.                                                                                                       |
+| **Credential cache**      | Faça login no host via `kinit` e passe o caminho para o cache de credenciais. O caminho do cache pode ser encontrado executando `klist` no host em questão.                          |
+| **Credential cache file** | Esta opção permite que várias configurações válidas estejam presentes e a correspondência é realizada no host, banco de dados e usuário. Veja o exemplo de JSON abaixo desta tabela. |
 
 ```json
 [
@@ -82,22 +119,38 @@ Windows Active Directory (Kerberos) authentication is not supported in Grafana C
 ]
 ```
 
-For installations from the [grafana/grafana](https://github.com/grafana/grafana/tree/main) repository, `gdev-mssql` data source is available. Once you add this data source, you can use the `Datasource tests - MSSQL` dashboard with three panels showing metrics generated from a test database.
+Para instalações a partir do repositório
+[grafana/grafana](https://github.com/grafana/grafana/tree/main), a fonte de
+dados `gdev-mssql` está disponível.
+Após adicionar essa fonte de dados, você pode usar o painel
+`Datasource tests - MSSQL` com três painéis que exibem métricas geradas a partir
+de um banco de dados de teste.
 
-![MS SQL Server dashboard](/static/img/docs/getting-started/gdev-sql-dashboard.png)
+![Dashboard do MS SQL Server](/static/img/docs/getting-started/gdev-sql-dashboard.png)
 
-Optionally, play around this dashboard and customize it to:
+Opcionalmente, explore este dashboard e personalize-o para:
 
-- Create different panels.
-- Change titles for panels.
-- Change frequency of data polling.
-- Change the period for which the data is displayed.
-- Rearrange and resize panels.
+- Criar painéis diferentes.
+- Alterar os títulos dos painéis.
+- Alterar a frequência de coleta de dados.
+- Alterar o período de exibição dos dados.
+- Reorganizar e redimensionar os painéis.
 
-#### Start building dashboards
+#### Comece a criar dashboards
 
-Now that you have gained some idea of using the pre-packaged MS SQL data source and some test data, the next step is to setup your own instance of MS SQL Server database and data your development or sandbox area.
+Agora que você já tem uma ideia de como usar a fonte de dados MS SQL
+pré-configurada e alguns dados de teste, o próximo passo é configurar sua
+própria instância do banco de dados MS SQL Server e seus dados para o ambiente
+de desenvolvimento ou sandbox.
 
-To fetch data from your own instance of MS SQL Server, add the data source using instructions in Step 4 of this topic. In Grafana [Explore](../../explore/) build queries to experiment with the metrics you want to monitor.
+Para obter dados da sua própria instância do MS SQL Server, adicione a fonte de
+dados seguindo as instruções da Etapa 4 deste tópico.
+No Grafana [Explore](../../explore/), crie consultas para experimentar as
+métricas que deseja monitorar.
 
-Once you have a curated list of queries, create [dashboards](../../dashboards/) to render metrics from the SQL Server database. For troubleshooting, user permissions, known issues, and query examples, refer to [Using Microsoft SQL Server in Grafana](../../datasources/mssql/).
+Depois de ter uma lista selecionada de consultas, crie
+[dashboards](../../dashboards/) para exibir as métricas do banco de dados SQL
+Server.
+Para solução de problemas, permissões de usuário, problemas conhecidos e
+exemplos de consultas, consulte
+[Usando o Microsoft SQL Server no Grafana](../../datasources/mssql/).
