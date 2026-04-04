@@ -9,11 +9,21 @@
 # https://github.com/grafana/grafana/blob/-/LICENSE
 # https://github.com/grafana/grafana/blob/-/LICENSING.md
 
+source_url: https://github.com/grafana/grafana/blob/main/docs/sources/shared/influxdb/intro.md
+revision: 7eb17bcccae0881d794f02ceb39bf80e5709810b
+status: ready
+
 labels:
   products:
     - enterprise
     - oss
-title: Intro paragraph
+title: Parágrafo introdutório
 ---
 
-[InfluxDB](https://www.influxdata.com/products/) is an open-source time series database (TSDB) developed by [InfluxData](https://www.influxdata.com/). It is optimized for fast, high-availability storage and retrieval of time series data in fields such as operations monitoring, application metrics, IoT sensor data, and real-time analytics.
+[InfluxDB](https://www.influxdata.com/products/) é um banco de dados de séries
+temporais (TSDB) de código aberto desenvolvido pela
+[InfluxData](https://www.influxdata.com/).
+Ele é otimizado para armazenamento e recuperação rápidos e de alta
+disponibilidade de dados de séries temporais em áreas como monitoramento de
+operações, métricas de aplicações, dados de sensores de IoT e análises em tempo
+real.
