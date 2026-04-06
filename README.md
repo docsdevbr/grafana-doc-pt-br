@@ -2,7 +2,7 @@
 
 [![Arquivo README em inglês][badge-readme-en]][readme-en]
 [![Arquivo README em português brasileiro][badge-readme-pt-br]][readme-pt-br]
-[![Licença:AGPL-3.0-only][badge-license]][license]
+[![Licença: AGPL-3.0-only][badge-license]][license]
 [![Status do REUSE][badge-reuse]][reuse]
 [![Pessoas contribuidoras][badge-contributors]][contributors]
 [![GitHub Sponsors][badge-github-sponsors]][github-sponsors]
