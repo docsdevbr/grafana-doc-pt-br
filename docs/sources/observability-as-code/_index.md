@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2026 Grafana Labs.
+# SPDX-FileCopyrightText: 2026 Grafana Labs.
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
 
@@ -57,7 +57,7 @@ hero:
   level: 1
   width: 110
 ---
-# Copyright (c) 2026 Grafana Labs.
+# SPDX-FileCopyrightText: 2026 Grafana Labs.
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
 #

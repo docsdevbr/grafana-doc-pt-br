@@ -50,7 +50,7 @@ cards:
       description: Learn how to create and use Correlations.
       height: 24
 ---
-# Copyright (c) 2026 Grafana Labs.
+# SPDX-FileCopyrightText: 2026 Grafana Labs.
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
 #

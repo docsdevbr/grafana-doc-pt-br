@@ -55,7 +55,7 @@ refs:
     - pattern: /docs/grafana-cloud/
       destination: /docs/grafana-cloud/visualizations/panels-visualizations/query-transform-data/
 ---
-# Copyright (c) 2026 Grafana Labs.
+# SPDX-FileCopyrightText: 2026 Grafana Labs.
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
 #
