@@ -1,4 +1,10 @@
 ---
+#
+# SPDX-License-Identifier: AGPL-3.0-only
+# Documentation licensed under the GNU Affero General Public License Version 3.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docsdevbr/grafana-doc-pt-br/blob/-/LICENSES/AGPL-3.0-only.txt
+
 canonical: https://grafana.com/docs/grafana/latest/alerting/best-practices/connectivity-errors/
 description: Learn how to detect and handle connectivity issues in alerts using Prometheus, Grafana Alerting, or both.
 keywords:
@@ -62,20 +68,20 @@ Typically, connectivity issues fall into a few common scenarios:
 
 When we talk about connectivity errors in alerting, we’re usually referring to one of two use cases:
 
-1. **Your target is down or unreachable.**  
+1. **Your target is down or unreachable.**
    The service crashed, the host was down, or a firewall or DNS issue blocked the connection. These are **availability problems**.
 
-1. **Your alert query failed.**  
+1. **Your alert query failed.**
    The alert couldn’t evaluate its query—maybe because the data source timed out or an invalid query. These are **execution errors**.
 
 It helps to separate these cases early, because they behave differently and require different strategies.
 
 Keep in mind that most alert rules don’t hit the target directly. They query metrics from a monitoring system like Prometheus, which scrapes data from your actual infrastructure or application. That gives us two typical alerting setups where connectivity issues can show up:
 
-1. **Alert rule → Target**  
+1. **Alert rule → Target**
    For example, an alert rule querying an external data source like a database.
 
-2. **Alert rule → Prometheus ← Target**  
+2. **Alert rule → Prometheus ← Target**
    More common in observability stacks. For instance, Prometheus scrapes a node or container, and the alert rule queries the metrics later.
 
    In this second setup, you can run into connectivity issues on either side. If Prometheus fails to scrape the target, your alert rule might not fire, even though something is likely wrong.

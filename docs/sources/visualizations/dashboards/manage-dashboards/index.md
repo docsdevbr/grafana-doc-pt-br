@@ -1,4 +1,10 @@
 ---
+#
+# SPDX-License-Identifier: AGPL-3.0-only
+# Documentation licensed under the GNU Affero General Public License Version 3.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docsdevbr/grafana-doc-pt-br/blob/-/LICENSES/AGPL-3.0-only.txt
+
 aliases:
   - ../../panels/working-with-panels/organize-dashboard/ # /docs/grafana/next/panels/working-with-panels/organize-dashboard/
   - ../../reference/dashboard_folders/ # /docs/grafana/next/reference/dashboard_folders/
@@ -124,7 +130,7 @@ For more information about dashboard permissions, refer to [Dashboard permission
 ## Restore deleted dashboards
 
 {{% admonition type="caution" %}}
-The feature is only available in Grafana Cloud.  
+The feature is only available in Grafana Cloud.
 {{% /admonition %}}
 
 When you delete dashboards, they’re stored in the deletion history for up to 12 months, allowing you to restore them if needed.

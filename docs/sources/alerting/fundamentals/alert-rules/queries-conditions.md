@@ -1,4 +1,10 @@
 ---
+#
+# SPDX-License-Identifier: AGPL-3.0-only
+# Documentation licensed under the GNU Affero General Public License Version 3.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docsdevbr/grafana-doc-pt-br/blob/-/LICENSES/AGPL-3.0-only.txt
+
 aliases:
   - ../../fundamentals/evaluate-grafana-alerts/ # /docs/grafana/<GRAFANA_VERSION>/alerting/fundamentals/evaluate-grafana-alerts/
   - ../../unified-alerting/fundamentals/evaluate-grafana-alerts/ # /docs/grafana/<GRAFANA_VERSION>/alerting/unified-alerting/fundamentals/evaluate-grafana-alerts/

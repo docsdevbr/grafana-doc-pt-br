@@ -2,12 +2,11 @@
 # Copyright (c) 2026 Grafana Labs.
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
-
-# Documentation licensed under the GNU Affero General Public License.
-# For license exceptions, see LICENSING.md.
+#
+# SPDX-License-Identifier: AGPL-3.0-only
+# Documentation licensed under the GNU Affero General Public License Version 3.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/grafana/grafana/blob/main/LICENSE
-# https://github.com/grafana/grafana/blob/main/LICENSING.md
+# https://github.com/docsdevbr/grafana-doc-pt-br/blob/-/LICENSES/AGPL-3.0-only.txt
 
 description: Overview of Observability as Code including description, key features, and explanation of benefits.
 keywords:
@@ -62,11 +61,10 @@ hero:
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
 #
+# SPDX-License-Identifier: AGPL-3.0-only
 # Documentation licensed under the GNU Affero General Public License Version 3.
-# For license exceptions, see LICENSING.md.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/grafana/grafana/blob/-/LICENSE
-# https://github.com/grafana/grafana/blob/-/LICENSING.md
+# https://github.com/docsdevbr/grafana-doc-pt-br/blob/-/LICENSES/AGPL-3.0-only.txt
 
 
 {{< docs/hero-simple key="hero" >}}

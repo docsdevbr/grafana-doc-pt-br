@@ -2,7 +2,7 @@
 
 [![Arquivo README em inglês][badge-readme-en]][readme-en]
 [![Arquivo README em português brasileiro][badge-readme-pt-br]][readme-pt-br]
-[![Licença: AGPL-3.0][badge-license]][license]
+[![Licença: AGPL-3.0-only][badge-license]][license]
 [![Pessoas contribuidoras][badge-contributors]][contributors]
 [![GitHub Sponsors][badge-github-sponsors]][github-sponsors]
 
@@ -33,7 +33,6 @@ Inc. dba Grafana Labs.
 
 Documentação licenciada sob a
 [Licença Pública Geral GNU Affero Versão 3][license].<br/>
-Para exceções de licença, consulte [LICENSING][licensing].<br/>
 A obra original foi traduzida do inglês para o português brasileiro.
 
 [badge-contributors]: https://img.shields.io/github/contributors/docsdevbr/grafana-doc-pt-br
@@ -54,9 +53,7 @@ A obra original foi traduzida do inglês para o português brasileiro.
 
 [github-sponsors]: https://github.com/sponsors/docsdevbr
 
-[license]: LICENSE
-
-[licensing]: https://github.com/grafana/grafana/blob/HEAD/LICENSING.md
+[license]: LICENSES/AGPL-3.0-only.txt
 
 [page]: https://pt.docs.dev.br/tech/g/grafana/index.html
 

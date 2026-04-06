@@ -1,4 +1,10 @@
 ---
+#
+# SPDX-License-Identifier: AGPL-3.0-only
+# Documentation licensed under the GNU Affero General Public License Version 3.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docsdevbr/grafana-doc-pt-br/blob/-/LICENSES/AGPL-3.0-only.txt
+
 aliases:
   - ../../../configure-access/configure-authentication/saml/configure-saml-with-azuread/ # /docs/grafana/next/setup-grafana/configure-access/configure-authentication/saml/configure-saml-with-azuread/
   - ../../../configure-security/configure-authentication/setup-grafana/configure-security/configure-authentication/saml/configure-saml-with-entraid/ # /docs/grafana/next/setup-grafana/configure-security/configure-authentication/setup-grafana/configure-security/configure-authentication/saml/configure-saml-with-entraid/

@@ -3,11 +3,10 @@
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
 #
+# SPDX-License-Identifier: AGPL-3.0-only
 # Documentation licensed under the GNU Affero General Public License Version 3.
-# For license exceptions, see LICENSING.md.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/grafana/grafana/blob/-/LICENSE
-# https://github.com/grafana/grafana/blob/-/LICENSING.md
+# https://github.com/docsdevbr/grafana-doc-pt-br/blob/-/LICENSES/AGPL-3.0-only.txt
 
 keywords:
   - Infrastructure as Code
@@ -185,6 +184,12 @@ data:
     "links": []
     }
 ---
+#
+# SPDX-License-Identifier: AGPL-3.0-only
+# Documentation licensed under the GNU Affero General Public License Version 3.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docsdevbr/grafana-doc-pt-br/blob/-/LICENSES/AGPL-3.0-only.txt
+
 apiVersion: grafana.integreatly.org/v1beta1
 kind: GrafanaDashboard
 metadata:

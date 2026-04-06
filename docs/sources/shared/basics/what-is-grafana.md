@@ -3,11 +3,10 @@
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
 #
+# SPDX-License-Identifier: AGPL-3.0-only
 # Documentation licensed under the GNU Affero General Public License Version 3.
-# For license exceptions, see LICENSING.md.
 # The original work was translated from English into Brazilian Portuguese.
-# https://github.com/grafana/grafana/blob/-/LICENSE
-# https://github.com/grafana/grafana/blob/-/LICENSING.md
+# https://github.com/docsdevbr/grafana-doc-pt-br/blob/-/LICENSES/AGPL-3.0-only.txt
 
 source_url: https://github.com/grafana/grafana/blob/release-12.4.3/docs/sources/shared/basics/what-is-grafana.md
 revision: c37a9ea8cb40a1796ede69cebebb7177be8cd98e

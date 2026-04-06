@@ -1,4 +1,10 @@
 ---
+#
+# SPDX-License-Identifier: AGPL-3.0-only
+# Documentation licensed under the GNU Affero General Public License Version 3.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docsdevbr/grafana-doc-pt-br/blob/-/LICENSES/AGPL-3.0-only.txt
+
 aliases:
   - ../../../features/panels/dashlist/ # /docs/grafana/next/features/panels/dashlist/
   - ../../../panels/visualizations/dashboard-list-panel/ # /docs/grafana/next/panels/visualizations/dashboard-list-panel/
