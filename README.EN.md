@@ -2,7 +2,7 @@
 
 [![README file in English][badge-readme-en]][readme-en]
 [![README file in Brazilian Portuguese][badge-readme-pt-br]][readme-pt-br]
-[![License: AGPL-3.0][badge-license]][license]
+[![License:AGPL-3.0-only][badge-license]][license]
 [![Contributors][badge-contributors]][contributors]
 [![GitHub Sponsors][badge-github-sponsors]][github-sponsors]
 
@@ -33,14 +33,13 @@ Labs.
 
 Documentation licensed under the
 [GNU Affero General Public License Version 3][license].<br/>
-For license exceptions, see [LICENSING][licensing].<br/>
 The original work was translated from English into Brazilian Portuguese.
 
 [badge-contributors]: https://img.shields.io/github/contributors/docsdevbr/grafana-doc-pt-br
 
 [badge-github-sponsors]: https://img.shields.io/github/sponsors/docsdevbr
 
-[badge-license]: https://img.shields.io/github/license/docsdevbr/grafana-doc-pt-br
+[badge-license]: https://img.shields.io/badge/license-AGPL--3.0-blue
 
 [badge-readme-en]: https://img.shields.io/badge/lang-en-blue
 
@@ -54,9 +53,7 @@ The original work was translated from English into Brazilian Portuguese.
 
 [github-sponsors]: https://github.com/sponsors/docsdevbr
 
-[license]: LICENSE
-
-[licensing]: https://github.com/grafana/grafana/blob/HEAD/LICENSING.md
+[license]: LICENSES/AGPL-3.0-only.txt
 
 [page]: https://pt.docs.dev.br/tech/g/grafana/index.html
 

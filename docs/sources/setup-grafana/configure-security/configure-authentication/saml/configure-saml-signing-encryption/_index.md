@@ -4,7 +4,6 @@
 # Grafana Labs.
 
 # Documentation licensed under the GNU Affero General Public License.
-# For license exceptions, see LICENSING.md.
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/grafana/grafana/blob/main/LICENSE
 # https://github.com/grafana/grafana/blob/main/LICENSING.md
@@ -84,7 +83,6 @@ The key you provide should look like:
 # Grafana Labs.
 
 # Documentation licensed under the GNU Affero General Public License.
-# For license exceptions, see LICENSING.md.
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/grafana/grafana/blob/main/LICENSE
 # https://github.com/grafana/grafana/blob/main/LICENSING.md
