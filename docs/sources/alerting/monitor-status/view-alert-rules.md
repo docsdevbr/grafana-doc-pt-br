@@ -1,4 +1,13 @@
 ---
+# SPDX-FileCopyrightText: 2026 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+#
+# SPDX-License-Identifier: AGPL-3.0-only
+# Documentation licensed under the GNU Affero General Public License Version 3.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docsdevbr/grafana-doc-pt-br/blob/-/LICENSES/AGPL-3.0-only.txt
+
 aliases:
   - ../../alerting/unified-alerting/alerting-rules/rule-list/ # /docs/grafana/<GRAFANA_VERSION>/alerting/unified-alerting/alerting-rules/rule-list
   - ../../alerting/alerting-rules/view-alert-rules/ # /docs/grafana/<GRAFANA_VERSION>/alerting/alerting-rules/view-alert-rules
@@ -69,7 +78,7 @@ To view or restore previous versions for an alert rule, complete the following s
 
 1. Navigate to **Alerts & IRM** -> **Alerting** -> **Alert rules**.
 1. Select an alert rule and click **View**.
-1. Click the **Versions** tab.  
+1. Click the **Versions** tab.
    The page displays a list of the previous rule versions.
 
 On the Alert rule's Versions page you can view, compare and restore the previous rule versions.
@@ -91,5 +100,5 @@ Only users with an Admin role can restore deleted Grafana-managed alert rules. A
 1. Click the **Restore** button to restore the alert rule or click **Delete permanently** to delete the alert rule.
 
 {{< admonition type="note" >}}
-Deleted alert rules are stored for 30 days. Grafana Enterprise and OSS users can adjust the length of time for which the rules are stored can be adjusted in the Grafana configuration file's `[unified_alerting].deleted_rule_retention` field. For an example of how to modify the Grafana configuration file, refer to the [documentation example here](/docs/grafana/latest/alerting/set-up/configure-alert-state-history/#configuring-grafana).  
+Deleted alert rules are stored for 30 days. Grafana Enterprise and OSS users can adjust the length of time for which the rules are stored can be adjusted in the Grafana configuration file's `[unified_alerting].deleted_rule_retention` field. For an example of how to modify the Grafana configuration file, refer to the [documentation example here](/docs/grafana/latest/alerting/set-up/configure-alert-state-history/#configuring-grafana).
 {{< /admonition >}}

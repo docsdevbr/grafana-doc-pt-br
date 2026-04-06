@@ -1,4 +1,13 @@
 ---
+# SPDX-FileCopyrightText: 2026 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+#
+# SPDX-License-Identifier: AGPL-3.0-only
+# Documentation licensed under the GNU Affero General Public License Version 3.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docsdevbr/grafana-doc-pt-br/blob/-/LICENSES/AGPL-3.0-only.txt
+
 aliases:
   - ../../../panels-visualizations/query-transform-data/sql-expressions/ # /docs/grafana/next/panels-visualizations/query-transform-data/sql-expressions/
 labels:
@@ -111,7 +120,7 @@ Use the following workflow to create a SQL expression:
 1. **Build your base queries.** Create the individual query and give it a meaningful name. Create the queries (A, B, etc.) that provide the data you want to combine or transform using SQL Expressions.
 1. **Hide your base queries.** Click the **👁️ Eye icon** next to each base query to hide them from visualization. This keeps your panel clean while still making the data available to the SQL Expression.
 1. **Switch to table view**. Set the panel visualization to **Table** to inspect and review the structure and output of your SQL expression as you build and refine it.
-1. **Add a SQL Expression**. Add a new query and add select SQL Expression as its type.  
+1. **Add a SQL Expression**. Add a new query and add select SQL Expression as its type.
    **Inspect inputs**. Start with simple test queries to understand the shape of your input frames.
 
    ```sql
@@ -203,15 +212,15 @@ Following are some best practices for alerting and recording rules:
 
 Grafana supports three types of data source response formats:
 
-1. **Single Table-like Frame**:  
+1. **Single Table-like Frame**:
    This refers to data returned in a standard tabular structure, where all values are organized into rows and columns, similar to what you'd get from a SQL query.
    - **Example**: Any query against a SQL data source (e.g., PostgreSQL, MySQL) with the format set to Table.
 
-2. **Dataplane: Time Series Format**:  
+2. **Dataplane: Time Series Format**:
    This format represents time series data with timestamps and associated values. It is typically returned from monitoring data sources.
    - **Example**: Prometheus or Loki Range Queries (queries that return a set of values over time).
 
-3. **Dataplane: Numeric Long Format**:  
+3. **Dataplane: Numeric Long Format**:
    This format is used for point-in-time (instant) metric queries that return a single value (or a set of values) at a specific moment.
    - **Example**: Prometheus or Loki Instant Queries (queries that return the current value of a metric).
 
