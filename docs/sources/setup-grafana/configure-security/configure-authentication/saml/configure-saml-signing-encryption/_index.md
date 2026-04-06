@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2026 Grafana Labs.
+# SPDX-FileCopyrightText: 2026 Grafana Labs.
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
 #
@@ -78,7 +78,7 @@ The key you provide should look like:
 
 ```
 -----BEGIN PRIVATE KEY-----
-# Copyright (c) 2026 Grafana Labs.
+# SPDX-FileCopyrightText: 2026 Grafana Labs.
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
 #

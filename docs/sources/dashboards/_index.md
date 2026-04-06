@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: 2026 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
 #
 # SPDX-License-Identifier: AGPL-3.0-only
 # Documentation licensed under the GNU Affero General Public License Version 3.
@@ -57,7 +60,7 @@ refs:
     - pattern: /docs/grafana-cloud/
       destination: /docs/grafana-cloud/visualizations/panels-visualizations/panel-overview/
 ---
-# Copyright (c) 2026 Grafana Labs.
+# SPDX-FileCopyrightText: 2026 Grafana Labs.
 # Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
 # Grafana Labs.
 #
