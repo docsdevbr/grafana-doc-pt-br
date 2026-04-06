@@ -1,4 +1,13 @@
 ---
+# SPDX-FileCopyrightText: 2026 Grafana Labs.
+# Grafana and the Grafana logo are trademarks owned by Raintank, Inc. dba
+# Grafana Labs.
+#
+# SPDX-License-Identifier: AGPL-3.0-only
+# Documentation licensed under the GNU Affero General Public License Version 3.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/docsdevbr/grafana-doc-pt-br/blob/-/LICENSES/AGPL-3.0-only.txt
+
 canonical: https://grafana.com/docs/grafana/latest/alerting/best-practices/dynamic-labels
 description: This example shows how to define dynamic labels based on query values, along with important behavior to keep in mind when using them.
 keywords:
@@ -270,7 +279,7 @@ This setup reproduces label flapping and shows how dynamic label values affect a
 
 1. Preview alert routing to verify the label template.
 
-   In **Configure notifications**, toggle **Advanced options**.  
+   In **Configure notifications**, toggle **Advanced options**.
    Click **Preview routing** and check the value of the `severity` label:
 
    {{< figure src="/media/docs/alerting/example-dynamic-labels-preview-label.png" max-width="750px" caption="Preview routing multiple times to verify how label values change over time." >}}
